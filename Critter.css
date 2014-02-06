@@ -1,9 +1,0 @@
-@media all {
-body {background-image: url('Camouflage_Background.jpg');background-repeat: repeat}
-.special {color: black}}
-
-@media print
-{body {background-colr: white}
-font {color: white}
-h2 {color: white}
-a {color: black}}
