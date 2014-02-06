@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>CSCI 396</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$(".ambush").hide();
+	$(".trap").mouseover(function(){
+		$(this).hide();
+		$(".ambush").show();
+	});
+	$("img").click(function(){
+		if ($(this).attr("class")=="wolpertinger"){
+			$(this).attr({"class":"jackalope","src":"jackalope.jpg"});
+		}
+		else if ($(this).attr("class")=="jackalope"){
+			$(this).attr({"class":"wolpertinger","src":"Wolpertinger.jpg"});
+		}
+	});
+});
+
+
+</script>
+</head>
+<body>
+<h1> CSCI 396 stuff </h1>
+There may possibly be links here.  Like these.
+<ul>
+	<li><a href="http://jsfiddle.net/SCHILDER/asRrX/3/">JS103 Quiz</a></li>
+	<li><a class="trap" href="http://jsfiddle.net/SCHILDER/ESKRE/766/">JS101 Fiddle</a></li>
+	<li><a class="trap" href="http://jsfiddle.net/SCHILDER/keAPx/689/">JS102 Fiddle</a></li>
+	<li><a class="ambush" href="http://jsfiddle.net/SCHILDER/ESKRE/766/">JS101 Fiddle</a></li>
+	<li><a class="ambush" href="http://jsfiddle.net/SCHILDER/keAPx/689/">JS102 Fiddle</a></li>
+	<li><a class="ambush" href="http://jsfiddle.net/SCHILDER/LmcJw/7/">Selectors101 Fiddle </a></li>
+	<li><a class="trap" href="http://jsfiddle.net/SCHILDER/LmcJw/7/">Selectors101 Fiddle</a></li>
+	<li><a href="http://jsfiddle.net/SCHILDER/p6qEs/6/">JQuery 101</a></li>
+	<li><a href="http://jsfiddle.net/SCHILDER/ugRJB/6/">JQuery 102</a></li>
+	<li><a href="http://jsfiddle.net/SCHILDER/ummRS/9/">DOM 101 (with functional tabs!)</a></li>
+	<li><a href="http://jsfiddle.net/SCHILDER/8cn23/6/">JQuery Events 101</a></li>
+	<li><a href="overview.html">Overview Tutorial</a></li>
+	<li><a href="RocknCoder.html">Calculator Thing</a></li>
+	<li><a href="googlemap.html">Google Maps API</a></li>
+	<li><a href="http://alightnin.net">Google Maps API Group Project</a></li>
+	<li><a href="https://github.com/schilder/PhoneGapAPI">PhoneGap File API on Github</a></li>
+	
+	
+	
+	
+</ul>
+<br/>
+<img class="wolpertinger" src="Wolpertinger.jpg" alt="A wolpertinger" height="265" width="300">
+</body>
+</html>

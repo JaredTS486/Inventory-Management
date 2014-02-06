@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" /> 
+        <title>Intro to jQuery Mobile</title> 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile
+/1.0a2/jquery.mobile-1.0a2.min.css" /> 
+        <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.0a2
+/jquery.mobile-1.0a2.min.js"></script> 
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCVyekKGGDpnwffoyF5sypSyp2K0Wylqe0&sensor=true">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+
+</head>
+<body onload="initialize()">
+<div data-role="page" id="page1">
+  <div data-role="header"> 
+    <h1>Page 1</h1> 
+  </div>
+  <div data-role="content">   
+    <p>Content Section</p>
+    <a href="page2"  >Facebook Buttons Page</a>
+	</br>
+    <a href="page3"  >Forms Page</a>
+    </br>	
+	<a href="page4"  >Google Map</a>
+	</br>
+  </div>
+  <div data-role="footer" class="ui-bar">
+    <div data-role="controlgroup" data-type="horizontal">
+    <a href="index.html" data-role="button">Not Today</a>
+    <a href="index.html" data-role="button">Yesterday</a>
+    <a href="index.html" data-role="button">Last Week</a>
+    <a href="index.html" data-role="button">Epoch</a>
+    </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="page2">
+
+            <div data-role="header">
+               <h1>Facebook Friends</h1>
+            </div>
+
+            <div data-role="content">
+               <a href="page1"  >Main Dates Page</a>
+			   </br>
+			   <a href="page3"  >Forms Page</a>
+			   </br>
+			   <a href="page4"  >Google Map</a>
+			   </br>
+			   <p>
+
+               <ul data-role="listview" data-inset="true">
+
+                  <li>
+                  <a href="index.html">Get Friends</a>
+                  </li>
+
+                  <li>
+                  <a href="index.html">Post to Wall</a>
+                  </li>
+
+                  <li><a href="index.html">Send Message</a></li>
+               </ul>
+
+               </p>
+
+            </div>
+
+            <div data-role="footer">
+            </div>
+
+</div>
+
+<div data-role="page" id="page3">
+
+  <div data-role="header">
+    <h1>Forms</h1>
+  </div>
+  
+  <div data-role="content">
+  <a href="page1"  >Main Dates Page</a>
+  </br>
+  <a href="page2"  >Facebook Buttons Page</a>
+  </br>
+  <a href="page4"  >Google Map</a>
+  </br>
+    <form action="forms-results.php" method="get"> 
+    <fieldset> 
+        <div data-role="fieldcontain">
+            <label for="select-options" class="select">Choose 
+an option:</label>
+            <select name="select-options" id="select-options">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option2">Option 3</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button> 
+    </fieldset> 
+</form>
+
+  <div data-role="footer">
+  </div>
+
+</div>
+
+<div data-role="page" id="page4">
+
+  <div data-role="header">
+    <h1>Google Map</h1>
+  </div>
+  
+  <div data-role="content" id="map_canvas" style="width:1000px; height:1000px">
+   <!-- <div id="map_canvas" style="width:1000px; height:1000px">
+	</div>-->
+  <a href="page1"  >Main Dates Page</a>
+  </br>
+  <a href="page2"  >Facebook Buttons Page</a>
+  </br>
+  <a href="page3"  >Forms Page</a>
+   </br>
+  </div>
+  
+  <div data-role="footer">
+ 	
+  </div>
+ 
+</div>
+
+</body>
+</html>
