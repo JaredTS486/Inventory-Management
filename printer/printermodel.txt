@@ -3,4 +3,5 @@ DYMO Labelwriter 400 Turbo
 Model No.:	93176
 SN: 		08230293176
 
-Drivers: http://www.dymo.com/en-US/online-support/dymo-user-guides
+Drivers: 	http://www.dymo.com/en-US/online-support/dymo-user-guides
+Documentation:	http://download.dymo.com/dymo/user-guides/LabelWriter/LW450Series/UG/LabelWriter_UserGuide_en-US.pdf
