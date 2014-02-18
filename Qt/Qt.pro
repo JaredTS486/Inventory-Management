@@ -14,9 +14,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    database.cpp \
-    printer.cpp \
-    qrgen.cpp
+        database.cpp \
+        printer.cpp \
+        qrgen.cpp
 
 HEADERS  += mainwindow.h \
     database.h \
@@ -25,3 +25,7 @@ HEADERS  += mainwindow.h \
 
 FORMS    += \
     mainwindow.ui
+
+unix:!macx: LIBS += -L$$PWD/../../../../../usr/lib/x86_64-linux-gnu/ -lmysqlclient
+INCLUDEPATH += $$PWD/../../../../../usr/lib/x86_64-linux-gnu
+DEPENDPATH += $$PWD/../../../../../usr/lib/x86_64-linux-gnu
