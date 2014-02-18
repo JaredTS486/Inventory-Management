@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Label Printing Demo</title>
+  </head>
+
+  <body>
+    <h1>JavaScript Label Printing Demo</h1>
+
+    <form>
+      <INPUT TYPE="BUTTON" NAME="PrintBtn" VALUE="Print Label" OnClick="PrintBtnClicked()">
+    </form>
+
+    <SCRIPT>
+      function PrintBtnClicked()
+      {
+        var DymoAddIn, DymoLabel;
+        DymoAddIn = new ActiveXObject('DYMO.DymoAddIn');
+        DymoLabel = new ActiveXObject('DYMO.DymoLabels');
+
+        if (DymoAddIn.Open('C:\\Documents and Settings\\All Users\\Documents\\DYMO Label\\Label Files\\Address (30252, 30320, 30572).LWL'))
+        {
+          DymoLabel.SetAddress(1, 'Pablo Martini1\nSAMPLE Corporation\n333 W. Fantasy World\nSantaland, NP 99999-9999');
+          DymoAddIn.Print(1, true);
+
+	  // this is how to print to the "Right Roll" of a TwinTurbo
+	  //DymoAddIn.StartPrintJob();
+	  //DymoAddIn.Print2(1, false, 1); // 0 = left roll, 1 = right roll, 2 = auto-switch
+	  //DymoAddIn.EndPrintJob();
+        }
+        else if (DymoAddIn.Open('C:\\Program Files\\DYMO Label\\Label Files\\Address (30252, 30320, 30572).LWL'))
+        {
+          DymoLabel.SetAddress(1, 'Pablo Martini1\nSAMPLE Corporation\n333 W. Fantasy World\nSantaland, NP 99999-9999');
+          DymoAddIn.Print(1, true);
+
+	  // this is how to print to the "Right Roll" of a TwinTurbo
+	  //DymoAddIn.StartPrintJob();
+	  //DymoAddIn.Print2(1, false, 1); // 0 = left roll, 1 = right roll, 2 = auto-switch
+	  //DymoAddIn.EndPrintJob();
+        }
+        else if (DymoAddIn.Open('C:\\Program Files\\Dymo Label\\Label Files\\Address  (30252, 30320).LWT'))
+        {
+          DymoLabel.SetAddress(1, 'Pablo Martini2\nSAMPLE Corporation\n333 W. Fantasy World\nSantaland, NP 99999-9999');
+          DymoAddIn.Print(1, true);
+
+	  // this is how to print to the "Right Roll" of a TwinTurbo
+	  //DymoAddIn.StartPrintJob();
+	  //DymoAddIn.Print2(1, false, 1); // 0 = left roll, 1 = right roll, 2 = auto-switch
+	  //DymoAddIn.EndPrintJob();
+        }
+        else
+          alert('Error: Label file Not Found!');
+       }
+     </SCRIPT>
+
+    </body>
+</html>

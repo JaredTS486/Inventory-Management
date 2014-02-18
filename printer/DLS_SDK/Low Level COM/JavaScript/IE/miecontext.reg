@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MenuExt\D&YMO]
+@="file://C:\\Program Files\\DYMO Label\\DLS_SDK\\Low Level COM\\JavaScript\\IE\\miecontext.htm"
+"Contexts"=dword:00000010
+

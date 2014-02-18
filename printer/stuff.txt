@@ -1,0 +1,45 @@
+High COM method
+
+AddPicture (Filename : WideString)	Appends a graphic object specified by the FileName parameter to the current text on the tape label.
+					The function returns TRUE if text is appended, FALSE on error.
+					Currently supported graphic formats are *.jpg, *.bmp, *.tif, *.ico, *.wmf, *.emf.
+
+
+Print (Copies: Integer)			Prints the current label.  Copies is the number of copies to print.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Low COM method
+
+
+PrintLabel(DeviceName: String, Port: String, Quantity: Integer, bShowDialog: Boolean)
+
+Prints the current label. DeviceName is the name of the device (such as “DYMO LabelWriter Turbo”). Port is the port on which the printer
+is connected. If Port is File:, then output is directed to a file. Quantity is the number of copies to be printed, and bShowDialog is a
+boolean used to display (TRUE) or hide (FALSE) the print progress dialog. Returns TRUE on success, FALSE otherwise.
+
+
+AddObject(ObjType: Integer, Name: String; X,Y, Width, Height: Integer; Rotation: Integer)
+
+Creates a new object on the label. ObjType is an integer that specifies the type of object to be created, where:
+0 - TEXT
+1 - ADDRESS
+2 - GRAPHIC
+3 - RECTANGLE
+4 - LINE
+5 - BARCODE
+6 - COUNTER
+7 - DATE_TIME
+8 - CIRCULAR_TEXT
+
+Name is the descriptive name to give the object (such as Return Address, Logo, or Product ID).
+X, Y, Width, and Height are the location (X,Y) of the upper left corner of the object and the dimensions of the object, all expressed in TWIPS.
+Rotation is the rotation to apply to the object and must be 0, 90, 180, or 270. This value is ignored when adding line or rectangle objects.
+
+After adding an object, the LabelObject method can be used to provide the object-specific settings for the newly created object.
+This function returns the ID for the new object, or 0 if the object could not be added.
+
+
+IGraphicObj

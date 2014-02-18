@@ -1,0 +1,273 @@
+<!--
+
+	This sample is meant to demonstrate the methods used to communicate with
+	the Dymo Label Software via LabelServer Automation Server interface.
+
+	Permission to use, copy, modify, and distribute this software for any
+	purpose and without fee is hereby granted.
+
+	Copyright 2007 DYMO Corporation
+	
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>DYMO SDK Sample Page</title>
+	<SCRIPT LANGUAGE="JavaScript">
+	function formLoad()
+	{
+		var parameters = window.location.search;
+		if (parameters.length > 0)
+		{
+			form1.TextArea1.innerText = paramDecode("param=", parameters);
+		}
+		
+		enumDymoPrinters(this);
+		
+		enumDymoLabels(this);
+	}
+	
+	function paramDecode(paramName, parameters)
+	{
+		var decodedStr = "";
+		var pos = parameters.indexOf(paramName);
+		if (pos >= 0)
+		{
+			decodedStr = parameters.substring(paramName.length + pos);
+		}
+		return unescape(decodedStr);
+	}
+	
+	// enumerates all available DYMO printers installed localy
+
+	function enumDymoPrinters(ext_wnd)
+	{
+		try
+		{
+			var DymoAddIn = new ActiveXObject('DYMO.DymoAddIn');
+			var printersStr = DymoAddIn.GetDymoPrinters();
+		
+			var printers = new Array();
+	
+			var printersTotal = printersStr2Array(printersStr, printers);
+			
+			var btn = ext_wnd.document.getElementById("Button1");
+						
+			if (printersTotal == 0)
+			{
+				// disable PRINT button
+				btn.disabled = true;
+				
+			}
+			else
+			{
+				btn.disabled = false;
+								
+				// fill out the html select element with the list of available
+				// DYMO printers
+					
+				var plist = ext_wnd.document.getElementById("pList");
+				for (var n = 0; n < printersTotal; n++)
+				{
+					newDropDownItem(plist, printers[n], n.toString(), n, n == 0 ? true : false);
+				}				
+			}
+
+		}
+		catch(err)
+		{
+			alert("Error: " + err.description);
+		}
+	}
+
+	// enumerates all DYMO labels
+	
+	function enumDymoLabels(ext_wnd)
+	{
+		try
+		{
+			var DymoLabelEngine = new ActiveXObject('DYMO.LabelEngine');
+			var LabelListObj = DymoLabelEngine.LabelNames();
+				
+			var llist = ext_wnd.document.getElementById("lList");
+			var selected = 0;
+	       
+			for (var i = 0; i < LabelListObj.Count; i++)
+			{
+				var labelName = LabelListObj.Item(i);
+				if (labelName.length > 0)
+					newDropDownItem(llist, labelName, i.toString(), i, false);
+			}
+		}
+		catch(err)
+		{
+			alert("Error: " + err.description);
+		}
+	}
+
+	// adds selection items into selection control
+	
+	function newDropDownItem(ctrl, itemText, itemValue, pos, selected)
+	{
+		var optn = ctrl.document.createElement("OPTION");
+
+		optn.text = itemText;
+		optn.value = itemValue;
+		optn.selected = selected;
+			
+		ctrl.options.add(optn, pos);
+	}
+
+	// converts the concatenaded |-separated string into array of individual strings
+	// (printer names)
+
+	function printersStr2Array(printersStr, printersArr)
+	{
+		if (printersStr.length > 0)
+		{
+			var pos, start = 0;
+
+			while (true)
+			{
+				pos = printersStr.indexOf('|', start);
+				if (pos != -1)
+				{
+					printersArr.push(printersStr.slice(start, pos));
+					start = pos + 1;
+				}
+				else
+				{
+					printersArr.push(printersStr.slice(start));
+					break;
+				}
+			}
+			
+		}
+		return printersArr.length;
+	}
+	
+	// prints label
+
+	function printLabel()
+	{
+		try
+	    {
+		   var DymoLabelEngine = new ActiveXObject('DYMO.LabelEngine');
+
+			var index = form1.lList.selectedIndex;
+			var labelName = form1.lList.options(index).text;
+		
+			// create new empty label
+			DymoLabelEngine.NewLabel(labelName);
+
+			// get an interface to acuare the label dimentions
+			var LabelInfoObj = DymoLabelEngine.LabelInfo();
+
+			// get objects collection interface to add new objects
+			var PrintObjects = DymoLabelEngine.PrintObject();
+
+			// add a new object (0 - text object, 1 - address object)
+			var objType = form1.Checkbox1.checked ? 1 : 0;
+			
+			// set the margings
+			var left = Math.ceil(0.23 * 1440.0); // twips
+			var top = Math.ceil(0.06 * 1440.0);
+			
+			var objID = PrintObjects.AddObject(objType, "FIELD1",
+								left, top, LabelInfoObj.LabelWidth - left * 2, LabelInfoObj.LabelHeight - top * 2, 0);
+
+			// test
+            var ObjList = PrintObjects.Objects();
+            if (ObjList.Count != 1)
+            {
+				alert("Could not add new object [" + objType + "] into " + labelName);
+				return;
+			}
+
+            // set the text property of the newly created object
+			var iObj = PrintObjects.LabelObject(objID);
+			
+			var objTxtAttrib = iObj.TextAttributes();
+			objTxtAttrib.Text = form1.TextArea1.innerText;
+			
+			// if it is an address object - set POSTNET barcode properties
+			if (objType == 1)
+			{
+				 // set barcode position = above
+				iObj.BarCodePosition = 1;
+				
+				// default value for the 9-digit-only property is true
+				iObj.b9DigitOnly = false;
+			}
+			
+			// the following method could be used to test result when opened in DLS.
+            // DymoLabelEngine.SaveFile("C:\\Temp\\test.LWL");
+            
+			index = form1.pList.selectedIndex;           
+			DymoLabelEngine.PrintLabel(form1.pList.options(index).text, "", 1, true);
+			
+		}
+		catch(err)
+	    {
+			alert("Error: " + err.description);
+		}
+	}
+	</SCRIPT>
+</head>
+
+<body bgcolor="gainsboro" onload='formLoad()'>
+    <form id="form1" onsubmit='test()'>
+    <div>
+        <span style="font-size: 16pt; color: #00ccff; font-family: Arial Black">
+				DYMO SDK SAMPLE</span>
+
+        <table style="width: 528px; height: 223px" id="TABLE1">
+            <tr>
+                <td colspan="3" style="height: 18px">
+                    <span style="font-size: 16pt; color: #00ccff; font-family: Arial Black"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 126px; height: 39px; text-align: left;">
+                    <Label ID="Label1" unselectable="on">Select Printer:</Label>
+                </td>
+                <td style="width: 250px; height: 39px;">
+					<select id="pList" style="width: 200px">
+					</select>
+				</td>
+                <td style="height: 39px">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 126px; height: 41px;">
+                    <Label ID="Label2">Select Label:</Label></td>
+                <td style="width: 250px; height: 41px;">
+					<select id="lList" style="width: 200px">
+					</select>
+				</td>
+                <td style="height: 41px">
+                    </td>
+            </tr>
+            <tr>
+                <td style="width: 126px; height: 142px;">
+					Text to Print:</td>
+                <td style="width: 250px; height: 142px;">
+					<textarea id="TextArea1" style="width: 238px; height: 87px"></textarea><br />
+					<input id="Checkbox1" style="width: 26px; height: 19px;" type="checkbox" />
+					This is address</td>
+                <td style="height: 142px">
+                </td>
+            </tr>
+			<tr>
+				<td style="width: 126px; height: 49px">
+				</td>
+				<td style="width: 250px; height: 49px">
+					<input id="Button1" style="width: 90px" type="button" value="Print" onclick='printLabel()' disabled="disabled" /></td>
+				<td style="height: 49px">
+					</td>
+			</tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

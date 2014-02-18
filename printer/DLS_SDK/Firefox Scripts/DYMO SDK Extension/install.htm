@@ -1,0 +1,20 @@
+<html> 
+<title>DYMO XPCOM Components Installation</title> 
+<script> 
+// trigger function 
+// that downloads the XPI 
+// so the install.js file inside can be 
+// read and executed 
+function installDymoXPCom()
+{ 
+  xpi={'DYMO XPCOM Extension':'dymo.xpi'};
+  InstallTrigger.install(xpi);
+}
+</script> 
+ 
+<h1>DYMO XPCOM Components</h1> 
+ 
+<p><a href="javascript:void" onclick="installDymoXPCom();">Install Now</a> 
+ 
+</html> 
+

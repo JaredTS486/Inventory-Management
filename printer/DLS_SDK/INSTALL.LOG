@@ -1,0 +1,487 @@
+***  Installation Started 02/10/2014 16:26  ***
+Title: DYMO Label Software SDK Installation
+Source: C:\Users\Mugwump\AppData\Local\Temp\GLB6174.tmp | 02-10-2014 | 16:25:54 | 71680
+'--------> THIS INSTALLER LAST MODIFIED 8/22/06 <--------
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\SDK Readme.txt | 03-25-2008 | 14:53:30 | | 5480 | e84f05d2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DYMO Label Software SDK Manual.pdf | 03-25-2008 | 14:13:22 | | 974560 | 1b9b60b2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DYMO Label Software SDK FAQ.pdf | 02-15-2008 | 11:13:22 | | 31157 | 5f383217
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\AssemblyInfo.cs | 02-15-2008 | 11:13:04 | | 2781 | da07da16
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\DLS_SDK_Sample.csproj | 02-15-2008 | 11:13:04 | | 6166 | e5afc046
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\DLS_SDK_Sample.csproj.webinfo | 02-15-2008 | 11:13:04 | | 126 | df3d0182
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\Global.asax | 02-15-2008 | 11:13:04 | | 81 | c4186e7d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\Global.asax.cs | 02-15-2008 | 11:13:04 | | 1451 | f01d7d1c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\Global.asax.resx | 02-15-2008 | 11:13:04 | | 1733 | cee2cd6f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\Readme.txt | 02-15-2008 | 11:13:04 | | 201 | 5b01af42
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\Web.config | 02-15-2008 | 11:13:04 | | 4445 | f302136b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\WebForm1.aspx | 02-15-2008 | 11:13:04 | | 2606 | c11d0c56
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\WebForm1.aspx.cs | 02-15-2008 | 11:13:04 | | 6489 | 8fcb1282
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\WebForm1.aspx.resx | 02-15-2008 | 11:13:04 | | 5317 | d0c630e2
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\bin
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\bin\DLS_SDK_Sample.dll | 02-15-2008 | 11:13:02 | 1.0.2053.18822 | 20480 | 149914fd
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\bin\DLS_SDK_Sample.pdb | 02-15-2008 | 11:13:02 | | 26112 | 801442eb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\bin\Interop.Dymo.dll | 02-15-2008 | 11:13:02 | 2.0.0.0 | 57344 | cd8926e9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\bin\Interop.StdType.dll | 02-15-2008 | 11:13:02 | 2.0.0.0 | 11776 | c784f2cb
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt\access.cnf | 02-15-2008 | 11:13:04 | | 116 | 702f5e19
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt\deptodoc.btr | 02-15-2008 | 11:13:04 | | 324 | ae3f2cc4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt\doctodep.btr | 02-15-2008 | 11:13:04 | | 324 | 6afd866f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt\service.cnf | 02-15-2008 | 11:13:04 | | 1355 | 88c97ba6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt\service.lck
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\ASP.NET\_vti_pvt\services.cnf | 02-15-2008 | 11:13:04 | | 3 | 992b4f9c
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi\Dymo_TLB.pas | 02-15-2008 | 11:13:00 | | 209637 | 58ae763d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi\hlOLE_Delphi_demo.dpr | 02-15-2008 | 11:13:00 | | 309 | 7c2c330c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi\hlOLE_Delphi_demo.exe | 02-15-2008 | 11:13:00 | | 489472 | d23269a2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi\hlOLE_Delphi_main.dfm | 02-15-2008 | 11:13:00 | | 3362 | 4771da8b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi\hlOLE_Delphi_main.pas | 02-15-2008 | 11:13:00 | | 8255 | 55a6c7a4
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\dotNet Samples.ncb | 02-15-2008 | 11:12:58 | | 6630400 | a9579658
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\dotNet Samples.sln | 02-15-2008 | 11:12:58 | | 1950 | aa627381
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\dotNet Samples.suo | 02-15-2008 | 11:12:58 | | 15360 | 2c47e00a
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\app.aps | 02-15-2008 | 11:12:56 | | 2116 | 5686a0b6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\app.ico | 02-15-2008 | 11:12:58 | | 1078 | 9eca8a4e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\app.rc | 02-15-2008 | 11:12:56 | | 1183 | 7784627d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\AssemblyInfo.cpp | 02-15-2008 | 11:12:58 | | 2330 | da63a427
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\CPP Sample.vcproj | 02-15-2008 | 11:12:58 | | 5399 | ecaf74e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\Form1.cpp | 02-15-2008 | 11:12:56 | | 424 | 281a50b1
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\Form1.h | 02-15-2008 | 11:12:58 | | 14669 | 69298fd5
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\Form1.resX | 02-15-2008 | 11:12:56 | | 13130 | 3b3b4da2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\ReadMe.txt | 02-15-2008 | 11:12:58 | | 1332 | c77779fa
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\resource.h | 02-15-2008 | 11:12:58 | | 91 | d5dcd426
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\stdafx.cpp | 02-15-2008 | 11:12:58 | | 210 | a6627b34
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\stdafx.h | 02-15-2008 | 11:12:56 | | 436 | 9c73ce97
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\Debug
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\App.ico | 02-15-2008 | 11:12:54 | | 1078 | 9eca8a4e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\AssemblyInfo.cs | 02-15-2008 | 11:12:54 | | 2426 | 5da85543
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\CSharp Sample.csproj | 02-15-2008 | 11:12:54 | | 5366 | 6980b146
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\CSharp Sample.csproj.user | 02-15-2008 | 11:12:54 | | 1803 | 200b170e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\Form1.cs | 02-15-2008 | 11:12:54 | | 13959 | 644cd17f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\Form1.resx | 02-15-2008 | 11:12:54 | | 16600 | 2839e6eb
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin\Debug
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin\Debug\CSharp Sample.exe | 02-15-2008 | 11:12:54 | 1.0.2257.20957 | 36864 | df126e39
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin\Debug\CSharp Sample.pdb | 02-15-2008 | 11:12:54 | | 22016 | 8c30898c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin\Debug\Interop.Dymo.dll | 02-15-2008 | 11:12:54 | 2.0.0.0 | 61440 | 8c21ae57
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin\Debug\Interop.StdType.dll | 02-15-2008 | 11:12:54 | 2.0.0.0 | 11776 | aa8caa50
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\obj
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\obj\Interop.Dymo.dll | 02-15-2008 | 11:12:54 | 2.0.0.0 | 61440 | 8c21ae57
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\obj\Interop.StdType.dll | 02-15-2008 | 11:12:54 | 2.0.0.0 | 11776 | aa8caa50
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\obj\Debug
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\AssemblyInfo.vb | 02-15-2008 | 11:12:58 | | 1044 | 869467ee
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\Form1.resx | 02-15-2008 | 11:12:58 | | 16633 | c8e2b8d9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\Form1.vb | 02-15-2008 | 11:12:58 | | 13291 | b1dd6fbf
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\VB Sample.vbproj | 02-15-2008 | 11:12:58 | | 4825 | 24d31719
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\VB Sample.vbproj.user | 02-15-2008 | 11:12:58 | | 1813 | 424a65e9
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\bin
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\bin\Interop.Dymo.dll | 02-15-2008 | 11:12:58 | 2.0.0.0 | 61440 | c7245421
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\bin\Interop.StdType.dll | 02-15-2008 | 11:12:58 | 2.0.0.0 | 11776 | 9cf27204
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\bin\VB Sample.exe | 02-15-2008 | 11:12:58 | 1.0.2257.20948 | 29696 | a9b92f42
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\obj
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\obj\Interop.Dymo.dll | 02-15-2008 | 11:12:58 | 2.0.0.0 | 61440 | c7245421
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\obj\Interop.StdType.dll | 02-15-2008 | 11:12:58 | 2.0.0.0 | 11776 | 9cf27204
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\MS Access
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\MS Access\ATTENDEE.MDB | 02-15-2008 | 11:12:50 | | 348160 | 19d692bb
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder\ArrDown.bmp | 02-15-2008 | 11:13:00 | | 138 | d5e04eed
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder\ArrUp.bmp | 02-15-2008 | 11:12:58 | | 138 | 86d841db
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder\hlole_pb_demo.exe | 02-15-2008 | 11:12:58 | 8.0.0.7039 | 132096 | ae55f8ac
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder\hlole_pb_demo.pbl | 02-15-2008 | 11:12:58 | | 69120 | 405e8161
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder\Thumbs.db | 02-15-2008 | 11:12:58 | | 9216 | d59889f8
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\MS Excel
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\MS Excel\DYMOTapeSample.xls | 02-15-2008 | 11:12:48 | | 65024 | b7ebd423
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\LabelSettingsDlg.frm | 02-15-2008 | 11:12:50 | | 5077 | d663b620
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\LabelSettingsDlg.frx | 02-15-2008 | 11:12:50 | | 218 | f0f17dbc
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\Module1.bas | 02-15-2008 | 11:12:50 | | 466 | 4f439b5e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\TapeSDKTest2.exe | 02-15-2008 | 11:12:50 | 1.0.0.0 | 40960 | a895d88c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\TapeSDKTest2.frm | 02-15-2008 | 11:12:50 | | 11149 | 9ff2e6ec
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\TapeSDKTest2.vbp | 02-15-2008 | 11:12:50 | | 932 | 25112471
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual Basic
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual Basic\FORM1.FRM | 02-15-2008 | 11:13:02 | | 18151 | 68332100
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual Basic\HighOLEDemo.vbp | 02-15-2008 | 11:13:02 | | 1063 | 45ca7450
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual Basic\hlOLEDEMO.exe | 02-15-2008 | 11:13:02 | 1.0.0.0 | 36864 | 57698b1a
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\dymolbl.cpp | 02-15-2008 | 11:13:06 | | 3256 | eaa4f77
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\dymolbl.h | 02-15-2008 | 11:13:06 | | 1440 | e66d2861
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.cpp | 02-15-2008 | 11:13:06 | | 2466 | 56967816
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.dsp | 02-15-2008 | 11:13:06 | | 4093 | c2cc8b3a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.dsw | 02-15-2008 | 11:13:06 | | 543 | 617e41bd
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.exe | 02-15-2008 | 11:13:06 | 1.0.0.1 | 217088 | d96456c6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.h | 02-15-2008 | 11:13:06 | | 1972 | 446a6a1f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.ico | 02-15-2008 | 11:13:06 | | 318 | 8a29cd92
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.rc | 02-15-2008 | 11:13:06 | | 6222 | a4af786c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemoDlg.cpp | 02-15-2008 | 11:13:06 | | 9293 | 1956c59d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemoDlg.h | 02-15-2008 | 11:13:06 | | 2252 | 18ccda8b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\resource.h | 02-15-2008 | 11:13:06 | | 1589 | d121def2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\StdAfx.cpp | 02-15-2008 | 11:13:06 | | 591 | 569ec3ef
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\StdAfx.h | 02-15-2008 | 11:13:06 | | 1417 | 3a5132a1
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\CDymoAddIn4.h | 02-15-2008 | 11:13:00 | | 4152 | 3b16179a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\CDymoLabels.h | 02-15-2008 | 11:13:00 | | 2154 | 2cfee05d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.cpp | 02-15-2008 | 11:13:00 | | 3365 | 928ed500
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.exe | 02-15-2008 | 11:13:00 | | 7168 | dc8cc309
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.h | 02-15-2008 | 11:13:00 | | 39 | 6da82c83
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.rc | 02-15-2008 | 11:13:00 | | 1370 | fa30a9d4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.sln | 02-15-2008 | 11:13:00 | | 909 | 2392ee9c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.suo | 02-15-2008 | 11:13:00 | | 10752 | 89649d19
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.vcproj | 02-15-2008 | 11:13:00 | | 4092 | 9b550cfd
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\ReadMe.txt | 02-15-2008 | 11:13:00 | | 2193 | a8760ef
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\Resource.h | 02-15-2008 | 11:13:00 | | 409 | e6807c80
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\stdafx.cpp | 02-15-2008 | 11:13:00 | | 297 | a1c47454
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\stdafx.h | 02-15-2008 | 11:13:00 | | 833 | bf41e0a9
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\CDymoAddIn5.h | 02-15-2008 | 11:12:52 | | 4504 | 1fe8df8c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\CDymoTape2.h | 02-15-2008 | 11:12:52 | | 5808 | 68b382f4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\ReadMe.txt | 02-15-2008 | 11:12:52 | | 4360 | f91ee31f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\resource.h | 02-15-2008 | 11:12:52 | | 916 | 4a4c13c9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.aps | 02-15-2008 | 11:12:52 | | 43368 | 9960393e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.cpp | 02-15-2008 | 11:12:52 | | 1981 | 3ec9e284
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.exe | 02-15-2008 | 11:12:50 | 1.0.0.1 | 249856 | acc08840
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.h | 02-15-2008 | 11:12:52 | | 550 | 8c4ee29c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.rc | 02-15-2008 | 11:12:52 | | 5649 | 1eb985b7
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.vcproj | 02-15-2008 | 11:12:52 | | 4926 | 120b0ab4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTestDlg.cpp | 02-15-2008 | 11:12:52 | | 5143 | 329f5f90
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTestDlg.h | 02-15-2008 | 11:12:50 | | 1007 | 7f0fa934
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\stdafx.cpp | 02-15-2008 | 11:12:52 | | 214 | ee222d13
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\stdafx.h | 02-15-2008 | 11:12:50 | | 1864 | 8e2e374f
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\res
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\res\SmartPasteTest.ico | 02-15-2008 | 11:12:50 | | 21630 | fac22279
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\res\SmartPasteTest.manifest | 02-15-2008 | 11:12:50 | | 704 | b26c30c1
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\res\SmartPasteTest.rc2 | 02-15-2008 | 11:12:50 | | 405 | aef02085
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\CDymoAddIn4.h | 02-15-2008 | 11:13:02 | | 4152 | 3b16179a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\CDymoLabels.h | 02-15-2008 | 11:13:02 | | 2154 | 2cfee05d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\ReadMe.txt | 02-15-2008 | 11:13:02 | | 4265 | 5762709a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\resource.h | 02-15-2008 | 11:13:02 | | 1003 | bbc2e152
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\stdafx.cpp | 02-15-2008 | 11:13:02 | | 209 | 72f5d9b5
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\stdafx.h | 02-15-2008 | 11:13:02 | | 1862 | 248646d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.aps | 02-15-2008 | 11:13:02 | | 59960 | 55409062
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.cpp | 02-15-2008 | 11:13:02 | | 1939 | d175d78
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.exe | 02-15-2008 | 11:13:02 | 1.0.0.1 | 258048 | 5ac719e5
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.h | 02-15-2008 | 11:13:02 | | 516 | f100cb55
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.rc | 02-15-2008 | 11:13:02 | | 6302 | 21dd1269
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.vcproj | 02-15-2008 | 11:13:02 | | 4894 | 269e6551
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC SampleDlg.cpp | 02-15-2008 | 11:13:02 | | 8776 | b0ec3489
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC SampleDlg.h | 02-15-2008 | 11:13:02 | | 1137 | d5e6a92b
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\res
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\res\VC Sample.ico | 02-15-2008 | 11:13:02 | | 21630 | fac22279
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\res\VC Sample.manifest | 02-15-2008 | 11:13:02 | | 698 | 7a6a99c4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\res\VC Sample.rc2 | 02-15-2008 | 11:13:02 | | 399 | a134fa55
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\Attendee.dbf | 02-15-2008 | 11:12:52 | | 2389 | ff230db
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\DemoDB.dbc | 02-15-2008 | 11:12:52 | | 3688 | f7fab913
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\DemoDB.DCT | 02-15-2008 | 11:12:52 | | 704 | afd87cef
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\demodb.DCX | 02-15-2008 | 11:12:52 | | 4608 | 4e919645
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\fmmain.SCT | 02-15-2008 | 11:12:52 | | 21035 | 191440dc
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\fmmain.scx | 02-15-2008 | 11:12:52 | | 4412 | a175eff3
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\FOXUSER.DBF | 02-15-2008 | 11:12:52 | | 2729 | 64fdbad4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\FOXUSER.FPT | 02-15-2008 | 11:12:52 | | 19584 | fafcd33
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\hlole_foxpro_demo.exe | 02-15-2008 | 11:12:52 | | 257487 | d74f989e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\hlOLE_FoxPro_Demo.PJT | 02-15-2008 | 11:12:52 | | 4917 | 8e9939d4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\hlOLE_FoxPro_Demo.pjx | 02-15-2008 | 11:12:52 | | 1712 | 7018eeeb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\LABELTYP.DBF | 02-15-2008 | 11:12:52 | | 1458 | 79ce532e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\main.FXP | 02-15-2008 | 11:12:52 | | 472 | adf0dab
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\main.prg | 02-15-2008 | 11:12:52 | | 1398 | af208c56
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\WIZSTYLE.VCT | 02-15-2008 | 11:12:52 | | 201856 | d8816d79
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\WIZSTYLE.VCX | 02-15-2008 | 11:12:52 | | 21960 | 3daba2e7
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\Color.dfm | 02-15-2008 | 11:13:10 | | 1174 | 83d56da0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\Color.pas | 02-15-2008 | 11:13:10 | | 6999 | a7a38b2b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\Decl.pas | 02-15-2008 | 11:13:10 | | 1490 | e9b20b8
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\Dymo_TLB.pas | 02-15-2008 | 11:13:10 | | 251063 | eeeacacb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\frmObjInspector.dfm | 02-15-2008 | 11:13:10 | | 2864 | ad208b16
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\frmObjInspector.pas | 02-15-2008 | 11:13:10 | | 35687 | abd9fe1b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\lb.dfm | 02-15-2008 | 11:13:10 | | 529 | b4ac16
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\lb.pas | 02-15-2008 | 11:13:10 | | 9241 | 3d228c08
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\MainFrm.dfm | 02-15-2008 | 11:13:10 | | 22042 | 48489121
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\MainFrm.pas | 02-15-2008 | 11:13:10 | | 14277 | f12792b3
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\TestProj.dpr | 02-15-2008 | 11:13:10 | | 1381 | 572c8d0f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\TestProj.exe | 02-15-2008 | 11:13:10 | | 672256 | 9f6b5d7
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\TextEditor.dfm | 02-15-2008 | 11:13:10 | | 723 | f21a3afe
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\TextEditor.pas | 02-15-2008 | 11:13:10 | | 1538 | 9fc704bb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\Wnds.dfm | 02-15-2008 | 11:13:10 | | 878 | 98414e27
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\Wnds.pas | 02-15-2008 | 11:13:10 | | 2701 | 938f6ad8
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\JavaScript
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\JavaScript\IE
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\JavaScript\IE\ieprintlabels.htm | 02-15-2008 | 11:13:12 | | 7376 | dbfa09f7
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\JavaScript\IE\miecontext.htm | 02-15-2008 | 11:13:12 | | 985 | 757318ce
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\JavaScript\IE\miecontext.reg | 02-15-2008 | 11:13:12 | | 239 | d973791c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\JavaScript\IE\Readme.doc | 02-15-2008 | 11:13:12 | | 53760 | 9a04e440
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\fmLabelObj.frm | 02-15-2008 | 11:13:10 | | 17501 | a8726f2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\fmLabelObj.frx | 02-15-2008 | 11:13:12 | | 24 | ce38d266
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\fmValidBC.frm | 02-15-2008 | 11:13:12 | | 3727 | 3125f2a9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\fmValidBC.frx | 02-15-2008 | 11:13:10 | | 314 | 35275c24
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\fmWindows.frm | 02-15-2008 | 11:13:10 | | 3781 | 2d79ce3f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\Form1.frm | 02-15-2008 | 11:13:10 | | 18998 | d6547c5b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\Form1.frx | 02-15-2008 | 11:13:10 | | 2660 | 93f9d201
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\frmAddObject.frm | 02-15-2008 | 11:13:10 | | 5694 | ac7860ff
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\frmInputXY.frm | 02-15-2008 | 11:13:10 | | 2840 | 3b4e40ed
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\llOLEDemo.exe | 02-15-2008 | 11:13:12 | 1.0.0.0 | 102400 | 510b64b3
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\LowLevelOLE_Demo.vbp | 02-15-2008 | 11:13:10 | | 1060 | d64d8cc3
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\Module1.bas | 02-15-2008 | 11:13:10 | | 1959 | f5bba93c
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\AddObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2390 | 3e9bddde
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\AddObjectDlg.h | 02-15-2008 | 11:13:14 | | 1325 | 3b95bd9e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\AddressObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2590 | 730035fd
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\AddressObjectDlg.h | 02-15-2008 | 11:13:14 | | 1517 | f60a8782
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\BarCodeObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2200 | fff3bb2c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\BarCodeObjectDlg.h | 02-15-2008 | 11:13:14 | | 1400 | 3f33ea39
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\bitmap1.bmp | 02-15-2008 | 11:13:14 | | 1270 | 49dc1fdf
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\ChooseWindowDlg.cpp | 02-15-2008 | 11:13:14 | | 2644 | e895794f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\ChooseWindowDlg.h | 02-15-2008 | 11:13:14 | | 1358 | 4895b037
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\CounterObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2930 | fae5aa31
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\CounterObjectDlg.h | 02-15-2008 | 11:13:14 | | 1600 | 53a6e9f8
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\DateTimeObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2816 | 73d9d5a2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\DateTimeObjectDlg.h | 02-15-2008 | 11:13:14 | | 1572 | 5e1f9d43
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\FindObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 1766 | ceb34100
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\FindObjectDlg.h | 02-15-2008 | 11:13:14 | | 1276 | 9e51b190
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\GraphicObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 3468 | a915e66d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\GraphicObjectDlg.h | 02-15-2008 | 11:13:14 | | 1516 | 8ddd52a6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\labels.cpp | 02-15-2008 | 11:13:14 | | 55712 | 3968fd35
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\labels.h | 02-15-2008 | 11:13:14 | | 18726 | 8d01d281
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\LineObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 1985 | 6778f6e9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\LineObjectDlg.h | 02-15-2008 | 11:13:14 | | 1327 | e0bdb116
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\OutputXYDlg.cpp | 02-15-2008 | 11:13:14 | | 1927 | 6aaa45b0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\OutputXYDlg.h | 02-15-2008 | 11:13:14 | | 740 | bb8348ae
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\PrintLabelDlg.cpp | 02-15-2008 | 11:13:14 | | 2337 | 10434b32
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\PrintLabelDlg.h | 02-15-2008 | 11:13:14 | | 835 | fe88ffe4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\RectangleObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2067 | f5f818ba
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\RectangleObjectDlg.h | 02-15-2008 | 11:13:14 | | 1391 | c2be9e0c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\resource.h | 02-15-2008 | 11:13:14 | | 7709 | 998c05cb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\StdAfx.cpp | 02-15-2008 | 11:13:14 | | 207 | c55ecd17
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\StdAfx.h | 02-15-2008 | 11:13:12 | | 1008 | 71d983f6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\TextObjectDlg.cpp | 02-15-2008 | 11:13:14 | | 2423 | 52e2559e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\TextObjectDlg.h | 02-15-2008 | 11:13:14 | | 1457 | 1e98fc35
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\ValidateBarCodeDlg.cpp | 02-15-2008 | 11:13:14 | | 2073 | 9aa871e5
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\ValidateBarCodeDlg.h | 02-15-2008 | 11:13:14 | | 1334 | b08d2e40
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.aps | 02-15-2008 | 11:13:14 | | 47136 | a8f6dd95
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.clw | 02-15-2008 | 11:13:14 | | 16066 | 357d7d46
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.cpp | 02-15-2008 | 11:13:14 | | 1506 | 6109b970
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.dsp | 02-15-2008 | 11:13:14 | | 6340 | f416e329
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.dsw | 02-15-2008 | 11:13:14 | | 543 | a0815fc9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.exe | 02-15-2008 | 11:13:12 | 1.0.0.1 | 274432 | c5aff1e6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.h | 02-15-2008 | 11:13:14 | | 1215 | 73b0b4a0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.ico | 02-15-2008 | 11:13:14 | | 318 | 8a29cd92
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.rc | 02-15-2008 | 11:13:14 | | 33683 | 4810dc5d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC TesterDlg.cpp | 02-15-2008 | 11:13:14 | | 32726 | 89c36d77
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC TesterDlg.h | 02-15-2008 | 11:13:14 | | 2536 | e9b792f0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\ZoomDlg.cpp | 02-15-2008 | 11:13:14 | | 1659 | 922670cb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\ZoomDlg.h | 02-15-2008 | 11:13:14 | | 1201 | dffbd442
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\DLS_JS.htm | 03-25-2008 | 14:44:42 | | 2127 | 10a57676
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\DLS_VB.htm | 03-25-2008 | 14:44:42 | | 955 | 3f40f9d9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\miecontext.reg | 03-25-2008 | 14:44:42 | | 196 | 3e709a2e
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\miecontext
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\miecontext\ieprintlabels.js | 03-25-2008 | 14:44:42 | | 1420 | 6f21b453
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\miecontext\miecontext.htm | 03-25-2008 | 14:44:42 | | 726 | ced644ea
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts\miecontext\test.LWL | 03-25-2008 | 14:44:42 | | 581 | 4ff13d5a
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts\DymoPrintLabel.js | 02-15-2008 | 11:13:04 | | 1678 | c30f25f1
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts\PrintLabel.html | 02-15-2008 | 11:13:04 | | 129 | a63bc45c
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts\DYMO SDK Extension
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts\DYMO SDK Extension\dymo.xpi | 02-15-2008 | 11:13:08 | | 12206 | 791f9bb7
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts\DYMO SDK Extension\install.htm | 02-15-2008 | 11:13:08 | | 442 | fb8813a4
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size\Dymo.exe | 02-15-2008 | 11:12:48 | 1.0.0.0 | 28672 | 1a46b7b3
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size\Dymo.frm | 02-15-2008 | 11:12:48 | | 3970 | bb2db929
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size\Dymo.vbp | 02-15-2008 | 11:12:48 | | 765 | d8c53879
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size\Dymo.vbw | 02-15-2008 | 11:12:48 | | 80 | 58ad08fe
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size\Module1.bas | 02-15-2008 | 11:12:48 | | 9441 | 5546ed22
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\Paper Size\MSSCCPRJ.SCC | 02-15-2008 | 11:12:48 | | 189 | aa4cf9e4
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi\DDEDEMO.DPR | 02-15-2008 | 11:13:18 | | 571 | c7a0971f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi\DDEDEMO.exe | 02-15-2008 | 11:13:18 | | 447488 | d39f53eb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi\MAIN.dfm | 02-15-2008 | 11:13:18 | | 2365 | dcd9c355
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi\MAIN.PAS | 02-15-2008 | 11:13:18 | | 8272 | e9aca749
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi\TEXTUTIL.PAS | 02-15-2008 | 11:13:18 | | 2655 | d8f98bed
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\MS Access
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\MS Access\ATTENDEE.MDB | 02-15-2008 | 11:13:18 | | 356352 | 5a759c01
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual Basic
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual Basic\DDEDEMO.exe | 02-15-2008 | 11:13:18 | 1.0.0.0 | 32768 | ee2d2c6f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual Basic\DDEDEMO.VBP | 02-15-2008 | 11:13:18 | | 1172 | 1d6e31b2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual Basic\FORM1.FRM | 02-15-2008 | 11:13:18 | | 14190 | 3e033f77
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\ddeclient.cpp | 02-15-2008 | 11:13:20 | | 6428 | db2f1683
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\ddeclient.h | 02-15-2008 | 11:13:20 | | 1744 | 324fa59e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.cpp | 02-15-2008 | 11:13:20 | | 2603 | ded8bfef
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.dsp | 02-15-2008 | 11:13:20 | | 4063 | cdf9ff01
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.dsw | 02-15-2008 | 11:13:20 | | 539 | a4e45e7c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.exe | 02-15-2008 | 11:13:20 | 1.0.0.1 | 1355852 | e91445db
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.exp | 02-15-2008 | 11:13:20 | | 752 | 9f21a499
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.h | 02-15-2008 | 11:13:20 | | 1926 | 6124ae07
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.ico | 02-15-2008 | 11:13:20 | | 318 | 8a29cd92
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.rc | 02-15-2008 | 11:13:20 | | 5235 | faa6ce48
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemoDlg.cpp | 02-15-2008 | 11:13:20 | | 8669 | 658c5e4a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemoDlg.h | 02-15-2008 | 11:13:20 | | 2090 | e44aca9e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\resource.h | 02-15-2008 | 11:13:20 | | 996 | 4de15888
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\StdAfx.cpp | 02-15-2008 | 11:13:20 | | 205 | 4e87b125
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\StdAfx.h | 02-15-2008 | 11:13:20 | | 928 | be9d56e0
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Color.dfm | 02-15-2008 | 11:13:16 | | 1174 | 83d56da0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Color.pas | 02-15-2008 | 11:13:16 | | 6974 | 4685a8f2
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\decl.pas | 02-15-2008 | 11:13:16 | | 2030 | f9cfc745
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Dymo_TLB.pas | 02-15-2008 | 11:13:16 | | 37799 | 6f620aee
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\frmObjInspector.dfm | 02-15-2008 | 11:13:16 | | 2864 | ad208b16
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\frmObjInspector.pas | 02-15-2008 | 11:13:16 | | 38752 | 7a03e3c4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\lb.dfm | 02-15-2008 | 11:13:16 | | 529 | b4ac16
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\lb.pas | 02-15-2008 | 11:13:16 | | 9280 | ed367abc
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Lblfunctions.pas | 02-15-2008 | 11:13:16 | | 4046 | 893dc331
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Lbltypes.pas | 02-15-2008 | 11:13:16 | | 7917 | 2f20c36c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\MainFrm.dfm | 02-15-2008 | 11:13:16 | | 22063 | 7ba47f57
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\MainFrm.pas | 02-15-2008 | 11:13:16 | | 20884 | e952c4f8
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\TestProj.dpr | 02-15-2008 | 11:13:16 | | 1390 | 556e0b8f
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\TestProj.exe | 02-15-2008 | 11:13:16 | | 665600 | c5cd03b0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\TextEditor.dfm | 02-15-2008 | 11:13:16 | | 723 | f21a3afe
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\TextEditor.pas | 02-15-2008 | 11:13:16 | | 1513 | 8d7568aa
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Wnds.dfm | 02-15-2008 | 11:13:16 | | 878 | 98414e27
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\Wnds.pas | 02-15-2008 | 11:13:16 | | 2676 | 8698cfb6
+Made Dir: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\AddObjectDlg.cpp | 02-15-2008 | 11:13:18 | | 2352 | 67eb1795
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\AddObjectDlg.h | 02-15-2008 | 11:13:16 | | 1325 | 3b95bd9e
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\AddressObjectDlg.cpp | 02-15-2008 | 11:13:18 | | 2552 | 89963b6d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\AddressObjectDlg.h | 02-15-2008 | 11:13:16 | | 1517 | f60a8782
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\BarCodeObjectDlg.cpp | 02-15-2008 | 11:13:16 | | 2162 | 22de602
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\BarCodeObjectDlg.h | 02-15-2008 | 11:13:18 | | 1400 | 3f33ea39
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\bitmap1.bmp | 02-15-2008 | 11:13:18 | | 1270 | 49dc1fdf
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\ChooseWindowDlg.cpp | 02-15-2008 | 11:13:18 | | 2606 | bf530370
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\ChooseWindowDlg.h | 02-15-2008 | 11:13:16 | | 1358 | 4895b037
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\CounterObjectDlg.cpp | 02-15-2008 | 11:13:18 | | 2892 | adf8602a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\CounterObjectDlg.h | 02-15-2008 | 11:13:16 | | 1600 | 53a6e9f8
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\DateTimeObjectDlg.cpp | 02-15-2008 | 11:13:16 | | 2778 | c3160074
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\DateTimeObjectDlg.h | 02-15-2008 | 11:13:18 | | 1572 | 5e1f9d43
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\DLL structures.h | 02-15-2008 | 11:13:18 | | 2595 | fb89bad4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\FindObjectDlg.cpp | 02-15-2008 | 11:13:18 | | 1728 | 1be24eb0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\FindObjectDlg.h | 02-15-2008 | 11:13:16 | | 1276 | 9e51b190
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\GraphicObjectDlg.cpp | 02-15-2008 | 11:13:16 | | 3430 | 9fbb47d1
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\GraphicObjectDlg.h | 02-15-2008 | 11:13:16 | | 1516 | 8ddd52a6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\LineObjectDlg.cpp | 02-15-2008 | 11:13:16 | | 1947 | e35d4332
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\LineObjectDlg.h | 02-15-2008 | 11:13:18 | | 1327 | e0bdb116
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\OutputXYDlg.cpp | 02-15-2008 | 11:13:16 | | 1889 | 2582b1f7
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\OutputXYDlg.h | 02-15-2008 | 11:13:18 | | 740 | bb8348ae
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\PrintLabelDlg.cpp | 02-15-2008 | 11:13:18 | | 2299 | 408ef7ce
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\PrintLabelDlg.h | 02-15-2008 | 11:13:16 | | 835 | fe88ffe4
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\RectangleObjectDlg.cpp | 02-15-2008 | 11:13:16 | | 2029 | f91f5522
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\RectangleObjectDlg.h | 02-15-2008 | 11:13:18 | | 1391 | c2be9e0c
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\resource.h | 02-15-2008 | 11:13:18 | | 7709 | 998c05cb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\StdAfx.cpp | 02-15-2008 | 11:13:16 | | 589 | b0521a6
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\StdAfx.h | 02-15-2008 | 11:13:16 | | 991 | f1913aa5
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\TextObjectDlg.cpp | 02-15-2008 | 11:13:16 | | 2385 | 21c7a12b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\TextObjectDlg.h | 02-15-2008 | 11:13:18 | | 1457 | 1e98fc35
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\ValidateBarCodeDlg.cpp | 02-15-2008 | 11:13:16 | | 2035 | c494ae5d
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\ValidateBarCodeDlg.h | 02-15-2008 | 11:13:18 | | 1334 | b08d2e40
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.cpp | 02-15-2008 | 11:13:16 | | 1514 | f12fddcb
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.dsp | 02-15-2008 | 11:13:18 | | 6294 | 91d9e43b
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.dsw | 02-15-2008 | 11:13:18 | | 543 | a0815fc9
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.exe | 02-15-2008 | 11:13:16 | 1.0.0.1 | 184320 | f1d71459
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.h | 02-15-2008 | 11:13:18 | | 1215 | 73b0b4a0
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.ico | 02-15-2008 | 11:13:16 | | 318 | 8a29cd92
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.rc | 02-15-2008 | 11:13:16 | | 33754 | 4c22867a
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC TesterDlg.cpp | 02-15-2008 | 11:13:16 | | 41719 | 59156dcc
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC TesterDlg.h | 02-15-2008 | 11:13:18 | | 2409 | cc10b2be
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\ZoomDlg.cpp | 02-15-2008 | 11:13:18 | | 1621 | a3a22d71
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\ZoomDlg.h | 02-15-2008 | 11:13:16 | | 1201 | dffbd442
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\SDK Readme.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\SDK Readme.txt | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\DYMO Label Software SDK Manual.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DYMO Label Software SDK Manual.pdf | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\DYMO Label Software SDK FAQ.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DYMO Label Software SDK FAQ.pdf | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\DDE
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\DDE\DDEDEMO.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Delphi\DDEDEMO.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\DLL
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\DLL\TestProj.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Delphi\TestProj.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\High Level COM\hlOLE_Delphi_demo.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Delphi\hlOLE_Delphi_demo.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\Low Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Delphi Samples\Low Level COM\TestProj.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Delphi\TestProj.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\DDE
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\DDE\DDEDEMO.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual C++\DDEDemo.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\DLL
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\DLL\VC Tester.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DLL Calls\Visual C++\VC Tester.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\High Level COM\hlOLEDemo.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++\hlOLEDemo.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\High Level COM\PrintLabel.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (CommandLine)\PrintLabel.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\High Level COM\SmartPasteTest.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Smart Paste)\SmartPasteTest.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\High Level COM\VC Sample.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual C++ (Twin Turbo Printing)\VC Sample.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\Low Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual C++ Samples\Low Level COM\VC Tester.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual C++\VC Tester.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples\DDE
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples\DDE\DDEDEMO.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\Visual Basic\DDEDEMO.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples\High Level COM\hlOLEDEMO.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual Basic\hlOLEDEMO.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples\Low Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual Basic Samples\Low Level COM\lOLEDemo.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\Low Level COM\Visual Basic\llOLEDemo.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\dotNET Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\dotNET Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\dotNET Samples\High Level COM\CPP Sample.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CPP Sample\Debug\CPP Sample.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\dotNET Samples\High Level COM\VB Sample.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\VB Sample\bin\VB Sample.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\dotNET Samples\High Level COM\CSharp Sample.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\dotNET Samples\CSharp Sample\bin\Debug\CSharp Sample.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\MS Access Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\MS Access Samples\DDE
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\MS Access Samples\DDE\ATTENDEE97.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\DDE Calls\MS Access\ATTENDEE.MDB | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\MS Access Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\MS Access Samples\High Level COM\ATTENDEE.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\MS Access\ATTENDEE.MDB | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual FoxPro Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual FoxPro Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Visual FoxPro Samples\High Level COM\hlole_foxpro_demo.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Visual FoxPro\hlole_foxpro_demo.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\PowerBuilder Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\PowerBuilder Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\PowerBuilder Samples\High Level COM\hlole_pb_demo.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Power Builder\hlole_pb_demo.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Tape SDK Samples
+Made Dir: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Tape SDK Samples\High Level COM
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Tape SDK Samples\High Level COM\TapeSDKTest2.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\Visual Basic\TapeSDKTest2.exe | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Tape SDK Samples\High Level COM\DYMOTapeSample.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\High Level COM\Tape SDK Samples\MS Excel\DYMOTapeSample.xls | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\IEScripts.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\IE Scripts | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\FirefoxScripts.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\Firefox Scripts | E:\SoftwareEngineering\printer\DLS_SDK |  | 0 | 1 | 0 | 
+File Copy: E:\SoftwareEngineering\printer\DLS_SDK\UNINSTAL.EXE | 09-28-2001 | 17:00:28 | | 164864 | acd7a536
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\DYMO Label Software SDK
+RegDB Val: DYMO Label Software SDK
+RegDB Name: DisplayName
+RegDB Root: 2
+RegDB Key: Software\Microsoft\Windows\CurrentVersion\Uninstall\DYMO Label Software SDK
+RegDB Val: E:\SOFTWA~1\printer\DLS_SDK\UNINSTAL.EXE E:\SOFTWA~1\printer\DLS_SDK\INSTALL.LOG
+RegDB Name: UninstallString
+RegDB Root: 2
+Shell Link: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\DYMO Label Software SDK\Uninstall DYMO Label Software SDK.lnk
+Link Info: E:\SoftwareEngineering\printer\DLS_SDK\UNINSTAL.EXE | E:\SOFTWA~1\printer\DLS_SDK |  | 0 | 1 | 0 | E:\SOFTWA~1\printer\DLS_SDK\INSTALL.LOG
+User Rights: Admin

@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE=VBScript>
+Sub Btn1_onclick()
+Dim DymoAddIn, DymoLabel
+Set DymoAddIn = CreateObject("DYMO.DymoAddIn")
+Set DymoLabel = CreateObject("DYMO.DymoLabels")
+
+DymoAddIn.Open "C:\Documents and Settings\All Users\Documents\DYMO Label\Label Files\Shipping (30256).LWL"
+
+DymoLabel.SetAddress 1,"Pablo Martini"+chr(10)+"SAMPLE Corporation"+chr(10)+"333 W. Fantasy World"+chr(10)+"Santaland, NP 99999-9999"
+DymoAddIn.Print 1, FALSE
+
+'here is how to print to the "right roll" on a TwinTurbo
+'DymoAddIn.StartPrintJob
+'DymoAddIn.Print2 1, FALSE, 1
+'DymoAddIn.EndPrintJob
+
+'Dim strMyAddress
+'strMyAddress = "CK Hsu" + chr(10) + "828 San Pablo Ave" + chr(10) + "Albany, CA 94706"
+'DymoLabel.SetAddress 1, strMyAddress
+'DymoAddIn.Print 1, TRUE
+
+End Sub
+</SCRIPT>
+<TITLE>Label Printing Demo</Title>
+</HEAD>
+<BODY>
+<Bold>Label Printing Demo</Bold><p>
+<INPUT TYPE=BUTTON NAME=Btn1 VALUE="Print Label">
+</BODY>
+</HTML>
