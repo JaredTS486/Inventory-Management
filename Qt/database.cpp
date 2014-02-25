@@ -1,15 +1,16 @@
 #include <mysql/mysql.h>
 #include <cstdio>
+#include <cstdlib>
+#define server "jpsharpe.net"
+#define user "shauni"
+#define password "M3g@m1nd!"
+#define database "ewaste"
 
 int Connect()
 {
     MYSQL *conn;
     MYSQL_RES *res;
     MYSQL_ROW row;
-    char *server = "server";
-    char *user = "user";
-    char *password = "password";
-    char *database = "cpp_test";
     conn = mysql_init(NULL);
 
     // connect to database

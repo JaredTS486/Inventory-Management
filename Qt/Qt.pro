@@ -10,18 +10,21 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Qt
 TEMPLATE = app
+LIBS = -lserial
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
         database.cpp \
         printer.cpp \
-        qrgen.cpp
+        qrgen.cpp \
+    scanner.cpp
 
 HEADERS  += mainwindow.h \
     database.h \
     printer.h \
-    qrgen.h
+    qrgen.h \
+    scanner.h
 
 FORMS    += \
     mainwindow.ui
