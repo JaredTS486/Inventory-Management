@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>10</x>
+      <y>20</y>
       <width>251</width>
       <height>17</height>
      </rect>
@@ -27,17 +27,43 @@
      <string>MySQL Connection DEBUG</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QPlainTextEdit" name="SQL_DBUG">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>40</y>
       <width>571</width>
-      <height>261</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="plainText">
-     <string>Hello World</string>
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="SCANNER_DEBUG">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>571</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>251</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QR Code Scanner DEBUG</string>
     </property>
    </widget>
   </widget>
@@ -50,6 +76,12 @@
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuDEBUG">
+    <property name="title">
+     <string>DEBUG</string>
+    </property>
+   </widget>
+   <addaction name="menuDEBUG"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

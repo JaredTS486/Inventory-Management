@@ -16,6 +16,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QStatusBar>
@@ -29,8 +30,11 @@ class Ui_MainWindow
 public:
     QWidget *widget;
     QLabel *label;
-    QPlainTextEdit *plainTextEdit;
+    QPlainTextEdit *SQL_DBUG;
+    QPlainTextEdit *SCANNER_DEBUG;
+    QLabel *label_2;
     QMenuBar *menuBar;
+    QMenu *menuDEBUG;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
     QToolBar *toolBar;
@@ -44,14 +48,22 @@ public:
         widget->setObjectName(QStringLiteral("widget"));
         label = new QLabel(widget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 10, 251, 17));
-        plainTextEdit = new QPlainTextEdit(widget);
-        plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(10, 40, 571, 261));
+        label->setGeometry(QRect(10, 20, 251, 17));
+        SQL_DBUG = new QPlainTextEdit(widget);
+        SQL_DBUG->setObjectName(QStringLiteral("SQL_DBUG"));
+        SQL_DBUG->setGeometry(QRect(10, 40, 571, 141));
+        SCANNER_DEBUG = new QPlainTextEdit(widget);
+        SCANNER_DEBUG->setObjectName(QStringLiteral("SCANNER_DEBUG"));
+        SCANNER_DEBUG->setGeometry(QRect(10, 210, 571, 141));
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(10, 190, 251, 17));
         MainWindow->setCentralWidget(widget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 592, 23));
+        menuDEBUG = new QMenu(menuBar);
+        menuDEBUG->setObjectName(QStringLiteral("menuDEBUG"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -63,6 +75,8 @@ public:
         toolBar->setObjectName(QStringLiteral("toolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, toolBar);
 
+        menuBar->addAction(menuDEBUG->menuAction());
+
         retranslateUi(MainWindow);
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -72,7 +86,10 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         label->setText(QApplication::translate("MainWindow", "MySQL Connection DEBUG", 0));
-        plainTextEdit->setPlainText(QApplication::translate("MainWindow", "Hello World", 0));
+        SQL_DBUG->setPlainText(QString());
+        SCANNER_DEBUG->setPlainText(QString());
+        label_2->setText(QApplication::translate("MainWindow", "QR Code Scanner DEBUG", 0));
+        menuDEBUG->setTitle(QApplication::translate("MainWindow", "DEBUG", 0));
         toolBar->setWindowTitle(QApplication::translate("MainWindow", "toolBar", 0));
     } // retranslateUi
 
