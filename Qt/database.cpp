@@ -3,7 +3,7 @@
 #include <cstdlib>
 #define server "jpsharpe.net"
 #define user "shauni"
-#define password "M3g@m1nd!"
+#define password "nAkqUSPezWVJ2dQM"
 #define database "ewaste"
 
 int Connect()
@@ -21,7 +21,7 @@ int Connect()
     }
 
     // send SQL query
-    if(mysql_query(conn, "select * from cpp_testTAB"))
+    if(mysql_query(conn, "select * from recieving"))
     {
         fprintf(stderr, "%s\n", mysql_error(conn));
         return -1;

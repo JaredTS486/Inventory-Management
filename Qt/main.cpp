@@ -24,19 +24,13 @@ int CallQRGen()
     return 0;
 }
 
-int CallScanner()
-{
-    Scan();
-    return 0;
-}
-
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     MainWindow w;
-    QPushButton *button = new QPushButton("Hello World", &w);
-    button->setGeometry(10, 10, 80, 30);
     w.show();
-
+    Scanner scanner;
+    scanner.done = false;
+    CallDatabase();
     return app.exec();
 }
