@@ -6,7 +6,7 @@ using namespace LibSerial;
 int Scan()
 {
     SerialStream ScannerStream;
-    ScannerStream.Open( "/dev/tty30" );
+    ScannerStream.Open( "/dev/tty32" );
     if ( ! ScannerStream.good() ){
         std::cerr << "[" << __FILE__ << ":" << __LINE__ << "] "
                   << "Error: Could not open serial port."
@@ -15,7 +15,7 @@ int Scan()
     }
 
     //BAUD Rate
-    ScannerStream.SetBaudRate( SerialStreamBuf::BAUD_57600 ) ;
+    ScannerStream.SetBaudRate( SerialStreamBuf::BAUD_115200 ) ;
     if ( ! ScannerStream.good() ){
         std::cerr << "Error: Could not set the baud rate." << std::endl ;
         exit(1) ;
@@ -44,7 +44,7 @@ int Scan()
     }
 
     // Turn on hardware flow control.
-    ScannerStream.SetFlowControl( SerialStreamBuf::FLOW_CONTROL_HARD ) ;
+    ScannerStream.SetFlowControl( SerialStreamBuf::FLOW_CONTROL_HARD );
     if ( ! ScannerStream.good() ){
         std::cerr << "Error: Could not use hardware flow control."
                   << std::endl ;

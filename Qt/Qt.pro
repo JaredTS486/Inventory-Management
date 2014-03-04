@@ -18,7 +18,8 @@ SOURCES += main.cpp\
         database.cpp \
         printer.cpp \
         qrgen.cpp \
-    scanner.cpp
+    scanner.cpp \
+    scanner2.cpp
 
 HEADERS  += mainwindow.h \
     database.h \

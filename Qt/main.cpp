@@ -1,5 +1,6 @@
-#include "mainwindow.h"
 #include <QApplication>
+#include <QPushButton>
+#include "mainwindow.h"
 #include "database.h"
 #include "qrgen.h"
 #include "printer.h"
@@ -23,7 +24,7 @@ int CallQRGen()
     return 0;
 }
 
-int Scanner()
+int CallScanner()
 {
     Scan();
     return 0;
@@ -31,11 +32,11 @@ int Scanner()
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     MainWindow w;
+    QPushButton *button = new QPushButton("Hello World", &w);
+    button->setGeometry(10, 10, 80, 30);
     w.show();
-    CallPrinter();
-    CallDatabase();
-    CallQRGen();
-    return a.exec();
+
+    return app.exec();
 }
