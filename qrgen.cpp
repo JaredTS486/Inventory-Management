@@ -1,23 +1,28 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <iomanip>
 #include <qrencode.h>
 
 using namespace std;
 
 
-void QRGen()
+unsigned char *QRGen(string dataString)
 {
-   string sampleDataString = "It Works!!!";
+   //string sampleDataString = "It Works!!!";
    QRcode *qrc;
    qrc = new QRcode;
-   qrc =  QRcode_encodeString8bit(sampleDataString.c_str(),4,QR_ECLEVEL_Q);
-   ofstream outf("SampleQRCodeFile.txt");
+   qrc = QRcode_encodeString8bit(dataString.c_str(),4,QR_ECLEVEL_Q);
+   cout << "The QRC data should be " << dataString << endl;
+   return qrc->data;
+}
 
-   outf << "QRC Data: " << qrc->data <<endl
-        << "\nQRC Version: " << qrc->version <<endl
-        << "\nQRC Width: " << qrc->width<<endl;
+void test()
+{
+   cout << QRGen("Hello, World") << endl;
+}
 
-   cout << sampleDataString <<endl;
+int main()
+{
+	test();
+	return 0;
 }
