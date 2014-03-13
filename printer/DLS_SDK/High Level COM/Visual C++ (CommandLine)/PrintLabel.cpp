@@ -135,6 +135,6 @@ int _tmain(int argc, TCHAR* argv[], TCHAR* envp[])
 					
 		m_DymoAddIn.Print2(Copies, false, Tray);
 	}
-
+	system("pause");
 	return nRetCode;
 }
