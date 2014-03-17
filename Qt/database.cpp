@@ -1,6 +1,7 @@
-#include <mysql.h>
 #include <cstdio>
 #include <cstdlib>
+#include <winsock.h>
+#include <mysql.h>
 #define server "jpsharpe.net"
 #define user "shauni"
 #define password "nAkqUSPezWVJ2dQM"

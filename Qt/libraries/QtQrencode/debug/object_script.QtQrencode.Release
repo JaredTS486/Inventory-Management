@@ -1,0 +1,12 @@
+INPUT(
+./release/bitstream.o
+./release/mask.o
+./release/mmask.o
+./release/mqrspec.o
+./release/qrenc.o
+./release/qrencode.o
+./release/qrinput.o
+./release/qrspec.o
+./release/rscode.o
+./release/split.o
+);

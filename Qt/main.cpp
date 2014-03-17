@@ -1,10 +1,11 @@
 #include <QApplication>
+#include <QCoreApplication>
 #include <QPushButton>
 #include "mainwindow.h"
 #include "database.h"
 #include "qrgen.h"
 #include "printer.h"
-#include "scanner.h"
+#include "PortListener.h"
 
 int CallPrinter()
 {
@@ -29,8 +30,10 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     MainWindow w;
     w.show();
-    Scanner scanner;
-    scanner.done = false;
+
+    QString portName = QLatin1String("COM1"); //Scanner
+    PortListener listener(portName);
+
     CallDatabase();
     return app.exec();
 }

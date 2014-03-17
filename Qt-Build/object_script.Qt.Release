@@ -1,0 +1,14 @@
+INPUT(
+./release/qextserialport.o
+./release/qextserialenumerator.o
+./release/qextserialport_win.o
+./release/qextserialenumerator_win.o
+./release/main.o
+./release/mainwindow.o
+./release/database.o
+./release/printer.o
+./release/qrgen.o
+./release/PortListener.o
+./release/moc_mainwindow.o
+./release/moc_PortListener.o
+);

@@ -1,0 +1,12 @@
+INPUT(
+./debug/bitstream.o
+./debug/mask.o
+./debug/mmask.o
+./debug/mqrspec.o
+./debug/qrenc.o
+./debug/qrencode.o
+./debug/qrinput.o
+./debug/qrspec.o
+./debug/rscode.o
+./debug/split.o
+);
