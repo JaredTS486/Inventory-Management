@@ -39,6 +39,8 @@ public:
 	bool Print(string ImageFile){
 		DymoLabels.SetImageFile(QRC, ImageFile);
 		DymoAddin.Print(1, False);
+		
+	}
 
 
 
