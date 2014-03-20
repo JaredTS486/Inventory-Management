@@ -2,13 +2,10 @@
 libraries printer will need
 #include <iostream>
 #include <String>
-#include "stdafx.h"
 #include "PrintLabel.h"
-#include "CDymoAddIn4.h"
+#include "CDymoAddIn2.h"
 #include "CDymoLabels.h"
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
+#include "CDymoTape.h"
 */
 
 class Printer{
@@ -39,8 +36,16 @@ public:
 	bool Print(string ImageFile){
 		DymoLabels.SetImageFile(QRC, ImageFile);
 		DymoAddin.Print(1, False);
+		return true;
 		
 	}
+	
+	bool PrintBarcode(string Code){
+		if (!DymoAddin.AddBarcode(Code,1,2,0))
+			return false;
+		DymoAddin.Print(1, False);
+		return true;
+		}
 
 
 
