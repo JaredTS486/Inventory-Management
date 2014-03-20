@@ -3,7 +3,7 @@ libraries printer will need
 #include <iostream>
 #include <String>
 #include "PrintLabel.h"
-#include "CDymoAddIn2.h"
+#include "CDymoAddIn5.h"
 #include "CDymoLabels.h"
 #include "CDymoTape.h"
 */
@@ -33,7 +33,7 @@ public:
 		return true;
 	}
 
-	bool Print(string ImageFile){
+	bool PrintImage(string ImageFile){
 		DymoLabels.SetImageFile(QRC, ImageFile);
 		DymoAddin.Print(1, False);
 		return true;
@@ -47,6 +47,15 @@ public:
 		return true;
 		}
 
-
+	bool Open(string name){
+		if (!DymoAddin.Open(name))
+			return false
+		return true;
+	}
+	
+	bool Print(){
+		DymoAddin.print(1, False);
+		return true;
+	}
 
 };
