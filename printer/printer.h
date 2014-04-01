@@ -14,7 +14,7 @@ class Printer{
 		CDymoLabels DymoLabels;
 	}
 public:
-	bool InitObjects(){
+	bool PrinterInit(){
 		if (DymoAddIn.m_lpDispatch == NULL){		
 			if (!DymoAddIn.CreateDispatch(_T("Dymo.DymoAddIn"))){
 				cout<<"Error: Cannot create the DymoAddIn."<<endl;					
@@ -29,7 +29,8 @@ public:
 				return false;
 			}
 		}
-		DymoLabels.
+		if (!DymoAddIn.open("default.lbl"))
+			DymoAddIn.new("default.lbl"));
 		return true;
 	}
 
