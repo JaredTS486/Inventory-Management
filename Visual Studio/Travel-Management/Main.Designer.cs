@@ -26,13 +26,15 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
             this.FileNameEdit = new System.Windows.Forms.TextBox();
             this.BrowseBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ScannerText = new System.Windows.Forms.TextBox();
+            this.label = DYMO.Label.Framework.Label.Open(@"Test.label");
+            this.ScanComm = new System.IO.Ports.SerialPort();
             this.SuspendLayout();
             // 
             // FileNameEdit
@@ -73,6 +75,7 @@
             this.ScannerText.Name = "ScannerText";
             this.ScannerText.Size = new System.Drawing.Size(507, 20);
             this.ScannerText.TabIndex = 5;
+            ScannerText.KeyDown += new System.Windows.Forms.KeyEventHandler(Main_KeyDown);
             // 
             // Main
             // 
@@ -88,7 +91,6 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
