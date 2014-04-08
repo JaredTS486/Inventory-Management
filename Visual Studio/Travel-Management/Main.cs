@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dymo;
+using System.IO;
+using MetroCommLibrary;
+using DYMO;
 
 namespace Travel_Management
 {
     public partial class Main : Form
     {
-        public IDymoAddIn4 DymoAddIn;
-        public IDymoLabels DymoLabels;
+        public DYMO.Label.Framework.Label label;
+        public IMetroComm ScanComm;
+        public _IMetroCommEvents ScanEvents;
         private System.Windows.Forms.TextBox FileNameEdit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button BrowseBtn;
@@ -22,32 +25,35 @@ namespace Travel_Management
         public Main()
         {
             InitializeComponent();
-            DymoAddIn = new DymoAddInClass();
-            DymoLabels = new DymoLabelsClass();
-            FileNameEdit.Text = DymoAddIn.FileName;
-            string PrtrNames = DymoAddIn.GetDymoPrinters();
-            DymoAddIn.SelectPrinter("DYMO LabelWriter 400");
-            Console.WriteLine(PrtrNames);
+            var scanner = ScanComm
+            var label = DYMO.Label.Framework.Label.Open(@"Test.label");
+            label.SetObjectText("BARCODE", "DYMOn828 San Pablo AvenAlbany CA 94706");
+            label.Print("DYMO LabelWriter 400");
         }
         private void Print_Click(object sender, System.EventArgs e)
         {
-            DymoAddIn.StartPrintJob();
-            DymoAddIn.Print(1, false);
-            DymoAddIn.EndPrintJob();
+            //DymoAddIn.StartPrintJob();
+            //DymoAddIn.Print(1, false);
+            //DymoAddIn.EndPrintJob();
         }
         private void Browse_Click(object sender, System.EventArgs e)
         {
-            string str = FileNameEdit.Text;
-            int i = str.LastIndexOf("\\");
-            str = str.Substring(0, i);
-            openFileDialog1.InitialDirectory = str;
-            if (openFileDialog1.ShowDialog() == DialogResult.OK){
-                if (DymoAddIn.Open(openFileDialog1.FileName)){
-                    FileNameEdit.Text = openFileDialog1.FileName;
-                    if (!DymoAddIn.Open("Test.label")) 
-                        Console.WriteLine("Failed to open label");
-                }
-            }
+            //string str = FileNameEdit.Text;
+            //int i = str.LastIndexOf("\\");
+            //str = str.Substring(0, i);
+            //openFileDialog1.InitialDirectory = str;
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK){
+            //    if (DymoAddIn.Open(openFileDialog1.FileName)){
+            //        FileNameEdit.Text = openFileDialog1.FileName;
+            //        if (!DymoAddIn.Open("Test.label")) 
+            //            Console.WriteLine("Failed to open label");
+            //    }
+            //}
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

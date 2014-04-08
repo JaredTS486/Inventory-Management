@@ -12,5 +12,19 @@ c:\users\jared\documents\visual studio 2013\Projects\Travel-Management\Travel-Ma
 C:\Users\Jared\Documents\Visual Studio 2013\Projects\Travel-Management\Travel-Management\obj\Debug\Travel_Management.Main.resources
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Travel-Management.exe.config
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.csproj.ResolveComReference.cache
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Travel-Management.exe
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Travel-Management.pdb
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel_Management.Main.resources
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel_Management.Properties.Resources.resources
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.csproj.GenerateResource.Cache
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.exe
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.pdb
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.Label.Framework.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.DLS.Runtime.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.Common.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Interop.DYMOPrintingSupportLib.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Interop.DYMOBarcodeLib.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.Label.Framework.xml
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Interop.MetroCommLibrary.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Interop.TerminalCommunications.dll
