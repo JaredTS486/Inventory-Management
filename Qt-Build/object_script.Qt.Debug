@@ -6,9 +6,9 @@ INPUT(
 ./debug/main.o
 ./debug/mainwindow.o
 ./debug/database.o
-./debug/printer.o
 ./debug/qrgen.o
 ./debug/PortListener.o
+./debug/PrintLabel.o
 ./debug/moc_mainwindow.o
 ./debug/moc_PortListener.o
 );

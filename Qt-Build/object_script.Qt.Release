@@ -6,9 +6,9 @@ INPUT(
 ./release/main.o
 ./release/mainwindow.o
 ./release/database.o
-./release/printer.o
 ./release/qrgen.o
 ./release/PortListener.o
+./release/PrintLabel.o
 ./release/moc_mainwindow.o
 ./release/moc_PortListener.o
 );

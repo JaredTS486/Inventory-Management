@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPrinter>
+#include <QPrintDialog>
+#include <QPrinterInfo>
 
 namespace Ui {
 class MainWindow;

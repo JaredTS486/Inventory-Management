@@ -1,4 +1,6 @@
-#ifndef QRGEN_H
-#define QRGEN_H
+//#ifndef QRGEN_H
+//#define QRGEN_H
 
-#endif // QRGEN_H
+//unsigned char *QRGen(); //updated to match latest version of QRGen.
+
+//#endif // QRGEN_H
