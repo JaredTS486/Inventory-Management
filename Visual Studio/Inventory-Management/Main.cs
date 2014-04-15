@@ -10,10 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using DYMO.Label.Framework;
 using System.IO.Ports;
-<<<<<<< HEAD
-
-=======
->>>>>>> 7c04312cae1580728a3796eb5f816d9589b9c1e1
 
 namespace Travel_Management
 {
@@ -47,7 +43,7 @@ namespace Travel_Management
         {
             SerialPort sp = (SerialPort)sender;
             string indata = sp.ReadExisting();
-            TestTextBox.Text = "";
+            boxSource.Text = "";
             Console.Write(indata);
         }
 
@@ -83,6 +79,32 @@ namespace Travel_Management
         private void Main_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxParentCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (boxParentCheckbox.Checked) boxParentID.Enabled = false;
+            if (!boxParentCheckbox.Checked) boxParentID.Enabled = true;
         }
     }
 }
