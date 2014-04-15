@@ -10,7 +10,10 @@ using System.Windows.Forms;
 using System.IO;
 using DYMO.Label.Framework;
 using System.IO.Ports;
-using TerminalCommunications;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7c04312cae1580728a3796eb5f816d9589b9c1e1
 
 namespace Travel_Management
 {
@@ -18,13 +21,11 @@ namespace Travel_Management
     {
         public SerialPort ScanComm;
         public DYMO.Label.Framework.ILabel label;
-        private System.Windows.Forms.TextBox FileNameEdit;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button BrowseBtn;
-        private System.Windows.Forms.Button PrintBtn;
         public Main()
         {
             InitializeComponent();
+            //ScanSetup();
         }
         public void PrintLabel(String NewData)
         {
@@ -33,31 +34,23 @@ namespace Travel_Management
         }
         private void ScanSetup()
         {
-            ScanComm.PortName = "COM1";
+            ScanComm.PortName = "COM6"; //TODO Auto Find COM Ports or add Selection.
             ScanComm.BaudRate =  9600;
             ScanComm.Parity = Parity.None;
             ScanComm.DataBits = 8;
             ScanComm.StopBits = StopBits.One;
+            ScanComm.Handshake = Handshake.None;
+            ScanComm.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+            ScanComm.Open();
         }
-        private void ScanCode(object sender, SerialDataReceivedEventHandler e)
+        private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            this.ScannerText.Text = ScanComm.ReadLine();
+            SerialPort sp = (SerialPort)sender;
+            string indata = sp.ReadExisting();
+            TestTextBox.Text = "";
+            Console.Write(indata);
         }
-        //EXAMPLE FOR EVENT ARGUMENTS, THIS ONE IS FOR WHEN SOME ONE USES THE A KEY -- Jared
-        public void Main_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            if (e.KeyCode == System.Windows.Forms.Keys.A)
-            {
-                System.Console.WriteLine("Hello World");
-                this.ScannerText.Text = " KeyPress";
-            }
-        }
-        private void Print_Click(object sender, System.EventArgs e)
-        {
-            //DymoAddIn.StartPrintJob();
-            //DymoAddIn.Print(1, false);
-            //DymoAddIn.EndPrintJob();
-        }
+
         private void Browse_Click(object sender, System.EventArgs e)
         {
             //string str = FileNameEdit.Text;
@@ -74,6 +67,20 @@ namespace Travel_Management
         }
 
         private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //EXAMPLE FOR EVENT ARGUMENTS, THIS ONE IS FOR WHEN SOME ONE USES THE A KEY -- Jared
+        public void Main_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.A)
+            {
+                System.Console.WriteLine("Hello World");
+            }
+        }
+
+        private void Main_Load_1(object sender, EventArgs e)
         {
 
         }

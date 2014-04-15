@@ -2,6 +2,7 @@ C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Manage
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Travel-Management.exe
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Travel-Management.pdb
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.Label.Framework.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\MySql.Data.Entity.dll
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.DLS.Runtime.dll
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.Common.dll
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Interop.DYMOPrintingSupportLib.dll
@@ -9,9 +10,9 @@ C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Manage
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\DYMO.Label.Framework.xml
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\bin\Debug\Interop.TerminalCommunications.dll
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Interop.TerminalCommunications.dll
-C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\TRM.csproj.ResolveComReference.cache
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\IVM.csproj.ResolveComReference.cache
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel_Management.Main.resources
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel_Management.Properties.Resources.resources
-C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\TRM.csproj.GenerateResource.Cache
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\IVM.csproj.GenerateResource.Cache
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.exe
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Travel-Management\obj\Debug\Travel-Management.pdb
