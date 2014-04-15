@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using DYMO.Label.Framework;
 using System.IO.Ports;
-using TerminalCommunications;
 
 namespace Travel_Management
 {
