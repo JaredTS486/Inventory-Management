@@ -25,7 +25,6 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
-            this.TestTextBox = new System.Windows.Forms.TextBox();
             this.ScanComm = new System.IO.Ports.SerialPort();
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
             this.label = DYMO.Label.Framework.Label.Open("Main.label");
@@ -190,18 +189,24 @@
             this.boxParentID.Name = "boxParentID";
             this.boxParentID.Size = new System.Drawing.Size(716, 20);
             this.boxParentID.TabIndex = 11;
+            //
             // ScanComm
             //
-            this.ScanComm.PortName = "COM6"; //TODO Auto Find COM Ports or add Selection.
+            try
+            {
+                //this.ScanComm.PortName = "COM6"; //TODO Auto Find COM Ports or add Selection.
+            }
+            catch 
+            { 
+
+            }
             this.ScanComm.BaudRate = 9600;
             this.ScanComm.Parity = System.IO.Ports.Parity.None;
             this.ScanComm.DataBits = 8;
             this.ScanComm.StopBits = System.IO.Ports.StopBits.One;
             this.ScanComm.Handshake = System.IO.Ports.Handshake.None;
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(DataReceivedHandler);
-            this.ScanComm.Open();
-            // 
-            // TestTextBox
+            //this.ScanComm.Open();
             // 
             // boxParentCheckbox
             // 
@@ -226,7 +231,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.boxWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxParentID)).EndInit();
             this.ResumeLayout(false);
-
         }
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

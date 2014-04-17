@@ -30,7 +30,7 @@ namespace Travel_Management
         }
         public void Set_InputTestData(String indata)
         {
-            this.TestTextBox.Text = indata;
+
         }
         private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e){
             SerialPort sp = (SerialPort)sender;
