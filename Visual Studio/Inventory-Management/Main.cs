@@ -95,6 +95,8 @@ namespace Travel_Management
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBox1.SelectedItem == "Box") objectSubmit.Hide();
+            if (listBox1.SelectedItem == "Item") objectSubmit.Show();
 
         }
 
@@ -107,6 +109,16 @@ namespace Travel_Management
         {
             if (boxParentCheckbox.Checked) boxParentID.Enabled = false;
             if (!boxParentCheckbox.Checked) boxParentID.Enabled = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxSource_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
