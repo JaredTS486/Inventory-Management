@@ -116,7 +116,8 @@ namespace Travel_Management
 
         private void Main_Load_1(object sender, EventArgs e)
         {
-
+            receivingPanel.Hide();
+            reusePanel.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -129,10 +130,23 @@ namespace Travel_Management
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void menuListbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == "Box") objectSubmit.Hide();
-            if (listBox1.SelectedItem == "Item") objectSubmit.Show();
+            if (menuListbox.SelectedItem == "Receiving")
+            {
+                reusePanel.Hide();
+                receivingPanel.Show();
+        }
+            if (menuListbox.SelectedItem == "Reuse")
+            {
+                receivingPanel.Hide();
+                reusePanel.Show();
+            }
+            if (menuListbox.SelectedItem == "Office")
+            {
+                receivingPanel.Hide();
+                reusePanel.Hide();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -142,8 +156,7 @@ namespace Travel_Management
 
         private void boxParentCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (boxParentCheckbox.Checked) boxParentID.Enabled = false;
-            if (!boxParentCheckbox.Checked) boxParentID.Enabled = true;
+          
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -152,6 +165,32 @@ namespace Travel_Management
         }
 
         private void boxSource_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingPileCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (receivingPileCheckbox.Checked) receivingGaylordSource.Enabled = false;
+            if (!receivingPileCheckbox.Checked) receivingGaylordSource.Enabled = true;
+        }
+
+        private void receivingPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void receivingCommentsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reusePanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
