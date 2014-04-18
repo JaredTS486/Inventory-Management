@@ -25,7 +25,10 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
+            this.dbVars = new DBI();
+            this.lblVars = new LabelStuff();
             this.components = new System.ComponentModel.Container();
+            this.myDelegate = new AddDataDelegate(AddDataMethod);
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
             this.boxSource = new System.Windows.Forms.TextBox();
@@ -47,6 +50,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.boxWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxParentID)).BeginInit();
             this.SuspendLayout();
+            //
+            // dbVars
+            //
+            this.dbVars.SetUser("shauni");
+            this.dbVars.SetPass("wDrTxy3hSUnRHLKY");
+            this.dbVars.SetServer("jpsharpe.net");
+            this.dbVars.SetDatabase("ewaste");
             // 
             // ScanComm
             // 
