@@ -34,3 +34,4 @@ C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Inventory-Man
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Inventory-Management\bin\Debug\Microsoft.CSharp.dll
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Inventory-Management\bin\Debug\MySql.Data.dll
 C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Inventory-Management\bin\Debug\System.dll
+C:\Users\Jared\Documents\GitHub\Inventory-Management\Visual Studio\Inventory-Management\obj\Debug\IVM.csprojResolveAssemblyReference.cache

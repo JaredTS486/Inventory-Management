@@ -16,10 +16,8 @@ namespace Inventory_Management
 {
     public partial class Main : Form
     {
-        private OpenFileDialog OpenFile1;
         public DATABASE dbs;
         public LABELS lbl;
-        private SerialPort ScanComm;
         public delegate void AddDataDelegate(String myString);
         public AddDataDelegate myDelegate;
         public Main()
@@ -59,6 +57,13 @@ namespace Inventory_Management
             this.myDelegate = new AddDataDelegate(AddDataMethod);
         }
 
+        private void receivingCommentsLabel_Click(object sender, EventArgs e) { }
+        private void receivingCommentsLabel_Click_1(object sender, EventArgs e) { }
+        private void receivingDateReceivedLabel_Click(object sender, EventArgs e){ }
+        private void receivingWeightLabel_Click(object sender, EventArgs e){ }
+        private void receivingCategoryLabel_Click(object sender, EventArgs e) { }
+        private void receivingClientLabel_Click(object sender, EventArgs e) { }
+
         private void receivingPileCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             if (receivingPileCheckbox.Checked) receivingClientTextbox.Enabled = false;
@@ -66,51 +71,6 @@ namespace Inventory_Management
         }
 
         private void receivingPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void receivingCommentsLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void reusePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void boxInputSubmitButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receivingPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void boxInputSubmitButton_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receivingDateReceivedLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receivingWeightLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receivingCategoryLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void receivingClientLabel_Click(object sender, EventArgs e)
         {
 
         }
@@ -140,18 +100,24 @@ namespace Inventory_Management
 
         }
 
-        private void receivingCommentsLabel_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void receivingPileCheckbox_CheckedChanged_1(object sender, EventArgs e)
         {
 
         }
-        private void harvestingTab_Click(object sender, System.EventArgs e)
-        {
 
+        private void receivingSubmitButton_Click(object sender, EventArgs e)
+        {
+            string source = this.receivingClientTextbox.Text;
+            string weight = this.receivingWeightNumericbox.Text;
+            string type = this.receivingCategoryTextbox.Text;
+            string comments = this.receivingCommentsTextbox.Text;
+            string date = this.receivingDateReceivedDatebox.Text;
+            Console.WriteLine(source);
+            Console.WriteLine(weight);
+            Console.WriteLine(type);
+            Console.WriteLine(comments);
+            Console.WriteLine(date);
+            //dbs.ReceivingInsert(source, weight, type, comments, date);
         }
     }
     public partial class DATABASE
