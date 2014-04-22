@@ -7,7 +7,7 @@
     <ProjectGuid>{640FBF3B-7375-40FE-B3C2-D66B3B9161CE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Travel_Management</RootNamespace>
+    <RootNamespace>Inventory_Management</RootNamespace>
     <AssemblyName>Travel-Management</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Main.label" />
     <None Include="Properties\Settings.settings">

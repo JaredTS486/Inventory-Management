@@ -12,20 +12,19 @@ using System.IO.Ports;
 using DYMO.Label.Framework;
 using MySql.Data.MySqlClient;
 
-namespace Travel_Management
+namespace Inventory_Management
 {
     public partial class Main : Form
     {
         private OpenFileDialog OpenFile1;
-        public DBI dbVars;
-        public LabelStuff lblVars;
+        public DATABASE dbs;
+        public LABELS lbl;
         private SerialPort ScanComm;
         public delegate void AddDataDelegate(String myString);
         public AddDataDelegate myDelegate;
         public Main()
         {
             InitializeComponent();
-            dbVars.TestDB();
         }
         public void AddDataMethod(String myString)
         {
@@ -135,8 +134,91 @@ namespace Travel_Management
         {
 
         }
+
+        private void boxInputSubmitButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void boxInputSubmitButton_Click_1(object sender, EventArgs e)
+        {
+            string source = this.receivingGaylordSource.Text;
+            string date = this.receivingDateReceived.Text;
+            string weight = this.receivingWeight.Text;
+            string category = this.receivingCategory.Text;
+            string comments = this.receivingComments.Text;
+            string type = this.receivingPileCheckbox.Text;
+            Console.WriteLine(source);
+            Console.WriteLine(date);
+            Console.WriteLine(weight);
+            Console.WriteLine(category);
+            Console.WriteLine(comments);
+            Console.WriteLine(type);
+            Console.WriteLine("HELLO WORLD");
+            //dbs.ReceivingInsert(source, weight, type, comments, date);
+        }
+
+        private void receivingDateReceivedLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingWeightLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingCategoryLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingClientLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingCategory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingWeight_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingDateReceived_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingGaylordSource_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingComments_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingCommentsLabel_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void receivingPileCheckbox_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
-    public partial class DBI
+    public partial class DATABASE
     {
         private String usr;
         private String pwd;
@@ -151,39 +233,64 @@ namespace Travel_Management
         public String GetPass() { return this.pwd; }
         public String GetServer() { return this.srv; }
         public String GetDatabase() { return this.dbs; }
-        public bool TestDB()
+        public bool Connection()
         {
             string connectionString = "database=" + this.dbs + ";server=" + this.srv + ";uid=" + this.usr + ";pwd=" + this.pwd;
-            using (conn = new MySqlConnection(connectionString))
-            {
-                try
-                {
+            using (conn = new MySqlConnection(connectionString)){
+                try{
                     conn.Open();
                     return true;
                 }
-                catch (MySqlException ex)
-                {
-                    switch (ex.Number)
-                    {
-                        case 4060:
-                            Console.WriteLine("INVALID DATABASE");
-                            return false;
-                        case 18456:
-                            Console.WriteLine("LOGIN FAILED");
-                            return false;
-                        default:
-                            Console.WriteLine("ERROR: " + ex);
-                            return false;
-                    }
+                catch (MySqlException ex){
+                    Console.WriteLine("ERROR IN SQL CONNECTION: " + ex);
+                    return false;
                 }
             }
         }
+        public bool ReceivingInsert(string source, string weight, string type, string comments, string date)
+        {
+            if(Connection())
+            {   //Contains query to insert data specifically into the receiving table using parameterization.
+                this.conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                cmd.CommandText = @"INSERT INTO receiving(Source,Weight,Type,Comments,DateReceived) 
+                                    VALUES(?source,?weight,?type,?comments,?date)";
+                cmd.Parameters.Add("?source", MySqlDbType.VarChar).Value = "Source Test";
+                cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = "Weight Test";
+                cmd.Parameters.Add("?type", MySqlDbType.VarChar).Value = "Type Test";
+                cmd.Parameters.Add("?comments", MySqlDbType.VarChar).Value = "Comments Test";
+                cmd.Parameters.Add("?date", MySqlDbType.VarChar).Value = "Date Test";
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            return false;
+        }
+        public bool ReuseInsert(string source, string weight, string type, string comments, string date)
+        {
+            if(Connection())
+            {   //Contains query to insert data specifically into the reuse table using parameterization.
+                this.conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                cmd.CommandText = @"INSERT INTO reuse(Source,Weight,Type,Comments,DateReceived) 
+                                    VALUES(?source,?weight,?type,?comments,?date)";
+                cmd.Parameters.Add("?source", MySqlDbType.VarChar).Value = "Source Test";
+                cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = "Weight Test";
+                cmd.Parameters.Add("?type", MySqlDbType.VarChar).Value = "Type Test";
+                cmd.Parameters.Add("?comments", MySqlDbType.VarChar).Value = "Comments Test";
+                cmd.Parameters.Add("?date", MySqlDbType.VarChar).Value = "Date Test";
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            return false;
+        }
     }
-    public partial class LabelStuff
+    public partial class LABELS
     {
         private ILabel label;
-        public LabelStuff(String LabelName) { label = DYMO.Label.Framework.Label.Open(LabelName); }
-        public LabelStuff() { }
+        public LABELS(String LabelName) { label = DYMO.Label.Framework.Label.Open(LabelName); }
+        public LABELS() { }
         private void SetBarcode(String BarcodeData) { label.SetObjectText("BARCODE", BarcodeData); }
         private void SetInfoData(String InfoData) { label.SetObjectText("INFOTXT", InfoData); }
         private String GetBarcode() { return label.GetObjectText("BARCODE"); }

@@ -1,4 +1,4 @@
-﻿namespace Travel_Management
+﻿namespace Inventory_Management
 {
     partial class Main
     {
@@ -25,15 +25,10 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
-            this.dbVars = new DBI();
-            this.lblVars = new LabelStuff();
             this.components = new System.ComponentModel.Container();
-            this.myDelegate = new AddDataDelegate(AddDataMethod);
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
-            this.menuListbox = new System.Windows.Forms.ListBox();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.boxInputSubmitButton = new System.Windows.Forms.Button();
+            this.recievingSubmitButton = new System.Windows.Forms.Button();
             this.receivingComments = new System.Windows.Forms.TextBox();
             this.receivingCommentsLabel = new System.Windows.Forms.Label();
             this.receivingCategory = new System.Windows.Forms.TextBox();
@@ -42,190 +37,157 @@
             this.receivingWeightLabel = new System.Windows.Forms.Label();
             this.receivingDateReceived = new System.Windows.Forms.DateTimePicker();
             this.receivingDateReceivedLabel = new System.Windows.Forms.Label();
-            this.receivingGaylordSource = new System.Windows.Forms.TextBox();
             this.receivingPileCheckbox = new System.Windows.Forms.CheckBox();
+            this.receivingGaylordSource = new System.Windows.Forms.TextBox();
             this.receivingClientLabel = new System.Windows.Forms.Label();
             this.receivingPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.reusePanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.receivingWeight)).BeginInit();
             this.receivingPanel.SuspendLayout();
-            this.reusePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
-            //
-            // dbVars
-            //
-            this.dbVars.SetUser("shauni");
-            this.dbVars.SetPass("wDrTxy3hSUnRHLKY");
-            this.dbVars.SetServer("jpsharpe.net");
-            this.dbVars.SetDatabase("ewaste");
             // 
             // ScanComm
             // 
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.DataReceivedHandler);
             // 
-            // menuListbox
+            // recievingSubmitButton
             // 
-            this.menuListbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
-            this.menuListbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.menuListbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuListbox.FormattingEnabled = true;
-            this.menuListbox.ItemHeight = 29;
-            this.menuListbox.Items.AddRange(new object[] {
-            "Receiving",
-            "Reuse",
-            "Office"});
-            this.menuListbox.Location = new System.Drawing.Point(13, 13);
-            this.menuListbox.Name = "menuListbox";
-            this.menuListbox.Size = new System.Drawing.Size(120, 261);
-            this.menuListbox.TabIndex = 2;
-            this.menuListbox.SelectedIndexChanged += new System.EventHandler(this.menuListbox_SelectedIndexChanged);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // boxInputSubmitButton
-            // 
-            this.boxInputSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.boxInputSubmitButton.Location = new System.Drawing.Point(3, 423);
-            this.boxInputSubmitButton.Name = "boxInputSubmitButton";
-            this.boxInputSubmitButton.Size = new System.Drawing.Size(177, 59);
-            this.boxInputSubmitButton.TabIndex = 12;
-            this.boxInputSubmitButton.Text = "Submit";
-            this.boxInputSubmitButton.UseVisualStyleBackColor = true;
+            this.recievingSubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.recievingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.recievingSubmitButton.Location = new System.Drawing.Point(3, 351);
+            this.recievingSubmitButton.Name = "recievingSubmitButton";
+            this.recievingSubmitButton.Size = new System.Drawing.Size(114, 51);
+            this.recievingSubmitButton.TabIndex = 12;
+            this.recievingSubmitButton.Text = "Submit";
+            this.recievingSubmitButton.UseVisualStyleBackColor = true;
+            this.recievingSubmitButton.Click += new System.EventHandler(this.boxInputSubmitButton_Click_1);
             // 
             // receivingComments
             // 
-            this.receivingComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingComments.Location = new System.Drawing.Point(255, 215);
+            this.receivingComments.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingComments.Location = new System.Drawing.Point(148, 143);
             this.receivingComments.Multiline = true;
             this.receivingComments.Name = "receivingComments";
-            this.receivingComments.Size = new System.Drawing.Size(910, 202);
+            this.receivingComments.Size = new System.Drawing.Size(420, 202);
             this.receivingComments.TabIndex = 11;
-            this.receivingComments.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.receivingComments.TextChanged += new System.EventHandler(this.receivingComments_TextChanged);
             // 
             // receivingCommentsLabel
             // 
-            this.receivingCommentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCommentsLabel.Location = new System.Drawing.Point(3, 212);
+            this.receivingCommentsLabel.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingCommentsLabel.Location = new System.Drawing.Point(3, 140);
             this.receivingCommentsLabel.Name = "receivingCommentsLabel";
-            this.receivingCommentsLabel.Size = new System.Drawing.Size(246, 39);
+            this.receivingCommentsLabel.Size = new System.Drawing.Size(139, 33);
             this.receivingCommentsLabel.TabIndex = 9;
             this.receivingCommentsLabel.Text = "Comments";
             this.receivingCommentsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.receivingCommentsLabel.Click += new System.EventHandler(this.receivingCommentsLabel_Click);
+            this.receivingCommentsLabel.Click += new System.EventHandler(this.receivingCommentsLabel_Click_1);
             // 
             // receivingCategory
             // 
-            this.receivingCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCategory.Location = new System.Drawing.Point(255, 162);
+            this.receivingCategory.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingCategory.Location = new System.Drawing.Point(148, 108);
             this.receivingCategory.Name = "receivingCategory";
-            this.receivingCategory.Size = new System.Drawing.Size(910, 47);
+            this.receivingCategory.Size = new System.Drawing.Size(420, 29);
             this.receivingCategory.TabIndex = 8;
+            this.receivingCategory.TextChanged += new System.EventHandler(this.receivingCategory_TextChanged);
             // 
             // receivingCategoryLabel
             // 
-            this.receivingCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCategoryLabel.Location = new System.Drawing.Point(3, 159);
+            this.receivingCategoryLabel.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingCategoryLabel.Location = new System.Drawing.Point(3, 105);
             this.receivingCategoryLabel.Name = "receivingCategoryLabel";
-            this.receivingCategoryLabel.Size = new System.Drawing.Size(246, 50);
+            this.receivingCategoryLabel.Size = new System.Drawing.Size(139, 32);
             this.receivingCategoryLabel.TabIndex = 7;
             this.receivingCategoryLabel.Text = "Category";
             this.receivingCategoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.receivingCategoryLabel.Click += new System.EventHandler(this.receivingCategoryLabel_Click);
             // 
             // receivingWeight
             // 
             this.receivingWeight.DecimalPlaces = 2;
-            this.receivingWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingWeight.Location = new System.Drawing.Point(255, 109);
+            this.receivingWeight.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingWeight.Location = new System.Drawing.Point(148, 73);
             this.receivingWeight.Maximum = new decimal(new int[] {
             276447231,
             23283,
             0,
             0});
             this.receivingWeight.Name = "receivingWeight";
-            this.receivingWeight.Size = new System.Drawing.Size(910, 47);
+            this.receivingWeight.Size = new System.Drawing.Size(420, 29);
             this.receivingWeight.TabIndex = 6;
+            this.receivingWeight.ValueChanged += new System.EventHandler(this.receivingWeight_ValueChanged);
             // 
             // receivingWeightLabel
             // 
-            this.receivingWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingWeightLabel.Location = new System.Drawing.Point(3, 106);
+            this.receivingWeightLabel.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingWeightLabel.Location = new System.Drawing.Point(3, 70);
             this.receivingWeightLabel.Name = "receivingWeightLabel";
-            this.receivingWeightLabel.Size = new System.Drawing.Size(246, 50);
+            this.receivingWeightLabel.Size = new System.Drawing.Size(139, 32);
             this.receivingWeightLabel.TabIndex = 4;
             this.receivingWeightLabel.Text = "Weight";
             this.receivingWeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.receivingWeightLabel.Click += new System.EventHandler(this.receivingWeightLabel_Click);
             // 
             // receivingDateReceived
             // 
-            this.receivingDateReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingDateReceived.Location = new System.Drawing.Point(255, 56);
+            this.receivingDateReceived.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingDateReceived.Location = new System.Drawing.Point(148, 38);
             this.receivingDateReceived.Name = "receivingDateReceived";
-            this.receivingDateReceived.Size = new System.Drawing.Size(910, 47);
+            this.receivingDateReceived.Size = new System.Drawing.Size(420, 29);
             this.receivingDateReceived.TabIndex = 3;
             this.receivingDateReceived.Value = new System.DateTime(2014, 4, 15, 11, 41, 41, 0);
-            this.receivingDateReceived.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.receivingDateReceived.ValueChanged += new System.EventHandler(this.receivingDateReceived_ValueChanged);
             // 
             // receivingDateReceivedLabel
             // 
             this.receivingDateReceivedLabel.Enabled = false;
-            this.receivingDateReceivedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingDateReceivedLabel.Location = new System.Drawing.Point(3, 53);
+            this.receivingDateReceivedLabel.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingDateReceivedLabel.Location = new System.Drawing.Point(3, 35);
             this.receivingDateReceivedLabel.Name = "receivingDateReceivedLabel";
-            this.receivingDateReceivedLabel.Size = new System.Drawing.Size(246, 50);
+            this.receivingDateReceivedLabel.Size = new System.Drawing.Size(139, 32);
             this.receivingDateReceivedLabel.TabIndex = 2;
             this.receivingDateReceivedLabel.Text = "Date Received";
             this.receivingDateReceivedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.receivingDateReceivedLabel.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // receivingGaylordSource
-            // 
-            this.receivingGaylordSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingGaylordSource.Location = new System.Drawing.Point(255, 3);
-            this.receivingGaylordSource.MaxLength = 200;
-            this.receivingGaylordSource.Name = "receivingGaylordSource";
-            this.receivingGaylordSource.Size = new System.Drawing.Size(644, 47);
-            this.receivingGaylordSource.TabIndex = 1;
-            this.receivingGaylordSource.Text = "Source...";
-            this.receivingGaylordSource.TextChanged += new System.EventHandler(this.boxSource_TextChanged);
+            this.receivingDateReceivedLabel.Click += new System.EventHandler(this.receivingDateReceivedLabel_Click);
             // 
             // receivingPileCheckbox
             // 
-            this.receivingPileCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingPileCheckbox.Location = new System.Drawing.Point(905, 3);
+            this.receivingPileCheckbox.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingPileCheckbox.Location = new System.Drawing.Point(308, 3);
             this.receivingPileCheckbox.Name = "receivingPileCheckbox";
-            this.receivingPileCheckbox.Size = new System.Drawing.Size(260, 47);
+            this.receivingPileCheckbox.Size = new System.Drawing.Size(260, 29);
             this.receivingPileCheckbox.TabIndex = 13;
             this.receivingPileCheckbox.Text = "Taken from Pile";
             this.receivingPileCheckbox.UseVisualStyleBackColor = true;
-            this.receivingPileCheckbox.CheckedChanged += new System.EventHandler(this.receivingPileCheckbox_CheckedChanged);
+            this.receivingPileCheckbox.CheckedChanged += new System.EventHandler(this.receivingPileCheckbox_CheckedChanged_1);
+            // 
+            // receivingGaylordSource
+            // 
+            this.receivingGaylordSource.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingGaylordSource.Location = new System.Drawing.Point(148, 3);
+            this.receivingGaylordSource.MaxLength = 200;
+            this.receivingGaylordSource.Name = "receivingGaylordSource";
+            this.receivingGaylordSource.Size = new System.Drawing.Size(154, 29);
+            this.receivingGaylordSource.TabIndex = 1;
+            this.receivingGaylordSource.Text = "Source...";
+            this.receivingGaylordSource.TextChanged += new System.EventHandler(this.receivingGaylordSource_TextChanged);
             // 
             // receivingClientLabel
             // 
             this.receivingClientLabel.Enabled = false;
-            this.receivingClientLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receivingClientLabel.Font = new System.Drawing.Font("Ubuntu", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receivingClientLabel.Location = new System.Drawing.Point(3, 0);
             this.receivingClientLabel.Name = "receivingClientLabel";
-            this.receivingClientLabel.Size = new System.Drawing.Size(246, 53);
+            this.receivingClientLabel.Size = new System.Drawing.Size(139, 32);
             this.receivingClientLabel.TabIndex = 0;
             this.receivingClientLabel.Text = "Original Client";
             this.receivingClientLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.receivingClientLabel.Click += new System.EventHandler(this.label1_Click);
+            this.receivingClientLabel.Click += new System.EventHandler(this.receivingClientLabel_Click);
             // 
             // receivingPanel
             // 
@@ -240,173 +202,58 @@
             this.receivingPanel.Controls.Add(this.receivingCategory);
             this.receivingPanel.Controls.Add(this.receivingCommentsLabel);
             this.receivingPanel.Controls.Add(this.receivingComments);
-            this.receivingPanel.Controls.Add(this.boxInputSubmitButton);
+            this.receivingPanel.Controls.Add(this.recievingSubmitButton);
             this.receivingPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingPanel.Location = new System.Drawing.Point(3, 3);
+            this.receivingPanel.Location = new System.Drawing.Point(6, 6);
             this.receivingPanel.Name = "receivingPanel";
-            this.receivingPanel.Size = new System.Drawing.Size(1338, 663);
-            this.receivingPanel.TabIndex = 1;
-            this.receivingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.receivingPanel_Paint);
+            this.receivingPanel.Size = new System.Drawing.Size(582, 437);
+            this.receivingPanel.TabIndex = 15;
+            this.receivingPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.receivingPanel_Paint_1);
             // 
-            // reusePanel
+            // tabControl1
             // 
-            this.reusePanel.Controls.Add(this.receivingPanel);
-            this.reusePanel.Controls.Add(this.label1);
-            this.reusePanel.Controls.Add(this.textBox1);
-            this.reusePanel.Controls.Add(this.checkBox1);
-            this.reusePanel.Controls.Add(this.label2);
-            this.reusePanel.Controls.Add(this.dateTimePicker1);
-            this.reusePanel.Controls.Add(this.label3);
-            this.reusePanel.Controls.Add(this.numericUpDown1);
-            this.reusePanel.Controls.Add(this.label4);
-            this.reusePanel.Controls.Add(this.textBox2);
-            this.reusePanel.Controls.Add(this.label5);
-            this.reusePanel.Controls.Add(this.textBox3);
-            this.reusePanel.Controls.Add(this.button1);
-            this.reusePanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reusePanel.Location = new System.Drawing.Point(139, 13);
-            this.reusePanel.Name = "reusePanel";
-            this.reusePanel.Size = new System.Drawing.Size(1338, 663);
-            this.reusePanel.TabIndex = 14;
-            this.reusePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.reusePanel_Paint);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(33, 37);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(672, 364);
+            this.tabControl1.TabIndex = 16;
             // 
-            // label1
+            // tabPage1
             // 
-            this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 669);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 53);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Original Client";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabPage1.Controls.Add(this.receivingPanel);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(664, 331);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tabPage2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(255, 672);
-            this.textBox1.MaxLength = 200;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(644, 47);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Source...";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(905, 672);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(260, 47);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "Taken from Pile";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.Enabled = false;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 722);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(246, 50);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Date Received";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(255, 725);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(910, 47);
-            this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.Value = new System.DateTime(2014, 4, 15, 11, 41, 41, 0);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 775);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 50);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Weight";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(255, 778);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(910, 47);
-            this.numericUpDown1.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 828);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(246, 50);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Category";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(255, 831);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(910, 47);
-            this.textBox2.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 881);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(246, 39);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Comments";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(255, 884);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(910, 202);
-            this.textBox3.TabIndex = 11;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(3, 1092);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 59);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(664, 331);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
             this.ClientSize = new System.Drawing.Size(1464, 653);
-            this.Controls.Add(this.menuListbox);
-            this.Controls.Add(this.reusePanel);
+            this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Main_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.receivingWeight)).EndInit();
             this.receivingPanel.ResumeLayout(false);
             this.receivingPanel.PerformLayout();
-            this.reusePanel.ResumeLayout(false);
-            this.reusePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -414,9 +261,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.TextBox SerialData;
-        private System.Windows.Forms.ListBox menuListbox;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.Button boxInputSubmitButton;
+        private System.Windows.Forms.Button recievingSubmitButton;
         private System.Windows.Forms.TextBox receivingComments;
         private System.Windows.Forms.Label receivingCommentsLabel;
         private System.Windows.Forms.TextBox receivingCategory;
@@ -425,23 +270,13 @@
         private System.Windows.Forms.Label receivingWeightLabel;
         private System.Windows.Forms.DateTimePicker receivingDateReceived;
         private System.Windows.Forms.Label receivingDateReceivedLabel;
-        private System.Windows.Forms.TextBox receivingGaylordSource;
         private System.Windows.Forms.CheckBox receivingPileCheckbox;
+        private System.Windows.Forms.TextBox receivingGaylordSource;
         private System.Windows.Forms.Label receivingClientLabel;
         private System.Windows.Forms.FlowLayoutPanel receivingPanel;
-        private System.Windows.Forms.FlowLayoutPanel reusePanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
