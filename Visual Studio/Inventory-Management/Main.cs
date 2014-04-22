@@ -59,8 +59,7 @@ namespace Inventory_Management
         }
         private void Main_Load_1(object sender, EventArgs e)
         {
-            receivingPanel.Hide();
-            reusePanel.Hide();
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -69,24 +68,6 @@ namespace Inventory_Management
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
-        }
-        private void menuListbox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (menuListbox.SelectedItem == "Receiving")
-            {
-                reusePanel.Hide();
-                receivingPanel.Show();
-            }
-            if (menuListbox.SelectedItem == "Reuse")
-            {
-                receivingPanel.Hide();
-                reusePanel.Show();
-            }
-            if (menuListbox.SelectedItem == "Office")
-            {
-                receivingPanel.Hide();
-                reusePanel.Hide();
-            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -116,8 +97,8 @@ namespace Inventory_Management
 
         private void receivingPileCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (receivingPileCheckbox.Checked) receivingGaylordSource.Enabled = false;
-            if (!receivingPileCheckbox.Checked) receivingGaylordSource.Enabled = true;
+            if (receivingPileCheckbox.Checked) receivingClientTextbox.Enabled = false;
+            if (!receivingPileCheckbox.Checked) receivingClientTextbox.Enabled = true;
         }
 
         private void receivingPanel_Paint(object sender, PaintEventArgs e)
@@ -206,10 +187,10 @@ namespace Inventory_Management
         private void receivingComments_TextChanged(object sender, EventArgs e)
         {
 
-        }
+    }
 
         private void receivingCommentsLabel_Click_1(object sender, EventArgs e)
-        {
+    {
 
         }
 
@@ -248,7 +229,7 @@ namespace Inventory_Management
             }
         }
         public bool ReceivingInsert(string source, string weight, string type, string comments, string date)
-        {
+                {
             if(Connection())
             {   //Contains query to insert data specifically into the receiving table using parameterization.
                 this.conn.Open();
@@ -264,8 +245,8 @@ namespace Inventory_Management
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            return false;
-        }
+                            return false;
+                    }
         public bool ReuseInsert(string source, string weight, string type, string comments, string date)
         {
             if(Connection())
