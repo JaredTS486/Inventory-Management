@@ -413,7 +413,7 @@
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Main";
-            this.Load += new System.EventHandler(this.Main_Load_1);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl1.ResumeLayout(false);
             this.receivingTab.ResumeLayout(false);
             this.harvestingTab.ResumeLayout(false);
@@ -425,11 +425,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).EndInit();
             this.ResumeLayout(false);
 
-        }
-
-        private void harvestingTab_Click(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
         }
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

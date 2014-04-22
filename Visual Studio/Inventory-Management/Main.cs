@@ -25,6 +25,7 @@ namespace Inventory_Management
         public Main()
         {
             InitializeComponent();
+            dbs.Connection();
         }
         public void AddDataMethod(String myString)
         {
@@ -56,43 +57,6 @@ namespace Inventory_Management
         private void Main_Load(object sender, EventArgs e)
         {
             this.myDelegate = new AddDataDelegate(AddDataMethod);
-        }
-        private void Main_Load_1(object sender, EventArgs e)
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boxParentCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boxSource_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void receivingPileCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -185,6 +149,10 @@ namespace Inventory_Management
         {
 
         }
+        private void harvestingTab_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
     public partial class DATABASE
     {
@@ -201,7 +169,7 @@ namespace Inventory_Management
         public String GetPass() { return this.pwd; }
         public String GetServer() { return this.srv; }
         public String GetDatabase() { return this.dbs; }
-        public bool Connection()
+        public bool Connection() 
         {
             string connectionString = "database=" + this.dbs + ";server=" + this.srv + ";uid=" + this.usr + ";pwd=" + this.pwd;
             using (conn = new MySqlConnection(connectionString)){
