@@ -25,6 +25,7 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
+            this.dbs = new DATABASE();
             this.components = new System.ComponentModel.Container();
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
@@ -69,10 +70,10 @@
             //
             // dbVars
             //
-            this.dbVars.SetUser("shauni");
-            this.dbVars.SetPass("wDrTxy3hSUnRHLKY");
-            this.dbVars.SetServer("jpsharpe.net");
-            this.dbVars.SetDatabase("ewaste");
+            this.dbs.SetUser("shauni");
+            this.dbs.SetPass("wDrTxy3hSUnRHLKY");
+            this.dbs.SetServer("jpsharpe.net");
+            this.dbs.SetDatabase("ewaste");
             // 
             // ScanComm
             // 
@@ -424,6 +425,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void harvestingTab_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

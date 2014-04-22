@@ -128,20 +128,7 @@ namespace Inventory_Management
 
         private void boxInputSubmitButton_Click_1(object sender, EventArgs e)
         {
-            string source = this.receivingGaylordSource.Text;
-            string date = this.receivingDateReceived.Text;
-            string weight = this.receivingWeight.Text;
-            string category = this.receivingCategory.Text;
-            string comments = this.receivingComments.Text;
-            string type = this.receivingPileCheckbox.Text;
-            Console.WriteLine(source);
-            Console.WriteLine(date);
-            Console.WriteLine(weight);
-            Console.WriteLine(category);
-            Console.WriteLine(comments);
-            Console.WriteLine(type);
-            Console.WriteLine("HELLO WORLD");
-            //dbs.ReceivingInsert(source, weight, type, comments, date);
+
         }
 
         private void receivingDateReceivedLabel_Click(object sender, EventArgs e)
@@ -187,10 +174,10 @@ namespace Inventory_Management
         private void receivingComments_TextChanged(object sender, EventArgs e)
         {
 
-    }
+        }
 
         private void receivingCommentsLabel_Click_1(object sender, EventArgs e)
-    {
+        {
 
         }
 
@@ -229,7 +216,7 @@ namespace Inventory_Management
             }
         }
         public bool ReceivingInsert(string source, string weight, string type, string comments, string date)
-                {
+        {
             if(Connection())
             {   //Contains query to insert data specifically into the receiving table using parameterization.
                 this.conn.Open();
@@ -245,8 +232,8 @@ namespace Inventory_Management
                 cmd.ExecuteNonQuery();
                 return true;
             }
-                            return false;
-                    }
+            return false;
+        }
         public bool ReuseInsert(string source, string weight, string type, string comments, string date)
         {
             if(Connection())
