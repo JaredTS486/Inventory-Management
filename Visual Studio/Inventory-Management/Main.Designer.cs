@@ -272,57 +272,57 @@
             // harvestingParentLabel
             // 
             this.harvestingParentLabel.Enabled = false;
-            this.harvestingParentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.harvestingParentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.harvestingParentLabel.Location = new System.Drawing.Point(3, 0);
             this.harvestingParentLabel.Name = "harvestingParentLabel";
-            this.harvestingParentLabel.Size = new System.Drawing.Size(208, 40);
+            this.harvestingParentLabel.Size = new System.Drawing.Size(139, 40);
             this.harvestingParentLabel.TabIndex = 9999;
             this.harvestingParentLabel.Text = "Parent Box ID";
             this.harvestingParentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // harvestingParentTextbox
             // 
-            this.harvestingParentTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingParentTextbox.Location = new System.Drawing.Point(217, 3);
+            this.harvestingParentTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingParentTextbox.Location = new System.Drawing.Point(148, 3);
             this.harvestingParentTextbox.MaxLength = 200;
             this.harvestingParentTextbox.Name = "harvestingParentTextbox";
-            this.harvestingParentTextbox.Size = new System.Drawing.Size(726, 35);
+            this.harvestingParentTextbox.Size = new System.Drawing.Size(865, 29);
             this.harvestingParentTextbox.TabIndex = 1;
             this.harvestingParentTextbox.Text = "ID or check box on right for pile";
             // 
             // harvestingCategoryTextbox
             // 
-            this.harvestingCategoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingCategoryTextbox.Location = new System.Drawing.Point(217, 43);
+            this.harvestingCategoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCategoryTextbox.Location = new System.Drawing.Point(148, 43);
             this.harvestingCategoryTextbox.Name = "harvestingCategoryTextbox";
-            this.harvestingCategoryTextbox.Size = new System.Drawing.Size(726, 35);
+            this.harvestingCategoryTextbox.Size = new System.Drawing.Size(865, 29);
             this.harvestingCategoryTextbox.TabIndex = 8;
             // 
             // harvestingCommentsTextbox
             // 
-            this.harvestingCommentsTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingCommentsTextbox.Location = new System.Drawing.Point(217, 126);
+            this.harvestingCommentsTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCommentsTextbox.Location = new System.Drawing.Point(148, 117);
             this.harvestingCommentsTextbox.Multiline = true;
             this.harvestingCommentsTextbox.Name = "harvestingCommentsTextbox";
-            this.harvestingCommentsTextbox.Size = new System.Drawing.Size(726, 199);
+            this.harvestingCommentsTextbox.Size = new System.Drawing.Size(865, 494);
             this.harvestingCommentsTextbox.TabIndex = 11;
             // 
             // harvestingPileCheckbox
             // 
-            this.harvestingPileCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingPileCheckbox.Location = new System.Drawing.Point(949, 3);
+            this.harvestingPileCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingPileCheckbox.Location = new System.Drawing.Point(1019, 3);
             this.harvestingPileCheckbox.Name = "harvestingPileCheckbox";
-            this.harvestingPileCheckbox.Size = new System.Drawing.Size(267, 34);
+            this.harvestingPileCheckbox.Size = new System.Drawing.Size(197, 34);
             this.harvestingPileCheckbox.TabIndex = 2;
             this.harvestingPileCheckbox.Text = "Taken from Pile";
             this.harvestingPileCheckbox.UseVisualStyleBackColor = true;
             // 
             // harvestingWeightLabel
             // 
-            this.harvestingWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingWeightLabel.Location = new System.Drawing.Point(3, 82);
+            this.harvestingWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingWeightLabel.Location = new System.Drawing.Point(3, 78);
             this.harvestingWeightLabel.Name = "harvestingWeightLabel";
-            this.harvestingWeightLabel.Size = new System.Drawing.Size(208, 41);
+            this.harvestingWeightLabel.Size = new System.Drawing.Size(139, 36);
             this.harvestingWeightLabel.TabIndex = 4;
             this.harvestingWeightLabel.Text = "Weight Taken";
             this.harvestingWeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -330,41 +330,41 @@
             // harvestingWeightNumericbox
             // 
             this.harvestingWeightNumericbox.DecimalPlaces = 2;
-            this.harvestingWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingWeightNumericbox.Location = new System.Drawing.Point(217, 85);
+            this.harvestingWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingWeightNumericbox.Location = new System.Drawing.Point(148, 81);
             this.harvestingWeightNumericbox.Maximum = new decimal(new int[] {
             276447231,
             23283,
             0,
             0});
             this.harvestingWeightNumericbox.Name = "harvestingWeightNumericbox";
-            this.harvestingWeightNumericbox.Size = new System.Drawing.Size(726, 35);
+            this.harvestingWeightNumericbox.Size = new System.Drawing.Size(865, 29);
             this.harvestingWeightNumericbox.TabIndex = 6;
             // 
             // harvestingCategoryLabel
             // 
-            this.harvestingCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.harvestingCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.harvestingCategoryLabel.Location = new System.Drawing.Point(3, 40);
             this.harvestingCategoryLabel.Name = "harvestingCategoryLabel";
-            this.harvestingCategoryLabel.Size = new System.Drawing.Size(208, 42);
+            this.harvestingCategoryLabel.Size = new System.Drawing.Size(139, 38);
             this.harvestingCategoryLabel.TabIndex = 7;
             this.harvestingCategoryLabel.Text = "Category";
             this.harvestingCategoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // harvestingCommentsLabel
             // 
-            this.harvestingCommentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingCommentsLabel.Location = new System.Drawing.Point(3, 123);
+            this.harvestingCommentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCommentsLabel.Location = new System.Drawing.Point(3, 114);
             this.harvestingCommentsLabel.Name = "harvestingCommentsLabel";
-            this.harvestingCommentsLabel.Size = new System.Drawing.Size(208, 39);
+            this.harvestingCommentsLabel.Size = new System.Drawing.Size(139, 184);
             this.harvestingCommentsLabel.TabIndex = 9;
             this.harvestingCommentsLabel.Text = "Comments";
             this.harvestingCommentsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // harvestingSubmitButton
             // 
-            this.harvestingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.harvestingSubmitButton.Location = new System.Drawing.Point(949, 126);
+            this.harvestingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingSubmitButton.Location = new System.Drawing.Point(1019, 117);
             this.harvestingSubmitButton.Name = "harvestingSubmitButton";
             this.harvestingSubmitButton.Size = new System.Drawing.Size(176, 59);
             this.harvestingSubmitButton.TabIndex = 12;
@@ -401,9 +401,9 @@
             // harvestingLayoutPanel
             // 
             this.harvestingLayoutPanel.ColumnCount = 3;
-            this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.6451F));
-            this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.3549F));
-            this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
+            this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.27165F));
+            this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.72835F));
+            this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.harvestingLayoutPanel.Controls.Add(this.harvestingCategoryLabel, 0, 1);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingPileCheckbox, 2, 0);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingCategoryTextbox, 1, 1);
@@ -418,11 +418,11 @@
             this.harvestingLayoutPanel.Location = new System.Drawing.Point(3, 0);
             this.harvestingLayoutPanel.Name = "harvestingLayoutPanel";
             this.harvestingLayoutPanel.RowCount = 4;
-            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.35065F));
-            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.64935F));
-            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 204F));
-            this.harvestingLayoutPanel.Size = new System.Drawing.Size(1219, 328);
+            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.28205F));
+            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.71795F));
+            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.harvestingLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 501F));
+            this.harvestingLayoutPanel.Size = new System.Drawing.Size(1219, 616);
             this.harvestingLayoutPanel.TabIndex = 4;
             // 
             // Main
