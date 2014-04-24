@@ -28,7 +28,7 @@
             this.components = new System.ComponentModel.Container();
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.receivingTab = new System.Windows.Forms.TabPage();
             this.receivingLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.receivingPileCheckbox = new System.Windows.Forms.CheckBox();
@@ -44,48 +44,54 @@
             this.receivingSubmitButton = new System.Windows.Forms.Button();
             this.receivingClientLabel = new System.Windows.Forms.Label();
             this.harvestingTab = new System.Windows.Forms.TabPage();
-            this.harvestingParentLabel = new System.Windows.Forms.Label();
-            this.harvestingParentTextbox = new System.Windows.Forms.TextBox();
-            this.harvestingCategoryTextbox = new System.Windows.Forms.TextBox();
-            this.harvestingCommentsTextbox = new System.Windows.Forms.TextBox();
-            this.harvestingPileCheckbox = new System.Windows.Forms.CheckBox();
-            this.harvestingWeightLabel = new System.Windows.Forms.Label();
-            this.harvestingWeightNumericbox = new System.Windows.Forms.NumericUpDown();
-            this.harvestingCategoryLabel = new System.Windows.Forms.Label();
-            this.harvestingCommentsLabel = new System.Windows.Forms.Label();
-            this.harvestingSubmitButton = new System.Windows.Forms.Button();
-            this.reuseTab = new System.Windows.Forms.TabPage();
-            this.officeTab = new System.Windows.Forms.TabPage();
-            this.searchTab = new System.Windows.Forms.TabPage();
             this.harvestingLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.tabControl1.SuspendLayout();
+            this.harvestingPileCheckbox = new System.Windows.Forms.CheckBox();
+            this.harvestingParentTextbox = new System.Windows.Forms.TextBox();
+            this.harvestingParentLabel = new System.Windows.Forms.Label();
+            this.harvestingCommentsTextbox = new System.Windows.Forms.TextBox();
+            this.harvestingSubmitButton = new System.Windows.Forms.Button();
+            this.harvestingCommentsLabel = new System.Windows.Forms.Label();
+            this.harvestingWeightNumericbox = new System.Windows.Forms.NumericUpDown();
+            this.harvestingCategoryTextbox = new System.Windows.Forms.TextBox();
+            this.harvestingWeightLabel = new System.Windows.Forms.Label();
+            this.harvestingCategoryLabel = new System.Windows.Forms.Label();
+            this.reuseTab = new System.Windows.Forms.TabPage();
+            this.reuseLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.officeTab = new System.Windows.Forms.TabPage();
+            this.officeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.searchTab = new System.Windows.Forms.TabPage();
+            this.searchLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tabControl.SuspendLayout();
             this.receivingTab.SuspendLayout();
             this.receivingLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.receivingWeightNumericbox)).BeginInit();
             this.harvestingTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).BeginInit();
             this.harvestingLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).BeginInit();
+            this.reuseTab.SuspendLayout();
+            this.officeTab.SuspendLayout();
+            this.searchTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // ScanComm
             // 
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.DataReceivedHandler);
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.receivingTab);
-            this.tabControl1.Controls.Add(this.harvestingTab);
-            this.tabControl1.Controls.Add(this.reuseTab);
-            this.tabControl1.Controls.Add(this.officeTab);
-            this.tabControl1.Controls.Add(this.searchTab);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(81, 30);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1477, 657);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.receivingTab);
+            this.tabControl.Controls.Add(this.harvestingTab);
+            this.tabControl.Controls.Add(this.reuseTab);
+            this.tabControl.Controls.Add(this.officeTab);
+            this.tabControl.Controls.Add(this.searchTab);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl.ItemSize = new System.Drawing.Size(81, 30);
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1477, 657);
+            this.tabControl.TabIndex = 0;
             // 
             // receivingTab
             // 
@@ -177,9 +183,10 @@
             this.receivingClientTextbox.Location = new System.Drawing.Point(194, 3);
             this.receivingClientTextbox.MaxLength = 200;
             this.receivingClientTextbox.Name = "receivingClientTextbox";
-            this.receivingClientTextbox.Size = new System.Drawing.Size(533, 31);
+            this.receivingClientTextbox.Size = new System.Drawing.Size(1063, 31);
             this.receivingClientTextbox.TabIndex = 1;
-            this.receivingClientTextbox.Text = "Business or Client name";
+            this.receivingClientTextbox.Text = "Business or Client name (required or checkbox if none)";
+            this.receivingClientTextbox.TextChanged += new System.EventHandler(this.receivingClientTextbox_TextChanged);
             // 
             // receivingWeightLabel
             // 
@@ -197,9 +204,9 @@
             this.receivingDateReceivedDatebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receivingDateReceivedDatebox.Location = new System.Drawing.Point(194, 78);
             this.receivingDateReceivedDatebox.Name = "receivingDateReceivedDatebox";
-            this.receivingDateReceivedDatebox.Size = new System.Drawing.Size(533, 31);
+            this.receivingDateReceivedDatebox.Size = new System.Drawing.Size(375, 31);
             this.receivingDateReceivedDatebox.TabIndex = 3;
-            this.receivingDateReceivedDatebox.Value = new System.DateTime(2014, 4, 15, 11, 41, 41, 0);
+            this.receivingDateReceivedDatebox.Value = new System.DateTime(2014, 1, 1, 11, 41, 0, 0);
             // 
             // receivingDateReceivedLabel
             // 
@@ -223,7 +230,7 @@
             0,
             0});
             this.receivingWeightNumericbox.Name = "receivingWeightNumericbox";
-            this.receivingWeightNumericbox.Size = new System.Drawing.Size(533, 31);
+            this.receivingWeightNumericbox.Size = new System.Drawing.Size(375, 31);
             this.receivingWeightNumericbox.TabIndex = 6;
             // 
             // receivingCategoryLabel
@@ -269,151 +276,22 @@
             this.harvestingTab.TabIndex = 1;
             this.harvestingTab.Text = "Harvesting";
             // 
-            // harvestingParentLabel
-            // 
-            this.harvestingParentLabel.Enabled = false;
-            this.harvestingParentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingParentLabel.Location = new System.Drawing.Point(3, 0);
-            this.harvestingParentLabel.Name = "harvestingParentLabel";
-            this.harvestingParentLabel.Size = new System.Drawing.Size(139, 40);
-            this.harvestingParentLabel.TabIndex = 9999;
-            this.harvestingParentLabel.Text = "Parent Box ID";
-            this.harvestingParentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // harvestingParentTextbox
-            // 
-            this.harvestingParentTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingParentTextbox.Location = new System.Drawing.Point(148, 3);
-            this.harvestingParentTextbox.MaxLength = 200;
-            this.harvestingParentTextbox.Name = "harvestingParentTextbox";
-            this.harvestingParentTextbox.Size = new System.Drawing.Size(865, 29);
-            this.harvestingParentTextbox.TabIndex = 1;
-            this.harvestingParentTextbox.Text = "ID or check box on right for pile";
-            // 
-            // harvestingCategoryTextbox
-            // 
-            this.harvestingCategoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingCategoryTextbox.Location = new System.Drawing.Point(148, 43);
-            this.harvestingCategoryTextbox.Name = "harvestingCategoryTextbox";
-            this.harvestingCategoryTextbox.Size = new System.Drawing.Size(865, 29);
-            this.harvestingCategoryTextbox.TabIndex = 8;
-            // 
-            // harvestingCommentsTextbox
-            // 
-            this.harvestingCommentsTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingCommentsTextbox.Location = new System.Drawing.Point(148, 117);
-            this.harvestingCommentsTextbox.Multiline = true;
-            this.harvestingCommentsTextbox.Name = "harvestingCommentsTextbox";
-            this.harvestingCommentsTextbox.Size = new System.Drawing.Size(865, 494);
-            this.harvestingCommentsTextbox.TabIndex = 11;
-            // 
-            // harvestingPileCheckbox
-            // 
-            this.harvestingPileCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingPileCheckbox.Location = new System.Drawing.Point(1019, 3);
-            this.harvestingPileCheckbox.Name = "harvestingPileCheckbox";
-            this.harvestingPileCheckbox.Size = new System.Drawing.Size(197, 34);
-            this.harvestingPileCheckbox.TabIndex = 2;
-            this.harvestingPileCheckbox.Text = "Taken from Pile";
-            this.harvestingPileCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // harvestingWeightLabel
-            // 
-            this.harvestingWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingWeightLabel.Location = new System.Drawing.Point(3, 78);
-            this.harvestingWeightLabel.Name = "harvestingWeightLabel";
-            this.harvestingWeightLabel.Size = new System.Drawing.Size(139, 36);
-            this.harvestingWeightLabel.TabIndex = 4;
-            this.harvestingWeightLabel.Text = "Weight Taken";
-            this.harvestingWeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // harvestingWeightNumericbox
-            // 
-            this.harvestingWeightNumericbox.DecimalPlaces = 2;
-            this.harvestingWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingWeightNumericbox.Location = new System.Drawing.Point(148, 81);
-            this.harvestingWeightNumericbox.Maximum = new decimal(new int[] {
-            276447231,
-            23283,
-            0,
-            0});
-            this.harvestingWeightNumericbox.Name = "harvestingWeightNumericbox";
-            this.harvestingWeightNumericbox.Size = new System.Drawing.Size(865, 29);
-            this.harvestingWeightNumericbox.TabIndex = 6;
-            // 
-            // harvestingCategoryLabel
-            // 
-            this.harvestingCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingCategoryLabel.Location = new System.Drawing.Point(3, 40);
-            this.harvestingCategoryLabel.Name = "harvestingCategoryLabel";
-            this.harvestingCategoryLabel.Size = new System.Drawing.Size(139, 38);
-            this.harvestingCategoryLabel.TabIndex = 7;
-            this.harvestingCategoryLabel.Text = "Category";
-            this.harvestingCategoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // harvestingCommentsLabel
-            // 
-            this.harvestingCommentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingCommentsLabel.Location = new System.Drawing.Point(3, 114);
-            this.harvestingCommentsLabel.Name = "harvestingCommentsLabel";
-            this.harvestingCommentsLabel.Size = new System.Drawing.Size(139, 184);
-            this.harvestingCommentsLabel.TabIndex = 9;
-            this.harvestingCommentsLabel.Text = "Comments";
-            this.harvestingCommentsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // harvestingSubmitButton
-            // 
-            this.harvestingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.harvestingSubmitButton.Location = new System.Drawing.Point(1019, 117);
-            this.harvestingSubmitButton.Name = "harvestingSubmitButton";
-            this.harvestingSubmitButton.Size = new System.Drawing.Size(176, 59);
-            this.harvestingSubmitButton.TabIndex = 12;
-            this.harvestingSubmitButton.Text = "Submit";
-            this.harvestingSubmitButton.UseVisualStyleBackColor = true;
-            // 
-            // reuseTab
-            // 
-            this.reuseTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
-            this.reuseTab.Location = new System.Drawing.Point(4, 34);
-            this.reuseTab.Name = "reuseTab";
-            this.reuseTab.Size = new System.Drawing.Size(1017, 354);
-            this.reuseTab.TabIndex = 2;
-            this.reuseTab.Text = "Reuse";
-            // 
-            // officeTab
-            // 
-            this.officeTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
-            this.officeTab.Location = new System.Drawing.Point(4, 34);
-            this.officeTab.Name = "officeTab";
-            this.officeTab.Size = new System.Drawing.Size(1017, 354);
-            this.officeTab.TabIndex = 3;
-            this.officeTab.Text = "Office";
-            // 
-            // searchTab
-            // 
-            this.searchTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
-            this.searchTab.Location = new System.Drawing.Point(4, 34);
-            this.searchTab.Name = "searchTab";
-            this.searchTab.Size = new System.Drawing.Size(1017, 354);
-            this.searchTab.TabIndex = 4;
-            this.searchTab.Text = "Search";
-            // 
             // harvestingLayoutPanel
             // 
             this.harvestingLayoutPanel.ColumnCount = 3;
             this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.27165F));
             this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.72835F));
             this.harvestingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
-            this.harvestingLayoutPanel.Controls.Add(this.harvestingCategoryLabel, 0, 1);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingPileCheckbox, 2, 0);
-            this.harvestingLayoutPanel.Controls.Add(this.harvestingCategoryTextbox, 1, 1);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingParentTextbox, 1, 0);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingParentLabel, 0, 0);
-            this.harvestingLayoutPanel.Controls.Add(this.harvestingWeightLabel, 0, 2);
-            this.harvestingLayoutPanel.Controls.Add(this.harvestingWeightNumericbox, 1, 2);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingCommentsTextbox, 1, 3);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingSubmitButton, 2, 3);
             this.harvestingLayoutPanel.Controls.Add(this.harvestingCommentsLabel, 0, 3);
+            this.harvestingLayoutPanel.Controls.Add(this.harvestingWeightNumericbox, 1, 1);
+            this.harvestingLayoutPanel.Controls.Add(this.harvestingCategoryTextbox, 1, 2);
+            this.harvestingLayoutPanel.Controls.Add(this.harvestingWeightLabel, 0, 1);
+            this.harvestingLayoutPanel.Controls.Add(this.harvestingCategoryLabel, 0, 2);
             this.harvestingLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.harvestingLayoutPanel.Location = new System.Drawing.Point(3, 0);
             this.harvestingLayoutPanel.Name = "harvestingLayoutPanel";
@@ -425,24 +303,201 @@
             this.harvestingLayoutPanel.Size = new System.Drawing.Size(1219, 616);
             this.harvestingLayoutPanel.TabIndex = 4;
             // 
+            // harvestingPileCheckbox
+            // 
+            this.harvestingPileCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingPileCheckbox.Location = new System.Drawing.Point(1019, 3);
+            this.harvestingPileCheckbox.Name = "harvestingPileCheckbox";
+            this.harvestingPileCheckbox.Size = new System.Drawing.Size(197, 34);
+            this.harvestingPileCheckbox.TabIndex = 2;
+            this.harvestingPileCheckbox.Text = "Taken from Pile";
+            this.harvestingPileCheckbox.UseVisualStyleBackColor = true;
+            this.harvestingPileCheckbox.CheckedChanged += new System.EventHandler(this.harvestingPileCheckbox_CheckedChanged);
+            // 
+            // harvestingParentTextbox
+            // 
+            this.harvestingParentTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingParentTextbox.Location = new System.Drawing.Point(148, 3);
+            this.harvestingParentTextbox.MaxLength = 200;
+            this.harvestingParentTextbox.Name = "harvestingParentTextbox";
+            this.harvestingParentTextbox.Size = new System.Drawing.Size(865, 29);
+            this.harvestingParentTextbox.TabIndex = 1;
+            this.harvestingParentTextbox.Text = "ID or check box on right for pile (required)";
+            this.harvestingParentTextbox.TextChanged += new System.EventHandler(this.harvestingParentTextbox_TextChanged);
+            // 
+            // harvestingParentLabel
+            // 
+            this.harvestingParentLabel.Enabled = false;
+            this.harvestingParentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingParentLabel.Location = new System.Drawing.Point(3, 0);
+            this.harvestingParentLabel.Name = "harvestingParentLabel";
+            this.harvestingParentLabel.Size = new System.Drawing.Size(139, 40);
+            this.harvestingParentLabel.TabIndex = 9999;
+            this.harvestingParentLabel.Text = "Parent Box ID";
+            this.harvestingParentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // harvestingCommentsTextbox
+            // 
+            this.harvestingCommentsTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCommentsTextbox.Location = new System.Drawing.Point(148, 117);
+            this.harvestingCommentsTextbox.Multiline = true;
+            this.harvestingCommentsTextbox.Name = "harvestingCommentsTextbox";
+            this.harvestingCommentsTextbox.Size = new System.Drawing.Size(865, 494);
+            this.harvestingCommentsTextbox.TabIndex = 11;
+            // 
+            // harvestingSubmitButton
+            // 
+            this.harvestingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingSubmitButton.Location = new System.Drawing.Point(1019, 117);
+            this.harvestingSubmitButton.Name = "harvestingSubmitButton";
+            this.harvestingSubmitButton.Size = new System.Drawing.Size(176, 59);
+            this.harvestingSubmitButton.TabIndex = 12;
+            this.harvestingSubmitButton.Text = "Submit";
+            this.harvestingSubmitButton.UseVisualStyleBackColor = true;
+            // 
+            // harvestingCommentsLabel
+            // 
+            this.harvestingCommentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCommentsLabel.Location = new System.Drawing.Point(3, 114);
+            this.harvestingCommentsLabel.Name = "harvestingCommentsLabel";
+            this.harvestingCommentsLabel.Size = new System.Drawing.Size(139, 184);
+            this.harvestingCommentsLabel.TabIndex = 9;
+            this.harvestingCommentsLabel.Text = "Comments";
+            this.harvestingCommentsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // harvestingWeightNumericbox
+            // 
+            this.harvestingWeightNumericbox.DecimalPlaces = 2;
+            this.harvestingWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingWeightNumericbox.Location = new System.Drawing.Point(148, 43);
+            this.harvestingWeightNumericbox.Maximum = new decimal(new int[] {
+            276447231,
+            23283,
+            0,
+            0});
+            this.harvestingWeightNumericbox.Name = "harvestingWeightNumericbox";
+            this.harvestingWeightNumericbox.Size = new System.Drawing.Size(865, 29);
+            this.harvestingWeightNumericbox.TabIndex = 6;
+            this.harvestingWeightNumericbox.ValueChanged += new System.EventHandler(this.harvestingWeightNumericbox_ValueChanged);
+            // 
+            // harvestingCategoryTextbox
+            // 
+            this.harvestingCategoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCategoryTextbox.Location = new System.Drawing.Point(148, 81);
+            this.harvestingCategoryTextbox.Name = "harvestingCategoryTextbox";
+            this.harvestingCategoryTextbox.Size = new System.Drawing.Size(865, 29);
+            this.harvestingCategoryTextbox.TabIndex = 8;
+            // 
+            // harvestingWeightLabel
+            // 
+            this.harvestingWeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingWeightLabel.Location = new System.Drawing.Point(3, 40);
+            this.harvestingWeightLabel.Name = "harvestingWeightLabel";
+            this.harvestingWeightLabel.Size = new System.Drawing.Size(139, 36);
+            this.harvestingWeightLabel.TabIndex = 4;
+            this.harvestingWeightLabel.Text = "Weight Taken";
+            this.harvestingWeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // harvestingCategoryLabel
+            // 
+            this.harvestingCategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.harvestingCategoryLabel.Location = new System.Drawing.Point(3, 78);
+            this.harvestingCategoryLabel.Name = "harvestingCategoryLabel";
+            this.harvestingCategoryLabel.Size = new System.Drawing.Size(139, 36);
+            this.harvestingCategoryLabel.TabIndex = 7;
+            this.harvestingCategoryLabel.Text = "Category";
+            this.harvestingCategoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // reuseTab
+            // 
+            this.reuseTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
+            this.reuseTab.Controls.Add(this.reuseLayoutPanel);
+            this.reuseTab.Location = new System.Drawing.Point(4, 34);
+            this.reuseTab.Name = "reuseTab";
+            this.reuseTab.Size = new System.Drawing.Size(1469, 619);
+            this.reuseTab.TabIndex = 2;
+            this.reuseTab.Text = "Reuse";
+            // 
+            // reuseLayoutPanel
+            // 
+            this.reuseLayoutPanel.ColumnCount = 2;
+            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.reuseLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.reuseLayoutPanel.Name = "reuseLayoutPanel";
+            this.reuseLayoutPanel.RowCount = 2;
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.reuseLayoutPanel.Size = new System.Drawing.Size(1186, 616);
+            this.reuseLayoutPanel.TabIndex = 0;
+            // 
+            // officeTab
+            // 
+            this.officeTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
+            this.officeTab.Controls.Add(this.officeLayoutPanel);
+            this.officeTab.Location = new System.Drawing.Point(4, 34);
+            this.officeTab.Name = "officeTab";
+            this.officeTab.Size = new System.Drawing.Size(1469, 619);
+            this.officeTab.TabIndex = 3;
+            this.officeTab.Text = "Office";
+            // 
+            // officeLayoutPanel
+            // 
+            this.officeLayoutPanel.ColumnCount = 2;
+            this.officeLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.officeLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.officeLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.officeLayoutPanel.Name = "officeLayoutPanel";
+            this.officeLayoutPanel.RowCount = 2;
+            this.officeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.officeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.officeLayoutPanel.Size = new System.Drawing.Size(1200, 595);
+            this.officeLayoutPanel.TabIndex = 0;
+            // 
+            // searchTab
+            // 
+            this.searchTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
+            this.searchTab.Controls.Add(this.searchLayoutPanel);
+            this.searchTab.Location = new System.Drawing.Point(4, 34);
+            this.searchTab.Name = "searchTab";
+            this.searchTab.Size = new System.Drawing.Size(1469, 619);
+            this.searchTab.TabIndex = 4;
+            this.searchTab.Text = "Search";
+            // 
+            // searchLayoutPanel
+            // 
+            this.searchLayoutPanel.ColumnCount = 2;
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.searchLayoutPanel.Name = "searchLayoutPanel";
+            this.searchLayoutPanel.RowCount = 2;
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.Size = new System.Drawing.Size(1196, 611);
+            this.searchLayoutPanel.TabIndex = 0;
+            // 
             // Main
             // 
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1477, 657);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.receivingTab.ResumeLayout(false);
             this.receivingTab.PerformLayout();
             this.receivingLayoutPanel.ResumeLayout(false);
             this.receivingLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.receivingWeightNumericbox)).EndInit();
             this.harvestingTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).EndInit();
             this.harvestingLayoutPanel.ResumeLayout(false);
             this.harvestingLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).EndInit();
+            this.reuseTab.ResumeLayout(false);
+            this.officeTab.ResumeLayout(false);
+            this.searchTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -452,7 +507,7 @@
         private System.Windows.Forms.TextBox SerialData;
         private System.IO.Ports.SerialPort ScanComm;
         private System.Windows.Forms.OpenFileDialog OpenFile1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage receivingTab;
         private System.Windows.Forms.TableLayoutPanel receivingLayoutPanel;
         private System.Windows.Forms.CheckBox receivingPileCheckbox;
@@ -482,6 +537,9 @@
         private System.Windows.Forms.TabPage officeTab;
         private System.Windows.Forms.TabPage searchTab;
         private System.Windows.Forms.TableLayoutPanel harvestingLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel reuseLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel officeLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
     }
 }
 

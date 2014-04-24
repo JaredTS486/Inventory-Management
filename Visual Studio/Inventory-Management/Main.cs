@@ -82,19 +82,19 @@ namespace Inventory_Management
 
         private void receivingWeight_ValueChanged(object sender, EventArgs e)
         {
-
+            receivingCheckCanSubmti();
         }
 
         private void receivingDateReceived_ValueChanged(object sender, EventArgs e)
         {
-
+            receivingCheckCanSubmti();
         }
-
+        /*
         private void receivingGaylordSource_TextChanged(object sender, EventArgs e)
         {
 
         }
-
+        */
         private void receivingComments_TextChanged(object sender, EventArgs e)
         {
 
@@ -102,7 +102,7 @@ namespace Inventory_Management
 
         private void receivingPileCheckbox_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            receivingCheckCanSubmti();
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -119,6 +119,60 @@ namespace Inventory_Management
             Console.WriteLine(date);
             //dbs.ReceivingInsert(source, weight, type, comments, date);
         }
+
+        private void receivingClientTextbox_TextChanged(object sender, EventArgs e)
+        {
+            receivingCheckCanSubmti();
+        }
+
+        private void receivingCheckCanSubmti()
+        {
+            bool receivingValidClientTextbox, receivingValidDateReceivedDatebox, receivingValidWeightNumericbox;
+            if (receivingClientTextbox.Text == "Business or Client name (required or checkbox if none)" || receivingClientTextbox.Text == "")
+                receivingValidClientTextbox = false;
+            else
+                receivingValidClientTextbox = true;
+            if (receivingDateReceivedDatebox.Value == new System.DateTime(2014, 1, 1, 11, 41, 0, 0))
+                receivingValidDateReceivedDatebox = false;
+            else receivingValidDateReceivedDatebox = true;
+            if (receivingWeightNumericbox.Value == 0)
+                receivingValidWeightNumericbox = false;
+            else receivingValidWeightNumericbox = true;
+
+            if (receivingValidClientTextbox && receivingValidDateReceivedDatebox && receivingValidWeightNumericbox)
+                receivingSubmitButton.Enabled = true;
+            else receivingSubmitButton.Enabled = false;
+        }
+
+        private void harvestingParentTextbox_TextChanged(object sender, EventArgs e)
+        {
+            harvestingCheckCanSubmit();
+        }
+
+        private void harvestingPileCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            harvestingCheckCanSubmit();
+        }
+
+        private void harvestingWeightNumericbox_ValueChanged(object sender, EventArgs e)
+        {
+            harvestingCheckCanSubmit();
+        }
+
+        private void harvestingCheckCanSubmit()
+        {
+            bool harvestingValidParentTextbox, harvestingValidWeightNumericbox;
+            if (harvestingParentTextbox.Text == "ID or check box on right for pile (required)" || harvestingParentTextbox.Text == "")
+                harvestingValidParentTextbox = false;
+            else harvestingValidParentTextbox = true;
+            if (harvestingWeightNumericbox.Value == 0)
+                harvestingValidWeightNumericbox = false;
+            else harvestingValidWeightNumericbox = true;
+            if (harvestingValidParentTextbox && harvestingValidWeightNumericbox)
+                harvestingSubmitButton.Enabled = true;
+            else harvestingSubmitButton.Enabled = false;
+        }
+
     }
     public partial class DATABASE
     {
