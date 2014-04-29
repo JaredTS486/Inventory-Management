@@ -23,6 +23,10 @@ namespace Inventory_Management
         public Main()
         {
             InitializeComponent();
+            //this.dbs.SetUser("shauni");
+            //this.dbs.SetPass("wDrTxy3hSUnRHLKY");
+            //this.dbs.SetServer("jpsharpe.net");
+            //this.dbs.SetDatabase("ewaste");
             dbs.Connection();
         }
         public void AddDataMethod(String myString)

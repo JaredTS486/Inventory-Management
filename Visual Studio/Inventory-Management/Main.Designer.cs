@@ -25,6 +25,8 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
+            this.dbs = new DATABASE();
+            this.lbl = new LABELS();
             this.components = new System.ComponentModel.Container();
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
@@ -90,9 +92,13 @@
             this.searchTab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ScanComm
+            // ScanComm // Database
             // 
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.DataReceivedHandler);
+            this.dbs.SetUser("shauni");
+            this.dbs.SetPass("wDrTxy3hSUnRHLKY");
+            this.dbs.SetServer("jpsharpe.net");
+            this.dbs.SetDatabase("ewaste");
             // 
             // tabControl
             // 
