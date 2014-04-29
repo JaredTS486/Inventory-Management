@@ -836,6 +836,7 @@
         private System.Windows.Forms.Button searchIDButton;
         private System.Windows.Forms.TextBox searchIDTextbox;
         private System.Windows.Forms.TextBox searchClientTextbox;
+        private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
     }
 }
 
