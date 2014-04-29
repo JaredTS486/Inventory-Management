@@ -25,6 +25,8 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
+            this.dbs = new DATABASE();
+            this.lbl = new LABELS();
             this.components = new System.ComponentModel.Container();
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
@@ -76,11 +78,12 @@
             this.officeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.searchIDLabel = new System.Windows.Forms.Label();
+            this.searchClientLabel = new System.Windows.Forms.Label();
+            this.searchIDButton = new System.Windows.Forms.Button();
+            this.searchClientButton = new System.Windows.Forms.Button();
+            this.searchIDTextbox = new System.Windows.Forms.TextBox();
+            this.searchClientTextbox = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.receivingTab.SuspendLayout();
             this.receivingLayoutPanel.SuspendLayout();
@@ -96,9 +99,13 @@
             this.searchLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ScanComm
+            // ScanComm // Database
             // 
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.DataReceivedHandler);
+            this.dbs.SetUser("shauni");
+            this.dbs.SetPass("wDrTxy3hSUnRHLKY");
+            this.dbs.SetServer("jpsharpe.net");
+            this.dbs.SetDatabase("ewaste");
             // 
             // tabControl
             // 
@@ -134,8 +141,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.receivingLayoutPanel.AutoSize = true;
             this.receivingLayoutPanel.ColumnCount = 3;
-            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.841269F));
-            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.15873F));
+            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.19507F));
+            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.80493F));
             this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.receivingLayoutPanel.Controls.Add(this.receivingPileCheckbox, 2, 0);
             this.receivingLayoutPanel.Controls.Add(this.receivingCommentsLabel, 0, 5);
@@ -665,67 +672,81 @@
             // 
             // searchLayoutPanel
             // 
-            this.searchLayoutPanel.ColumnCount = 2;
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.187291F));
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.81271F));
-            this.searchLayoutPanel.Controls.Add(this.listBox1, 0, 1);
-            this.searchLayoutPanel.Controls.Add(this.label1, 0, 2);
-            this.searchLayoutPanel.Controls.Add(this.textBox1, 1, 3);
-            this.searchLayoutPanel.Controls.Add(this.listBox2, 1, 4);
-            this.searchLayoutPanel.Controls.Add(this.label2, 0, 3);
+            this.searchLayoutPanel.ColumnCount = 3;
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.25418F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.74582F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
+            this.searchLayoutPanel.Controls.Add(this.searchIDLabel, 0, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchClientLabel, 0, 1);
+            this.searchLayoutPanel.Controls.Add(this.searchClientButton, 2, 1);
+            this.searchLayoutPanel.Controls.Add(this.searchIDButton, 2, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchIDTextbox, 1, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchClientTextbox, 1, 1);
             this.searchLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.searchLayoutPanel.Name = "searchLayoutPanel";
-            this.searchLayoutPanel.RowCount = 5;
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.932203F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.06779F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32680F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.searchLayoutPanel.Size = new System.Drawing.Size(1196, 234);
+            this.searchLayoutPanel.RowCount = 4;
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.53764F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.46236F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 487F));
+            this.searchLayoutPanel.Size = new System.Drawing.Size(1196, 611);
             this.searchLayoutPanel.TabIndex = 0;
             // 
-            // listBox1
+            // searchIDLabel
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 24;
-            this.listBox1.Location = new System.Drawing.Point(3, -1933);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(68, 4);
-            this.listBox1.TabIndex = 0;
+            this.searchIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchIDLabel.AutoSize = true;
+            this.searchIDLabel.Location = new System.Drawing.Point(3, 9);
+            this.searchIDLabel.Name = "searchIDLabel";
+            this.searchIDLabel.Size = new System.Drawing.Size(168, 24);
+            this.searchIDLabel.TabIndex = 0;
+            this.searchIDLabel.Text = "Search by Label ID";
             // 
-            // textBox1
+            // searchClientLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 29);
-            this.textBox1.TabIndex = 1;
+            this.searchClientLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchClientLabel.AutoSize = true;
+            this.searchClientLabel.Location = new System.Drawing.Point(3, 51);
+            this.searchClientLabel.Name = "searchClientLabel";
+            this.searchClientLabel.Size = new System.Drawing.Size(147, 24);
+            this.searchClientLabel.TabIndex = 1;
+            this.searchClientLabel.Text = "Search by Client";
             // 
-            // label1
+            // searchIDButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, -32636);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.searchIDButton.Enabled = false;
+            this.searchIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.searchIDButton.Location = new System.Drawing.Point(1019, 3);
+            this.searchIDButton.Name = "searchIDButton";
+            this.searchIDButton.Size = new System.Drawing.Size(164, 36);
+            this.searchIDButton.TabIndex = 17;
+            this.searchIDButton.Text = "Search";
+            this.searchIDButton.UseVisualStyleBackColor = true;
             // 
-            // listBox2
+            // searchClientButton
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 24;
-            this.listBox2.Location = new System.Drawing.Point(77, 84);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(134, 124);
-            this.listBox2.TabIndex = 3;
+            this.searchClientButton.Enabled = false;
+            this.searchClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.searchClientButton.Location = new System.Drawing.Point(1019, 45);
+            this.searchClientButton.Name = "searchClientButton";
+            this.searchClientButton.Size = new System.Drawing.Size(164, 36);
+            this.searchClientButton.TabIndex = 18;
+            this.searchClientButton.Text = "Search";
+            this.searchClientButton.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // searchIDTextbox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.searchIDTextbox.Location = new System.Drawing.Point(270, 3);
+            this.searchIDTextbox.Name = "searchIDTextbox";
+            this.searchIDTextbox.Size = new System.Drawing.Size(731, 29);
+            this.searchIDTextbox.TabIndex = 19;
+            // 
+            // searchClientTextbox
+            // 
+            this.searchClientTextbox.Location = new System.Drawing.Point(270, 45);
+            this.searchClientTextbox.Name = "searchClientTextbox";
+            this.searchClientTextbox.Size = new System.Drawing.Size(731, 29);
+            this.searchClientTextbox.TabIndex = 20;
             // 
             // Main
             // 
@@ -809,12 +830,12 @@
         private System.Windows.Forms.CheckBox reuseSoldCheckbox;
         private System.Windows.Forms.Button reuseSubmitButton;
         private System.Windows.Forms.Button reuseSearchButton;
-        private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label searchIDLabel;
+        private System.Windows.Forms.Label searchClientLabel;
+        private System.Windows.Forms.Button searchClientButton;
+        private System.Windows.Forms.Button searchIDButton;
+        private System.Windows.Forms.TextBox searchIDTextbox;
+        private System.Windows.Forms.TextBox searchClientTextbox;
     }
 }
 
