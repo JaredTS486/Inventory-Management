@@ -23,7 +23,8 @@ namespace Inventory_Management
         public Main()
         {
             InitializeComponent();
-            dbs.Connection();
+
+        //    dbs.Connection();
         }
         public void AddDataMethod(String myString)
         {
@@ -82,12 +83,12 @@ namespace Inventory_Management
 
         private void receivingWeight_ValueChanged(object sender, EventArgs e)
         {
-            receivingCheckCanSubmti();
+            receivingCheckCanSubmit();
         }
 
         private void receivingDateReceived_ValueChanged(object sender, EventArgs e)
         {
-            receivingCheckCanSubmti();
+            receivingCheckCanSubmit();
         }
         /*
         private void receivingGaylordSource_TextChanged(object sender, EventArgs e)
@@ -102,7 +103,7 @@ namespace Inventory_Management
 
         private void receivingPileCheckbox_CheckedChanged_1(object sender, EventArgs e)
         {
-            receivingCheckCanSubmti();
+            receivingCheckCanSubmit();
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -122,10 +123,10 @@ namespace Inventory_Management
 
         private void receivingClientTextbox_TextChanged(object sender, EventArgs e)
         {
-            receivingCheckCanSubmti();
+            receivingCheckCanSubmit();
         }
 
-        private void receivingCheckCanSubmti()
+        private void receivingCheckCanSubmit()
         {
             bool receivingValidClientTextbox, receivingValidDateReceivedDatebox, receivingValidWeightNumericbox;
             if (receivingClientTextbox.Text == "Business or Client name (required or checkbox if none)" || receivingClientTextbox.Text == "")

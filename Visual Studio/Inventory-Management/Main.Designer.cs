@@ -76,6 +76,12 @@
             this.officeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.searchIDLabel = new System.Windows.Forms.Label();
+            this.searchClientLabel = new System.Windows.Forms.Label();
+            this.searchIDButton = new System.Windows.Forms.Button();
+            this.searchClientButton = new System.Windows.Forms.Button();
+            this.searchIDTextbox = new System.Windows.Forms.TextBox();
+            this.searchClientTextbox = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.receivingTab.SuspendLayout();
             this.receivingLayoutPanel.SuspendLayout();
@@ -88,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).BeginInit();
             this.officeTab.SuspendLayout();
             this.searchTab.SuspendLayout();
+            this.searchLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ScanComm
@@ -659,16 +666,81 @@
             // 
             // searchLayoutPanel
             // 
-            this.searchLayoutPanel.ColumnCount = 2;
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.ColumnCount = 3;
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.25418F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.74582F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
+            this.searchLayoutPanel.Controls.Add(this.searchIDLabel, 0, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchClientLabel, 0, 1);
+            this.searchLayoutPanel.Controls.Add(this.searchClientButton, 2, 1);
+            this.searchLayoutPanel.Controls.Add(this.searchIDButton, 2, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchIDTextbox, 1, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchClientTextbox, 1, 1);
             this.searchLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.searchLayoutPanel.Name = "searchLayoutPanel";
-            this.searchLayoutPanel.RowCount = 2;
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.RowCount = 4;
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.53764F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.46236F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 487F));
             this.searchLayoutPanel.Size = new System.Drawing.Size(1196, 611);
             this.searchLayoutPanel.TabIndex = 0;
+            // 
+            // searchIDLabel
+            // 
+            this.searchIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchIDLabel.AutoSize = true;
+            this.searchIDLabel.Location = new System.Drawing.Point(3, 9);
+            this.searchIDLabel.Name = "searchIDLabel";
+            this.searchIDLabel.Size = new System.Drawing.Size(168, 24);
+            this.searchIDLabel.TabIndex = 0;
+            this.searchIDLabel.Text = "Search by Label ID";
+            // 
+            // searchClientLabel
+            // 
+            this.searchClientLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchClientLabel.AutoSize = true;
+            this.searchClientLabel.Location = new System.Drawing.Point(3, 51);
+            this.searchClientLabel.Name = "searchClientLabel";
+            this.searchClientLabel.Size = new System.Drawing.Size(147, 24);
+            this.searchClientLabel.TabIndex = 1;
+            this.searchClientLabel.Text = "Search by Client";
+            // 
+            // searchIDButton
+            // 
+            this.searchIDButton.Enabled = false;
+            this.searchIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.searchIDButton.Location = new System.Drawing.Point(1019, 3);
+            this.searchIDButton.Name = "searchIDButton";
+            this.searchIDButton.Size = new System.Drawing.Size(164, 36);
+            this.searchIDButton.TabIndex = 17;
+            this.searchIDButton.Text = "Search";
+            this.searchIDButton.UseVisualStyleBackColor = true;
+            // 
+            // searchClientButton
+            // 
+            this.searchClientButton.Enabled = false;
+            this.searchClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.searchClientButton.Location = new System.Drawing.Point(1019, 45);
+            this.searchClientButton.Name = "searchClientButton";
+            this.searchClientButton.Size = new System.Drawing.Size(164, 36);
+            this.searchClientButton.TabIndex = 18;
+            this.searchClientButton.Text = "Search";
+            this.searchClientButton.UseVisualStyleBackColor = true;
+            // 
+            // searchIDTextbox
+            // 
+            this.searchIDTextbox.Location = new System.Drawing.Point(270, 3);
+            this.searchIDTextbox.Name = "searchIDTextbox";
+            this.searchIDTextbox.Size = new System.Drawing.Size(731, 29);
+            this.searchIDTextbox.TabIndex = 19;
+            // 
+            // searchClientTextbox
+            // 
+            this.searchClientTextbox.Location = new System.Drawing.Point(270, 45);
+            this.searchClientTextbox.Name = "searchClientTextbox";
+            this.searchClientTextbox.Size = new System.Drawing.Size(731, 29);
+            this.searchClientTextbox.TabIndex = 20;
             // 
             // Main
             // 
@@ -694,6 +766,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).EndInit();
             this.officeTab.ResumeLayout(false);
             this.searchTab.ResumeLayout(false);
+            this.searchLayoutPanel.ResumeLayout(false);
+            this.searchLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -751,6 +825,12 @@
         private System.Windows.Forms.CheckBox reuseSoldCheckbox;
         private System.Windows.Forms.Button reuseSubmitButton;
         private System.Windows.Forms.Button reuseSearchButton;
+        private System.Windows.Forms.Label searchIDLabel;
+        private System.Windows.Forms.Label searchClientLabel;
+        private System.Windows.Forms.Button searchClientButton;
+        private System.Windows.Forms.Button searchIDButton;
+        private System.Windows.Forms.TextBox searchIDTextbox;
+        private System.Windows.Forms.TextBox searchClientTextbox;
     }
 }
 
