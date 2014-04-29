@@ -57,6 +57,21 @@
             this.harvestingCategoryLabel = new System.Windows.Forms.Label();
             this.reuseTab = new System.Windows.Forms.TabPage();
             this.reuseLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.reuseParentIDTextbox = new System.Windows.Forms.TextBox();
+            this.reuseExistingIDTextbox = new System.Windows.Forms.TextBox();
+            this.reuseParentIDLabel = new System.Windows.Forms.Label();
+            this.reuseWeightLabel = new System.Windows.Forms.Label();
+            this.reuseCategoryLabel = new System.Windows.Forms.Label();
+            this.reuseCategoryTextbox = new System.Windows.Forms.TextBox();
+            this.reuseWeightNumericbox = new System.Windows.Forms.NumericUpDown();
+            this.reuseCommentsTextbox = new System.Windows.Forms.TextBox();
+            this.reuseCommentsLabel = new System.Windows.Forms.Label();
+            this.reuseExistingIDLabel = new System.Windows.Forms.Label();
+            this.reuseListedCheckbox = new System.Windows.Forms.CheckBox();
+            this.reuseSoldCheckbox = new System.Windows.Forms.CheckBox();
+            this.reuseCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.reuseSearchButton = new System.Windows.Forms.Button();
+            this.reuseSubmitButton = new System.Windows.Forms.Button();
             this.officeTab = new System.Windows.Forms.TabPage();
             this.officeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchTab = new System.Windows.Forms.TabPage();
@@ -69,6 +84,8 @@
             this.harvestingLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).BeginInit();
             this.reuseTab.SuspendLayout();
+            this.reuseLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).BeginInit();
             this.officeTab.SuspendLayout();
             this.searchTab.SuspendLayout();
             this.SuspendLayout();
@@ -245,10 +262,11 @@
             // 
             // receivingSubmitButton
             // 
+            this.receivingSubmitButton.Enabled = false;
             this.receivingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receivingSubmitButton.Location = new System.Drawing.Point(1263, 152);
             this.receivingSubmitButton.Name = "receivingSubmitButton";
-            this.receivingSubmitButton.Size = new System.Drawing.Size(189, 43);
+            this.receivingSubmitButton.Size = new System.Drawing.Size(189, 60);
             this.receivingSubmitButton.TabIndex = 12;
             this.receivingSubmitButton.Text = "Submit";
             this.receivingSubmitButton.UseVisualStyleBackColor = true;
@@ -347,6 +365,7 @@
             // 
             // harvestingSubmitButton
             // 
+            this.harvestingSubmitButton.Enabled = false;
             this.harvestingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.harvestingSubmitButton.Location = new System.Drawing.Point(1019, 117);
             this.harvestingSubmitButton.Name = "harvestingSubmitButton";
@@ -420,16 +439,190 @@
             // 
             // reuseLayoutPanel
             // 
-            this.reuseLayoutPanel.ColumnCount = 2;
-            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.reuseLayoutPanel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reuseLayoutPanel.ColumnCount = 3;
+            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.8145F));
+            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.1855F));
+            this.reuseLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.reuseLayoutPanel.Controls.Add(this.reuseParentIDTextbox, 1, 1);
+            this.reuseLayoutPanel.Controls.Add(this.reuseExistingIDTextbox, 1, 2);
+            this.reuseLayoutPanel.Controls.Add(this.reuseParentIDLabel, 0, 1);
+            this.reuseLayoutPanel.Controls.Add(this.reuseWeightLabel, 0, 3);
+            this.reuseLayoutPanel.Controls.Add(this.reuseCategoryLabel, 0, 4);
+            this.reuseLayoutPanel.Controls.Add(this.reuseCategoryTextbox, 1, 4);
+            this.reuseLayoutPanel.Controls.Add(this.reuseWeightNumericbox, 1, 3);
+            this.reuseLayoutPanel.Controls.Add(this.reuseCommentsTextbox, 1, 6);
+            this.reuseLayoutPanel.Controls.Add(this.reuseCommentsLabel, 0, 6);
+            this.reuseLayoutPanel.Controls.Add(this.reuseExistingIDLabel, 0, 2);
+            this.reuseLayoutPanel.Controls.Add(this.reuseListedCheckbox, 0, 5);
+            this.reuseLayoutPanel.Controls.Add(this.reuseSoldCheckbox, 1, 5);
+            this.reuseLayoutPanel.Controls.Add(this.reuseCheckedListBox, 1, 0);
+            this.reuseLayoutPanel.Controls.Add(this.reuseSearchButton, 2, 2);
+            this.reuseLayoutPanel.Controls.Add(this.reuseSubmitButton, 2, 6);
             this.reuseLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.reuseLayoutPanel.Name = "reuseLayoutPanel";
-            this.reuseLayoutPanel.RowCount = 2;
-            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.reuseLayoutPanel.Size = new System.Drawing.Size(1186, 616);
+            this.reuseLayoutPanel.RowCount = 8;
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 344F));
+            this.reuseLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.reuseLayoutPanel.Size = new System.Drawing.Size(1352, 616);
             this.reuseLayoutPanel.TabIndex = 0;
+            this.reuseLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.reuseLayoutPanel_Paint);
+            // 
+            // reuseParentIDTextbox
+            // 
+            this.reuseParentIDTextbox.Location = new System.Drawing.Point(237, 75);
+            this.reuseParentIDTextbox.Name = "reuseParentIDTextbox";
+            this.reuseParentIDTextbox.Size = new System.Drawing.Size(934, 29);
+            this.reuseParentIDTextbox.TabIndex = 3;
+            // 
+            // reuseExistingIDTextbox
+            // 
+            this.reuseExistingIDTextbox.Location = new System.Drawing.Point(237, 112);
+            this.reuseExistingIDTextbox.Name = "reuseExistingIDTextbox";
+            this.reuseExistingIDTextbox.Size = new System.Drawing.Size(934, 29);
+            this.reuseExistingIDTextbox.TabIndex = 5;
+            // 
+            // reuseParentIDLabel
+            // 
+            this.reuseParentIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reuseParentIDLabel.AutoSize = true;
+            this.reuseParentIDLabel.Location = new System.Drawing.Point(3, 78);
+            this.reuseParentIDLabel.Name = "reuseParentIDLabel";
+            this.reuseParentIDLabel.Size = new System.Drawing.Size(193, 24);
+            this.reuseParentIDLabel.TabIndex = 2;
+            this.reuseParentIDLabel.Text = "ID of Box Taken From";
+            // 
+            // reuseWeightLabel
+            // 
+            this.reuseWeightLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reuseWeightLabel.AutoSize = true;
+            this.reuseWeightLabel.Location = new System.Drawing.Point(3, 151);
+            this.reuseWeightLabel.Name = "reuseWeightLabel";
+            this.reuseWeightLabel.Size = new System.Drawing.Size(69, 24);
+            this.reuseWeightLabel.TabIndex = 7;
+            this.reuseWeightLabel.Text = "Weight";
+            // 
+            // reuseCategoryLabel
+            // 
+            this.reuseCategoryLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reuseCategoryLabel.AutoSize = true;
+            this.reuseCategoryLabel.Location = new System.Drawing.Point(3, 188);
+            this.reuseCategoryLabel.Name = "reuseCategoryLabel";
+            this.reuseCategoryLabel.Size = new System.Drawing.Size(85, 24);
+            this.reuseCategoryLabel.TabIndex = 11;
+            this.reuseCategoryLabel.Text = "Category";
+            // 
+            // reuseCategoryTextbox
+            // 
+            this.reuseCategoryTextbox.Location = new System.Drawing.Point(237, 184);
+            this.reuseCategoryTextbox.Name = "reuseCategoryTextbox";
+            this.reuseCategoryTextbox.Size = new System.Drawing.Size(934, 29);
+            this.reuseCategoryTextbox.TabIndex = 8;
+            // 
+            // reuseWeightNumericbox
+            // 
+            this.reuseWeightNumericbox.DecimalPlaces = 2;
+            this.reuseWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.reuseWeightNumericbox.Location = new System.Drawing.Point(237, 148);
+            this.reuseWeightNumericbox.Maximum = new decimal(new int[] {
+            276447231,
+            23283,
+            0,
+            0});
+            this.reuseWeightNumericbox.Name = "reuseWeightNumericbox";
+            this.reuseWeightNumericbox.Size = new System.Drawing.Size(934, 29);
+            this.reuseWeightNumericbox.TabIndex = 12;
+            // 
+            // reuseCommentsTextbox
+            // 
+            this.reuseCommentsTextbox.Location = new System.Drawing.Point(237, 260);
+            this.reuseCommentsTextbox.Multiline = true;
+            this.reuseCommentsTextbox.Name = "reuseCommentsTextbox";
+            this.reuseCommentsTextbox.Size = new System.Drawing.Size(934, 335);
+            this.reuseCommentsTextbox.TabIndex = 10;
+            // 
+            // reuseCommentsLabel
+            // 
+            this.reuseCommentsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reuseCommentsLabel.AutoSize = true;
+            this.reuseCommentsLabel.Location = new System.Drawing.Point(3, 417);
+            this.reuseCommentsLabel.Name = "reuseCommentsLabel";
+            this.reuseCommentsLabel.Size = new System.Drawing.Size(101, 24);
+            this.reuseCommentsLabel.TabIndex = 9;
+            this.reuseCommentsLabel.Text = "Comments";
+            // 
+            // reuseExistingIDLabel
+            // 
+            this.reuseExistingIDLabel.AutoSize = true;
+            this.reuseExistingIDLabel.Location = new System.Drawing.Point(3, 109);
+            this.reuseExistingIDLabel.Name = "reuseExistingIDLabel";
+            this.reuseExistingIDLabel.Size = new System.Drawing.Size(218, 24);
+            this.reuseExistingIDLabel.TabIndex = 4;
+            this.reuseExistingIDLabel.Text = "ID of Item Being Modified";
+            // 
+            // reuseListedCheckbox
+            // 
+            this.reuseListedCheckbox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.reuseListedCheckbox.AutoSize = true;
+            this.reuseListedCheckbox.Location = new System.Drawing.Point(85, 224);
+            this.reuseListedCheckbox.Name = "reuseListedCheckbox";
+            this.reuseListedCheckbox.Size = new System.Drawing.Size(146, 28);
+            this.reuseListedCheckbox.TabIndex = 13;
+            this.reuseListedCheckbox.Text = "Listed for Sale";
+            this.reuseListedCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // reuseSoldCheckbox
+            // 
+            this.reuseSoldCheckbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.reuseSoldCheckbox.AutoSize = true;
+            this.reuseSoldCheckbox.Location = new System.Drawing.Point(237, 224);
+            this.reuseSoldCheckbox.Name = "reuseSoldCheckbox";
+            this.reuseSoldCheckbox.Size = new System.Drawing.Size(67, 28);
+            this.reuseSoldCheckbox.TabIndex = 14;
+            this.reuseSoldCheckbox.Text = "Sold";
+            this.reuseSoldCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // reuseCheckedListBox
+            // 
+            this.reuseCheckedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
+            this.reuseCheckedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reuseCheckedListBox.FormattingEnabled = true;
+            this.reuseCheckedListBox.Items.AddRange(new object[] {
+            "Create New Item Label",
+            "Modify Existing Item"});
+            this.reuseCheckedListBox.Location = new System.Drawing.Point(237, 3);
+            this.reuseCheckedListBox.Name = "reuseCheckedListBox";
+            this.reuseCheckedListBox.Size = new System.Drawing.Size(274, 48);
+            this.reuseCheckedListBox.TabIndex = 6;
+            this.reuseCheckedListBox.SelectedIndexChanged += new System.EventHandler(this.reuseCheckedListBox_SelectedIndexChanged);
+            // 
+            // reuseSearchButton
+            // 
+            this.reuseSearchButton.Enabled = false;
+            this.reuseSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.reuseSearchButton.Location = new System.Drawing.Point(1185, 112);
+            this.reuseSearchButton.Name = "reuseSearchButton";
+            this.reuseSearchButton.Size = new System.Drawing.Size(164, 30);
+            this.reuseSearchButton.TabIndex = 16;
+            this.reuseSearchButton.Text = "Search";
+            this.reuseSearchButton.UseVisualStyleBackColor = true;
+            // 
+            // reuseSubmitButton
+            // 
+            this.reuseSubmitButton.Enabled = false;
+            this.reuseSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.reuseSubmitButton.Location = new System.Drawing.Point(1185, 260);
+            this.reuseSubmitButton.Name = "reuseSubmitButton";
+            this.reuseSubmitButton.Size = new System.Drawing.Size(164, 59);
+            this.reuseSubmitButton.TabIndex = 15;
+            this.reuseSubmitButton.Text = "Submit";
+            this.reuseSubmitButton.UseVisualStyleBackColor = true;
             // 
             // officeTab
             // 
@@ -496,6 +689,9 @@
             this.harvestingLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.harvestingWeightNumericbox)).EndInit();
             this.reuseTab.ResumeLayout(false);
+            this.reuseLayoutPanel.ResumeLayout(false);
+            this.reuseLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).EndInit();
             this.officeTab.ResumeLayout(false);
             this.searchTab.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -540,6 +736,21 @@
         private System.Windows.Forms.TableLayoutPanel reuseLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel officeLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
+        private System.Windows.Forms.Label reuseParentIDLabel;
+        private System.Windows.Forms.TextBox reuseParentIDTextbox;
+        private System.Windows.Forms.Label reuseExistingIDLabel;
+        private System.Windows.Forms.TextBox reuseExistingIDTextbox;
+        private System.Windows.Forms.CheckedListBox reuseCheckedListBox;
+        private System.Windows.Forms.Label reuseWeightLabel;
+        private System.Windows.Forms.TextBox reuseCategoryTextbox;
+        private System.Windows.Forms.TextBox reuseCommentsTextbox;
+        private System.Windows.Forms.Label reuseCommentsLabel;
+        private System.Windows.Forms.Label reuseCategoryLabel;
+        private System.Windows.Forms.NumericUpDown reuseWeightNumericbox;
+        private System.Windows.Forms.CheckBox reuseListedCheckbox;
+        private System.Windows.Forms.CheckBox reuseSoldCheckbox;
+        private System.Windows.Forms.Button reuseSubmitButton;
+        private System.Windows.Forms.Button reuseSearchButton;
     }
 }
 

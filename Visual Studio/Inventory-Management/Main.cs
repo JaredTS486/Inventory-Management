@@ -173,6 +173,57 @@ namespace Inventory_Management
             else harvestingSubmitButton.Enabled = false;
         }
 
+        private void reuseCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (reuseCheckedListBox.GetItemChecked(0))
+            {
+                reuseExistingIDTextbox.Enabled = false;
+                reuseParentIDTextbox.Enabled = true;
+                reuseSearchButton.Enabled = false;
+            }
+            if (reuseCheckedListBox.GetItemChecked(1))
+            {
+                reuseExistingIDTextbox.Enabled = true;
+                reuseParentIDTextbox.Enabled = false;
+                reuseSearchButton.Enabled = true;
+            }
+        }
+
+        private void reuseLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void reuseCheckCanSubmit()
+        {
+            bool reuseValidChecklist=false, reuseValidID=false, reuseValidWeight=false;
+            if (reuseCheckedListBox.GetItemChecked(0))
+            {
+                reuseValidChecklist = true;
+                if (reuseParentIDTextbox.Text == "")
+                    reuseValidID = false;
+                else reuseValidID = true;
+                if (reuseWeightNumericbox.Value == 0)
+                    reuseValidWeight = false;
+                else reuseValidWeight = true;
+            }
+            else if (reuseCheckedListBox.GetItemChecked(1))
+            {
+                reuseValidChecklist = true;
+                if (reuseExistingIDTextbox.Text == "")
+                    reuseValidID = false;
+                else reuseValidID = true;
+                if (reuseWeightNumericbox.Value == 0)
+                    reuseValidWeight = false;
+                else reuseValidWeight = true;
+            }
+            else reuseValidChecklist = false;
+
+            if (reuseValidChecklist && reuseValidID && reuseValidWeight)
+                reuseSubmitButton.Enabled = true;
+            else reuseSubmitButton.Enabled = false;
+        }
+
     }
     public partial class DATABASE
     {
