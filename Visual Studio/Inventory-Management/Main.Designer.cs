@@ -25,8 +25,6 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
-            this.dbs = new DATABASE();
-            this.lbl = new LABELS();
             this.components = new System.ComponentModel.Container();
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
@@ -78,6 +76,11 @@
             this.officeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.receivingTab.SuspendLayout();
             this.receivingLayoutPanel.SuspendLayout();
@@ -90,15 +93,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).BeginInit();
             this.officeTab.SuspendLayout();
             this.searchTab.SuspendLayout();
+            this.searchLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ScanComm // Database
+            // ScanComm
             // 
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.DataReceivedHandler);
-            this.dbs.SetUser("shauni");
-            this.dbs.SetPass("wDrTxy3hSUnRHLKY");
-            this.dbs.SetServer("jpsharpe.net");
-            this.dbs.SetDatabase("ewaste");
             // 
             // tabControl
             // 
@@ -134,8 +134,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.receivingLayoutPanel.AutoSize = true;
             this.receivingLayoutPanel.ColumnCount = 3;
-            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.19507F));
-            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.80493F));
+            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.841269F));
+            this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.15873F));
             this.receivingLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.receivingLayoutPanel.Controls.Add(this.receivingPileCheckbox, 2, 0);
             this.receivingLayoutPanel.Controls.Add(this.receivingCommentsLabel, 0, 5);
@@ -185,25 +185,25 @@
             // 
             this.receivingCategoryTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.receivingCategoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCategoryTextbox.Location = new System.Drawing.Point(194, 115);
+            this.receivingCategoryTextbox.Location = new System.Drawing.Point(127, 115);
             this.receivingCategoryTextbox.Name = "receivingCategoryTextbox";
-            this.receivingCategoryTextbox.Size = new System.Drawing.Size(1063, 31);
+            this.receivingCategoryTextbox.Size = new System.Drawing.Size(1130, 31);
             this.receivingCategoryTextbox.TabIndex = 8;
             // 
             // receivingCommentsTextbox
             // 
             this.receivingCommentsTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.receivingCommentsTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCommentsTextbox.Location = new System.Drawing.Point(194, 152);
+            this.receivingCommentsTextbox.Location = new System.Drawing.Point(127, 152);
             this.receivingCommentsTextbox.Multiline = true;
             this.receivingCommentsTextbox.Name = "receivingCommentsTextbox";
-            this.receivingCommentsTextbox.Size = new System.Drawing.Size(1063, 450);
+            this.receivingCommentsTextbox.Size = new System.Drawing.Size(1130, 450);
             this.receivingCommentsTextbox.TabIndex = 11;
             // 
             // receivingClientTextbox
             // 
             this.receivingClientTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingClientTextbox.Location = new System.Drawing.Point(194, 3);
+            this.receivingClientTextbox.Location = new System.Drawing.Point(127, 3);
             this.receivingClientTextbox.MaxLength = 200;
             this.receivingClientTextbox.Name = "receivingClientTextbox";
             this.receivingClientTextbox.Size = new System.Drawing.Size(1063, 31);
@@ -225,7 +225,7 @@
             // receivingDateReceivedDatebox
             // 
             this.receivingDateReceivedDatebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingDateReceivedDatebox.Location = new System.Drawing.Point(194, 78);
+            this.receivingDateReceivedDatebox.Location = new System.Drawing.Point(127, 78);
             this.receivingDateReceivedDatebox.Name = "receivingDateReceivedDatebox";
             this.receivingDateReceivedDatebox.Size = new System.Drawing.Size(375, 31);
             this.receivingDateReceivedDatebox.TabIndex = 3;
@@ -246,7 +246,7 @@
             // 
             this.receivingWeightNumericbox.DecimalPlaces = 2;
             this.receivingWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingWeightNumericbox.Location = new System.Drawing.Point(194, 41);
+            this.receivingWeightNumericbox.Location = new System.Drawing.Point(127, 41);
             this.receivingWeightNumericbox.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -666,15 +666,66 @@
             // searchLayoutPanel
             // 
             this.searchLayoutPanel.ColumnCount = 2;
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.187291F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 93.81271F));
+            this.searchLayoutPanel.Controls.Add(this.listBox1, 0, 1);
+            this.searchLayoutPanel.Controls.Add(this.label1, 0, 2);
+            this.searchLayoutPanel.Controls.Add(this.textBox1, 1, 3);
+            this.searchLayoutPanel.Controls.Add(this.listBox2, 1, 4);
+            this.searchLayoutPanel.Controls.Add(this.label2, 0, 3);
             this.searchLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.searchLayoutPanel.Name = "searchLayoutPanel";
-            this.searchLayoutPanel.RowCount = 2;
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.searchLayoutPanel.Size = new System.Drawing.Size(1196, 611);
+            this.searchLayoutPanel.RowCount = 5;
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.932203F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.06779F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32680F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.searchLayoutPanel.Size = new System.Drawing.Size(1196, 234);
             this.searchLayoutPanel.TabIndex = 0;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 24;
+            this.listBox1.Location = new System.Drawing.Point(3, -1933);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(68, 4);
+            this.listBox1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(77, 47);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 29);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, -32636);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 24;
+            this.listBox2.Location = new System.Drawing.Point(77, 84);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(134, 124);
+            this.listBox2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
             // 
             // Main
             // 
@@ -700,6 +751,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).EndInit();
             this.officeTab.ResumeLayout(false);
             this.searchTab.ResumeLayout(false);
+            this.searchLayoutPanel.ResumeLayout(false);
+            this.searchLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -741,7 +794,6 @@
         private System.Windows.Forms.TableLayoutPanel harvestingLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel reuseLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel officeLayoutPanel;
-        private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
         private System.Windows.Forms.Label reuseParentIDLabel;
         private System.Windows.Forms.TextBox reuseParentIDTextbox;
         private System.Windows.Forms.Label reuseExistingIDLabel;
@@ -757,6 +809,12 @@
         private System.Windows.Forms.CheckBox reuseSoldCheckbox;
         private System.Windows.Forms.Button reuseSubmitButton;
         private System.Windows.Forms.Button reuseSearchButton;
+        private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
 

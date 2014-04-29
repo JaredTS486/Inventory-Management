@@ -250,7 +250,6 @@ namespace Inventory_Management
                 reuseSubmitButton.Enabled = true;
             else reuseSubmitButton.Enabled = false;
         }
-
     }
     public partial class DATABASE
     {
