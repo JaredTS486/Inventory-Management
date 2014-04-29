@@ -64,6 +64,11 @@ namespace Inventory_Management
         private void receivingWeightLabel_Click(object sender, EventArgs e){ }
         private void receivingCategoryLabel_Click(object sender, EventArgs e) { }
         private void receivingClientLabel_Click(object sender, EventArgs e) { }
+        private void harvestingCommentsLabel_Click(object sender, EventArgs e) { }
+        private void harvestingCommentsLabel_Click_1(object sender, EventArgs e) { }
+        private void harvestingWeightLabel_Click(object sender, EventArgs e) { }
+        private void harvestingCategoryLabel_Click(object sender, EventArgs e) { }
+        private void harvestingParentLabel_Click(object sender, EventArgs e) { }
 
         private void receivingPileCheckbox_CheckedChanged(object sender, EventArgs e)
         {
@@ -158,6 +163,24 @@ namespace Inventory_Management
         private void harvestingWeightNumericbox_ValueChanged(object sender, EventArgs e)
         {
             harvestingCheckCanSubmit();
+        }
+
+        private void harvestingLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void harvestingSubmitButton_Click(object sender, EventArgs e)
+        {
+            string source = this.harvestingParentTextbox.Text;
+            string weight = this.harvestingWeightNumericbox.Text;
+            string type = this.harvestingCategoryTextbox.Text;
+            string comments = this.harvestingCommentsTextbox.Text;
+            Console.WriteLine(source);
+            Console.WriteLine(weight);
+            Console.WriteLine(type);
+            Console.WriteLine(comments);
+            //dbs.HarvestingInsert(source, weight, type, comments);
         }
 
         private void harvestingCheckCanSubmit()
