@@ -25,8 +25,6 @@
         /// </summary>
         private void InitializeComponent() //Its easier to declare here an inilialize in the Main.
         {
-            this.dbs = new DATABASE();
-            this.lbl = new LABELS();
             this.components = new System.ComponentModel.Container();
             this.ScanComm = new System.IO.Ports.SerialPort(this.components);
             this.OpenFile1 = new System.Windows.Forms.OpenFileDialog();
@@ -74,14 +72,12 @@
             this.reuseCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.reuseSearchButton = new System.Windows.Forms.Button();
             this.reuseSubmitButton = new System.Windows.Forms.Button();
-            this.officeTab = new System.Windows.Forms.TabPage();
-            this.officeLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.searchIDLabel = new System.Windows.Forms.Label();
             this.searchClientLabel = new System.Windows.Forms.Label();
-            this.searchIDButton = new System.Windows.Forms.Button();
             this.searchClientButton = new System.Windows.Forms.Button();
+            this.searchIDButton = new System.Windows.Forms.Button();
             this.searchIDTextbox = new System.Windows.Forms.TextBox();
             this.searchClientTextbox = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
@@ -94,25 +90,19 @@
             this.reuseTab.SuspendLayout();
             this.reuseLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).BeginInit();
-            this.officeTab.SuspendLayout();
             this.searchTab.SuspendLayout();
             this.searchLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ScanComm // Database
+            // ScanComm
             // 
             this.ScanComm.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.DataReceivedHandler);
-            this.dbs.SetUser("shauni");
-            this.dbs.SetPass("wDrTxy3hSUnRHLKY");
-            this.dbs.SetServer("jpsharpe.net");
-            this.dbs.SetDatabase("ewaste");
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.receivingTab);
             this.tabControl.Controls.Add(this.harvestingTab);
             this.tabControl.Controls.Add(this.reuseTab);
-            this.tabControl.Controls.Add(this.officeTab);
             this.tabControl.Controls.Add(this.searchTab);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,30 +182,29 @@
             // 
             this.receivingCategoryTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.receivingCategoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCategoryTextbox.Location = new System.Drawing.Point(127, 115);
+            this.receivingCategoryTextbox.Location = new System.Drawing.Point(194, 115);
             this.receivingCategoryTextbox.Name = "receivingCategoryTextbox";
-            this.receivingCategoryTextbox.Size = new System.Drawing.Size(1130, 31);
+            this.receivingCategoryTextbox.Size = new System.Drawing.Size(1063, 31);
             this.receivingCategoryTextbox.TabIndex = 8;
             // 
             // receivingCommentsTextbox
             // 
             this.receivingCommentsTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.receivingCommentsTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingCommentsTextbox.Location = new System.Drawing.Point(127, 152);
+            this.receivingCommentsTextbox.Location = new System.Drawing.Point(194, 152);
             this.receivingCommentsTextbox.Multiline = true;
             this.receivingCommentsTextbox.Name = "receivingCommentsTextbox";
-            this.receivingCommentsTextbox.Size = new System.Drawing.Size(1130, 450);
+            this.receivingCommentsTextbox.Size = new System.Drawing.Size(1063, 450);
             this.receivingCommentsTextbox.TabIndex = 11;
             // 
             // receivingClientTextbox
             // 
             this.receivingClientTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingClientTextbox.Location = new System.Drawing.Point(127, 3);
+            this.receivingClientTextbox.Location = new System.Drawing.Point(194, 3);
             this.receivingClientTextbox.MaxLength = 200;
             this.receivingClientTextbox.Name = "receivingClientTextbox";
             this.receivingClientTextbox.Size = new System.Drawing.Size(1063, 31);
             this.receivingClientTextbox.TabIndex = 1;
-            this.receivingClientTextbox.Text = "Business or Client name (required or checkbox if none)";
             this.receivingClientTextbox.TextChanged += new System.EventHandler(this.receivingClientTextbox_TextChanged);
             // 
             // receivingWeightLabel
@@ -232,7 +221,7 @@
             // receivingDateReceivedDatebox
             // 
             this.receivingDateReceivedDatebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingDateReceivedDatebox.Location = new System.Drawing.Point(127, 78);
+            this.receivingDateReceivedDatebox.Location = new System.Drawing.Point(194, 78);
             this.receivingDateReceivedDatebox.Name = "receivingDateReceivedDatebox";
             this.receivingDateReceivedDatebox.Size = new System.Drawing.Size(375, 31);
             this.receivingDateReceivedDatebox.TabIndex = 3;
@@ -253,7 +242,7 @@
             // 
             this.receivingWeightNumericbox.DecimalPlaces = 2;
             this.receivingWeightNumericbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receivingWeightNumericbox.Location = new System.Drawing.Point(127, 41);
+            this.receivingWeightNumericbox.Location = new System.Drawing.Point(194, 41);
             this.receivingWeightNumericbox.Maximum = new decimal(new int[] {
             276447231,
             23283,
@@ -275,7 +264,6 @@
             // 
             // receivingSubmitButton
             // 
-            this.receivingSubmitButton.Enabled = false;
             this.receivingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receivingSubmitButton.Location = new System.Drawing.Point(1263, 152);
             this.receivingSubmitButton.Name = "receivingSubmitButton";
@@ -293,7 +281,7 @@
             this.receivingClientLabel.Name = "receivingClientLabel";
             this.receivingClientLabel.Size = new System.Drawing.Size(116, 35);
             this.receivingClientLabel.TabIndex = 9999;
-            this.receivingClientLabel.Text = "Source";
+            this.receivingClientLabel.Text = "Client Name";
             this.receivingClientLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // harvestingTab
@@ -353,7 +341,6 @@
             this.harvestingParentTextbox.Name = "harvestingParentTextbox";
             this.harvestingParentTextbox.Size = new System.Drawing.Size(865, 29);
             this.harvestingParentTextbox.TabIndex = 1;
-            this.harvestingParentTextbox.Text = "ID or check box on right for pile (required)";
             this.harvestingParentTextbox.TextChanged += new System.EventHandler(this.harvestingParentTextbox_TextChanged);
             // 
             // harvestingParentLabel
@@ -378,7 +365,6 @@
             // 
             // harvestingSubmitButton
             // 
-            this.harvestingSubmitButton.Enabled = false;
             this.harvestingSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.harvestingSubmitButton.Location = new System.Drawing.Point(1019, 117);
             this.harvestingSubmitButton.Name = "harvestingSubmitButton";
@@ -617,7 +603,6 @@
             // 
             // reuseSearchButton
             // 
-            this.reuseSearchButton.Enabled = false;
             this.reuseSearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.reuseSearchButton.Location = new System.Drawing.Point(1185, 112);
             this.reuseSearchButton.Name = "reuseSearchButton";
@@ -628,7 +613,6 @@
             // 
             // reuseSubmitButton
             // 
-            this.reuseSubmitButton.Enabled = false;
             this.reuseSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.reuseSubmitButton.Location = new System.Drawing.Point(1185, 260);
             this.reuseSubmitButton.Name = "reuseSubmitButton";
@@ -636,29 +620,6 @@
             this.reuseSubmitButton.TabIndex = 15;
             this.reuseSubmitButton.Text = "Submit";
             this.reuseSubmitButton.UseVisualStyleBackColor = true;
-            // 
-            // officeTab
-            // 
-            this.officeTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(162)))), ((int)(((byte)(106)))));
-            this.officeTab.Controls.Add(this.officeLayoutPanel);
-            this.officeTab.Location = new System.Drawing.Point(4, 34);
-            this.officeTab.Name = "officeTab";
-            this.officeTab.Size = new System.Drawing.Size(1469, 619);
-            this.officeTab.TabIndex = 3;
-            this.officeTab.Text = "Office";
-            // 
-            // officeLayoutPanel
-            // 
-            this.officeLayoutPanel.ColumnCount = 2;
-            this.officeLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.officeLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.officeLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.officeLayoutPanel.Name = "officeLayoutPanel";
-            this.officeLayoutPanel.RowCount = 2;
-            this.officeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.officeLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.officeLayoutPanel.Size = new System.Drawing.Size(1200, 595);
-            this.officeLayoutPanel.TabIndex = 0;
             // 
             // searchTab
             // 
@@ -712,17 +673,6 @@
             this.searchClientLabel.TabIndex = 1;
             this.searchClientLabel.Text = "Search by Client";
             // 
-            // searchIDButton
-            // 
-            this.searchIDButton.Enabled = false;
-            this.searchIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.searchIDButton.Location = new System.Drawing.Point(1019, 3);
-            this.searchIDButton.Name = "searchIDButton";
-            this.searchIDButton.Size = new System.Drawing.Size(164, 36);
-            this.searchIDButton.TabIndex = 17;
-            this.searchIDButton.Text = "Search";
-            this.searchIDButton.UseVisualStyleBackColor = true;
-            // 
             // searchClientButton
             // 
             this.searchClientButton.Enabled = false;
@@ -733,6 +683,17 @@
             this.searchClientButton.TabIndex = 18;
             this.searchClientButton.Text = "Search";
             this.searchClientButton.UseVisualStyleBackColor = true;
+            // 
+            // searchIDButton
+            // 
+            this.searchIDButton.Enabled = false;
+            this.searchIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.searchIDButton.Location = new System.Drawing.Point(1019, 3);
+            this.searchIDButton.Name = "searchIDButton";
+            this.searchIDButton.Size = new System.Drawing.Size(164, 36);
+            this.searchIDButton.TabIndex = 17;
+            this.searchIDButton.Text = "Search";
+            this.searchIDButton.UseVisualStyleBackColor = true;
             // 
             // searchIDTextbox
             // 
@@ -770,7 +731,6 @@
             this.reuseLayoutPanel.ResumeLayout(false);
             this.reuseLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reuseWeightNumericbox)).EndInit();
-            this.officeTab.ResumeLayout(false);
             this.searchTab.ResumeLayout(false);
             this.searchLayoutPanel.ResumeLayout(false);
             this.searchLayoutPanel.PerformLayout();
@@ -810,11 +770,9 @@
         private System.Windows.Forms.Label harvestingCommentsLabel;
         private System.Windows.Forms.Button harvestingSubmitButton;
         private System.Windows.Forms.TabPage reuseTab;
-        private System.Windows.Forms.TabPage officeTab;
         private System.Windows.Forms.TabPage searchTab;
         private System.Windows.Forms.TableLayoutPanel harvestingLayoutPanel;
         private System.Windows.Forms.TableLayoutPanel reuseLayoutPanel;
-        private System.Windows.Forms.TableLayoutPanel officeLayoutPanel;
         private System.Windows.Forms.Label reuseParentIDLabel;
         private System.Windows.Forms.TextBox reuseParentIDTextbox;
         private System.Windows.Forms.Label reuseExistingIDLabel;

@@ -109,6 +109,10 @@ namespace Inventory_Management
         private void receivingPileCheckbox_CheckedChanged_1(object sender, EventArgs e)
         {
             receivingCheckCanSubmit();
+
+            if (receivingPileCheckbox.Checked)
+                receivingClientTextbox.Enabled = false;
+            else receivingClientTextbox.Enabled = true;
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -134,13 +138,14 @@ namespace Inventory_Management
         private void receivingCheckCanSubmit()
         {
             bool receivingValidClientTextbox, receivingValidDateReceivedDatebox, receivingValidWeightNumericbox;
-            if (receivingClientTextbox.Text == "Business or Client name (required or checkbox if none)" || receivingClientTextbox.Text == "")
+            if (receivingClientTextbox.Text == "" || receivingPileCheckbox.Checked)
                 receivingValidClientTextbox = false;
-            else
-                receivingValidClientTextbox = true;
+            else receivingValidClientTextbox = true;
+
             if (receivingDateReceivedDatebox.Value == new System.DateTime(2014, 1, 1, 11, 41, 0, 0))
                 receivingValidDateReceivedDatebox = false;
             else receivingValidDateReceivedDatebox = true;
+
             if (receivingWeightNumericbox.Value == 0)
                 receivingValidWeightNumericbox = false;
             else receivingValidWeightNumericbox = true;
@@ -158,6 +163,10 @@ namespace Inventory_Management
         private void harvestingPileCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             harvestingCheckCanSubmit();
+
+            if (harvestingPileCheckbox.Checked)
+                harvestingParentTextbox.Enabled = false;
+            else harvestingParentTextbox.Enabled = true;
         }
 
         private void harvestingWeightNumericbox_ValueChanged(object sender, EventArgs e)
@@ -186,12 +195,14 @@ namespace Inventory_Management
         private void harvestingCheckCanSubmit()
         {
             bool harvestingValidParentTextbox, harvestingValidWeightNumericbox;
-            if (harvestingParentTextbox.Text == "ID or check box on right for pile (required)" || harvestingParentTextbox.Text == "")
+            if (harvestingParentTextbox.Text == ""  || harvestingPileCheckbox.Checked)
                 harvestingValidParentTextbox = false;
             else harvestingValidParentTextbox = true;
+
             if (harvestingWeightNumericbox.Value == 0)
                 harvestingValidWeightNumericbox = false;
             else harvestingValidWeightNumericbox = true;
+            
             if (harvestingValidParentTextbox && harvestingValidWeightNumericbox)
                 harvestingSubmitButton.Enabled = true;
             else harvestingSubmitButton.Enabled = false;
