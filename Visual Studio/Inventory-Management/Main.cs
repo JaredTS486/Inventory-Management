@@ -96,6 +96,7 @@ namespace Inventory_Management
             this.receivingCommentsTextbox.Text = "";
             this.receivingDateReceivedDatebox.Value = new System.DateTime(2014, 1, 1, 11, 41, 0, 0);
             this.receivingPileCheckbox.Checked = false;
+            this.receivingPileIDTextbox.Text = "";
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -143,19 +144,33 @@ namespace Inventory_Management
             {
                 this.receivingClientTextbox.Enabled = false;
                 this.receivingClientTextbox.Text = "";
+                this.receivingPileIDTextbox.Enabled = true;
             }
-            else this.receivingClientTextbox.Enabled = true;
+            else
+            {
+                this.receivingPileIDTextbox.Enabled = false;
+                this.receivingPileIDTextbox.Text = "";
+                this.receivingClientTextbox.Enabled = true;
+            }
+        }
+
+        private void receivingPileIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+            receivingCheckCanSubmit();
         }
 
         private void receivingCheckCanSubmit()
         {
             bool receivingValidClientTextbox, receivingValidDateReceivedDatebox, receivingValidWeightNumericbox;
+
             if (!receivingPileCheckbox.Checked)
             {
                 if (receivingClientTextbox.Text == "")
                     receivingValidClientTextbox = false;
                 else receivingValidClientTextbox = true;
             }
+            else if (receivingPileIDTextbox.Text=="")
+                receivingValidClientTextbox = false;
             else receivingValidClientTextbox = true;
 
             if (receivingDateReceivedDatebox.Value == new System.DateTime(2014, 1, 1, 11, 41, 0, 0))
@@ -182,9 +197,11 @@ namespace Inventory_Management
         private void harvestingPileCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             harvestingCheckCanSubmit();
- 
-            if (harvestingPileCheckbox.Checked)
+
+            if (harvestingPileCheckbox.Checked){
                 harvestingParentTextbox.Enabled = false;
+                harvestingParentTextbox.Text = "";
+            }
             else harvestingParentTextbox.Enabled = true;
         }
 
@@ -195,23 +212,21 @@ namespace Inventory_Management
 
         private void resetHarvesting()
         {
-
-        }
-
-        private void harvestingSubmitButton_Click(object sender, EventArgs e)
-        {
-            resetHarvesting();
-            // DATABASE INSERT / PRINT LABEL ========================================
-            //int ID = dbs.HarvestingInsert();
-
-            //=======================================================================
+            harvestingParentTextbox.Text = "";
+            harvestingCommentsTextbox.Text = "";
+            harvestingCategoryTextbox.Text = "";
+            harvestingWeightNumericbox.Value = 0;
+            harvestingPileCheckbox.Checked = false;
         }
 
         private void harvestingCheckCanSubmit()
         {
             bool harvestingValidParentTextbox, harvestingValidWeightNumericbox;
-            if (harvestingParentTextbox.Text == ""  || harvestingPileCheckbox.Checked)
-                harvestingValidParentTextbox = false;
+            if (!harvestingPileCheckbox.Checked)
+            {
+                if (harvestingParentTextbox.Text == "") harvestingValidParentTextbox = false;
+                else harvestingValidParentTextbox = true;
+            }
             else harvestingValidParentTextbox = true;
 
             if (harvestingWeightNumericbox.Value == 0)
@@ -223,29 +238,24 @@ namespace Inventory_Management
             else harvestingSubmitButton.Enabled = false;
         }
 
+        private void harvestingSubmitButton_Click(object sender, EventArgs e)
+        {
+            resetHarvesting();
+            // DATABASE INSERT / PRINT LABEL ========================================
+            //int ID = dbs.HarvestingInsert();
+
+            //======================================================================= 
+        }
+
         //============================================================================================================
         //REUSE
         //============================================================================================================
-        private void reuseCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (reuseCheckedListBox.GetItemChecked(0))
-            {
-                reuseExistingIDTextbox.Enabled = false;
-                reuseParentIDTextbox.Enabled = true;
-                reuseSearchButton.Enabled = false;
-            }
-            if (reuseCheckedListBox.GetItemChecked(1))
-            {
-                reuseExistingIDTextbox.Enabled = true;
-                reuseParentIDTextbox.Enabled = false;
-                reuseSearchButton.Enabled = true;
-            }
-        }
+        
 
         private void reuseCheckCanSubmit()
         {
             bool reuseValidChecklist=false, reuseValidID=false, reuseValidWeight=false;
-            if (reuseCheckedListBox.GetItemChecked(0))
+            if (reuseNewLabelCheckbox.Checked)
             {
                 reuseValidChecklist = true;
                 if (reuseParentIDTextbox.Text == "")
@@ -255,7 +265,7 @@ namespace Inventory_Management
                     reuseValidWeight = false;
                 else reuseValidWeight = true;
             }
-            else if (reuseCheckedListBox.GetItemChecked(1))
+            else if (reuseModifyItemCheckbox.Checked)
             {
                 reuseValidChecklist = true;
                 if (reuseExistingIDTextbox.Text == "")
@@ -274,7 +284,13 @@ namespace Inventory_Management
 
         private void resetReuse()
         {
-
+            reuseNewLabelCheckbox.Checked = false;
+            reuseModifyItemCheckbox.Checked = false;
+            reuseParentIDTextbox.Text = "";
+            reuseCategoryTextbox.Text = "";
+            reuseCommentsTextbox.Text = "";
+            reuseExistingIDTextbox.Text = "";
+            reuseWeightNumericbox.Value = 0;
         }
 
         private void reuseSubmitButton_Click(object sender, EventArgs e)
@@ -284,6 +300,26 @@ namespace Inventory_Management
             //int ID = dbs.ReuseInsert();
 
             //=======================================================================
+        }
+
+        private void reuseNewLabelCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            reuseExistingIDTextbox.Enabled = false;
+            reuseExistingIDTextbox.Text = "";
+            reuseSearchButton.Enabled = false;
+            reuseParentIDTextbox.Enabled = true;
+            reuseModifyItemCheckbox.Checked = false;
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseModifyItemCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            reuseExistingIDTextbox.Enabled = true;
+            reuseSearchButton.Enabled = true;
+            reuseParentIDTextbox.Enabled = false;
+            reuseParentIDTextbox.Text = "";
+            reuseNewLabelCheckbox.Checked = false;
+            reuseCheckCanSubmit();
         }
     }
     public partial class DATABASE
