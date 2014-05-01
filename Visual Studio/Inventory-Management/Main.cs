@@ -96,7 +96,7 @@ namespace Inventory_Management
             this.receivingCommentsTextbox.Text = "";
             this.receivingDateReceivedDatebox.Value = new System.DateTime(2014, 1, 1, 11, 41, 0, 0);
             this.receivingPileCheckbox.Checked = false;
-            this.receivingPileIDTextbox.Text = "";
+            this.receivingJobIDTextbox.Text = "";
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -144,14 +144,8 @@ namespace Inventory_Management
             {
                 this.receivingClientTextbox.Enabled = false;
                 this.receivingClientTextbox.Text = "";
-                this.receivingPileIDTextbox.Enabled = true;
             }
-            else
-            {
-                this.receivingPileIDTextbox.Enabled = false;
-                this.receivingPileIDTextbox.Text = "";
-                this.receivingClientTextbox.Enabled = true;
-            }
+            else this.receivingClientTextbox.Enabled = true;
         }
 
         private void receivingPileIDTextbox_TextChanged(object sender, EventArgs e)
@@ -169,8 +163,6 @@ namespace Inventory_Management
                     receivingValidClientTextbox = false;
                 else receivingValidClientTextbox = true;
             }
-            else if (receivingPileIDTextbox.Text=="")
-                receivingValidClientTextbox = false;
             else receivingValidClientTextbox = true;
 
             if (receivingDateReceivedDatebox.Value == new System.DateTime(2014, 1, 1, 11, 41, 0, 0))
@@ -254,42 +246,34 @@ namespace Inventory_Management
 
         private void reuseCheckCanSubmit()
         {
-            bool reuseValidChecklist=false, reuseValidID=false, reuseValidWeight=false;
-            if (reuseNewLabelCheckbox.Checked)
-            {
-                reuseValidChecklist = true;
-                if (reuseParentIDTextbox.Text == "")
-                    reuseValidID = false;
-                else reuseValidID = true;
-                if (reuseWeightNumericbox.Value == 0)
-                    reuseValidWeight = false;
-                else reuseValidWeight = true;
-            }
-            else if (reuseModifyItemCheckbox.Checked)
-            {
-                reuseValidChecklist = true;
-                if (reuseExistingIDTextbox.Text == "")
-                    reuseValidID = false;
-                else reuseValidID = true;
-                if (reuseWeightNumericbox.Value == 0)
-                    reuseValidWeight = false;
-                else reuseValidWeight = true;
-            }
-            else reuseValidChecklist = false;
+            bool reuseValidID=false, reuseValidWeight=false, reuseValidPayment=false;
 
-            if (reuseValidChecklist && reuseValidID && reuseValidWeight)
+            if (reuseParentIDTextbox.Text == "") reuseValidID = false;
+            else reuseValidID = true;
+
+            if (reuseWeightNumericbox.Value == 0) reuseValidWeight = false;
+            else reuseValidWeight = true;
+
+            if (reuseSoldCheckbox.Checked)
+            {
+                if (reuseSaleAmountNumericbox.Value <= 0) reuseValidPayment = false;
+                else reuseValidPayment = true;
+            }
+            else reuseValidPayment = true;
+
+            if (reuseValidPayment && reuseValidID && reuseValidWeight)
                 reuseSubmitButton.Enabled = true;
             else reuseSubmitButton.Enabled = false;
         }
 
         private void resetReuse()
         {
-            reuseNewLabelCheckbox.Checked = false;
-            reuseModifyItemCheckbox.Checked = false;
             reuseParentIDTextbox.Text = "";
             reuseCategoryTextbox.Text = "";
             reuseCommentsTextbox.Text = "";
-            reuseExistingIDTextbox.Text = "";
+            reuseSoldCheckbox.Checked = false;
+            reuseListedCheckbox.Checked = false;
+            reuseSaleAmountNumericbox.Value = 0;
             reuseWeightNumericbox.Value = 0;
         }
 
@@ -302,23 +286,50 @@ namespace Inventory_Management
             //=======================================================================
         }
 
-        private void reuseNewLabelCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void reuseParentIDTextbox_TextChanged(object sender, EventArgs e)
         {
-            reuseExistingIDTextbox.Enabled = false;
-            reuseExistingIDTextbox.Text = "";
-            reuseSearchButton.Enabled = false;
-            reuseParentIDTextbox.Enabled = true;
-            reuseModifyItemCheckbox.Checked = false;
             reuseCheckCanSubmit();
         }
 
-        private void reuseModifyItemCheckbox_CheckedChanged(object sender, EventArgs e)
+        private void reuseExistingIDTextbox_TextChanged(object sender, EventArgs e)
         {
-            reuseExistingIDTextbox.Enabled = true;
-            reuseSearchButton.Enabled = true;
-            reuseParentIDTextbox.Enabled = false;
-            reuseParentIDTextbox.Text = "";
-            reuseNewLabelCheckbox.Checked = false;
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseWeightNumericbox_ValueChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseCategoryTextbox_TextChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseListedCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseSoldCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (reuseSoldCheckbox.Checked)
+                reuseSaleAmountNumericbox.Enabled = true;
+            else
+            {
+                reuseSaleAmountNumericbox.Enabled = false;
+                reuseSaleAmountNumericbox.Value = 0;
+            }
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseCommentsTextbox_TextChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseSaleAmountNumericbox_ValueChanged(object sender, EventArgs e)
+        {
             reuseCheckCanSubmit();
         }
     }
