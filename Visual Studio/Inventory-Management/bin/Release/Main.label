@@ -15,7 +15,12 @@
 			<Rotation>Rotation0</Rotation>
 			<IsMirrored>False</IsMirrored>
 			<IsVariable>False</IsVariable>
-			<Text>Weight:2939,Source:St. Marys, Date:2/2/2222, Pkey:123456789, Leaves:10</Text>
+			<Text>ID:123456789
+Source:Source Name
+JobID:123456789
+Weight:000.00
+Date:22-22-2222
+Leaves:10</Text>
 			<Type>QRCode</Type>
 			<Size>Large</Size>
 			<TextPosition>None</TextPosition>
@@ -23,14 +28,14 @@
 			<CheckSumFont Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />
 			<TextEmbedding>None</TextEmbedding>
 			<ECLevel>0</ECLevel>
-			<HorizontalAlignment>Left</HorizontalAlignment>
+			<HorizontalAlignment>Center</HorizontalAlignment>
 			<QuietZonesPadding Left="0" Top="0" Right="0" Bottom="0" />
 		</BarcodeObject>
-		<Bounds X="331" Y="143" Width="1305" Height="1275" />
+		<Bounds X="331" Y="98" Width="1305" Height="1200" />
 	</ObjectInfo>
 	<ObjectInfo>
 		<TextObject>
-			<Name>INFOTXT</Name>
+			<Name>ID</Name>
 			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
 			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
 			<LinkedObjectName></LinkedObjectName>
@@ -44,44 +49,7 @@
 			<Verticalized>False</Verticalized>
 			<StyledText>
 				<Element>
-					<String>ID:</String>
-					<Attributes>
-						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
-						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
-					</Attributes>
-				</Element>
-				<Element>
-					<String> 123456789
-</String>
-					<Attributes>
-						<Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
-						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
-					</Attributes>
-				</Element>
-				<Element>
-					<String>Source:</String>
-					<Attributes>
-						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
-						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
-					</Attributes>
-				</Element>
-				<Element>
-					<String> Mordor
-</String>
-					<Attributes>
-						<Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
-						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
-					</Attributes>
-				</Element>
-				<Element>
-					<String>Weight:</String>
-					<Attributes>
-						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
-						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
-					</Attributes>
-				</Element>
-				<Element>
-					<String> 405lbs</String>
+					<String>123456789</String>
 					<Attributes>
 						<Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
 						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
@@ -89,7 +57,7 @@
 				</Element>
 			</StyledText>
 		</TextObject>
-		<Bounds X="1725" Y="135" Width="3090" Height="930" />
+		<Bounds X="2085" Y="75" Width="2040" Height="285" />
 	</ObjectInfo>
 	<ObjectInfo>
 		<DateTimeObject>
@@ -109,9 +77,139 @@
 			<Font Family="Arial" Size="11" Bold="False" Italic="False" Underline="False" Strikeout="False" />
 			<PreText></PreText>
 			<PostText></PostText>
-			<IncludeTime>False</IncludeTime>
+			<IncludeTime>True</IncludeTime>
 			<Use24HourFormat>False</Use24HourFormat>
 		</DateTimeObject>
-		<Bounds X="1725" Y="1223" Width="2880" Height="270" />
+		<Bounds X="1695" Y="1118" Width="2910" Height="270" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>SOURCE</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<HorizontalAlignment>Left</HorizontalAlignment>
+			<VerticalAlignment>Top</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>Mordor</String>
+					<Attributes>
+						<Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="2628" Y="345" Width="2235" Height="405" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>TEXT_1</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<HorizontalAlignment>Left</HorizontalAlignment>
+			<VerticalAlignment>Top</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>ID:</String>
+					<Attributes>
+						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="1695" Y="60" Width="330" Height="285" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>TEXT_2</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<HorizontalAlignment>Left</HorizontalAlignment>
+			<VerticalAlignment>Top</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>Source:</String>
+					<Attributes>
+						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="1665" Y="345" Width="930" Height="285" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>TEXT_3</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<HorizontalAlignment>Left</HorizontalAlignment>
+			<VerticalAlignment>Top</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>Weight:</String>
+					<Attributes>
+						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="1695" Y="810" Width="870" Height="315" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>WEIGHT</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<HorizontalAlignment>Left</HorizontalAlignment>
+			<VerticalAlignment>Top</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>205</String>
+					<Attributes>
+						<Font Family="Arial" Size="12" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="2643" Y="810" Width="1545" Height="300" />
 	</ObjectInfo>
 </DieCutLabel>
