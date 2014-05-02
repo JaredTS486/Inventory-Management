@@ -96,6 +96,7 @@ namespace Inventory_Management
             this.receivingCommentsTextbox.Text = "";
             this.receivingDateReceivedDatebox.Value = new System.DateTime(2014, 1, 1, 11, 41, 0, 0);
             this.receivingPileCheckbox.Checked = false;
+            this.receivingJobIDTextbox.Text = "";
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -147,9 +148,15 @@ namespace Inventory_Management
             else this.receivingClientTextbox.Enabled = true;
         }
 
+        private void receivingPileIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+            receivingCheckCanSubmit();
+        }
+
         private void receivingCheckCanSubmit()
         {
             bool receivingValidClientTextbox, receivingValidDateReceivedDatebox, receivingValidWeightNumericbox;
+
             if (!receivingPileCheckbox.Checked)
             {
                 if (receivingClientTextbox.Text == "")
@@ -182,9 +189,11 @@ namespace Inventory_Management
         private void harvestingPileCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             harvestingCheckCanSubmit();
- 
-            if (harvestingPileCheckbox.Checked)
+
+            if (harvestingPileCheckbox.Checked){
                 harvestingParentTextbox.Enabled = false;
+                harvestingParentTextbox.Text = "";
+            }
             else harvestingParentTextbox.Enabled = true;
         }
 
@@ -195,23 +204,21 @@ namespace Inventory_Management
 
         private void resetHarvesting()
         {
-
-        }
-
-        private void harvestingSubmitButton_Click(object sender, EventArgs e)
-        {
-            resetHarvesting();
-            // DATABASE INSERT / PRINT LABEL ========================================
-            //int ID = dbs.HarvestingInsert();
-
-            //=======================================================================
+            harvestingParentTextbox.Text = "";
+            harvestingCommentsTextbox.Text = "";
+            harvestingCategoryTextbox.Text = "";
+            harvestingWeightNumericbox.Value = 0;
+            harvestingPileCheckbox.Checked = false;
         }
 
         private void harvestingCheckCanSubmit()
         {
             bool harvestingValidParentTextbox, harvestingValidWeightNumericbox;
-            if (harvestingParentTextbox.Text == ""  || harvestingPileCheckbox.Checked)
-                harvestingValidParentTextbox = false;
+            if (!harvestingPileCheckbox.Checked)
+            {
+                if (harvestingParentTextbox.Text == "") harvestingValidParentTextbox = false;
+                else harvestingValidParentTextbox = true;
+            }
             else harvestingValidParentTextbox = true;
 
             if (harvestingWeightNumericbox.Value == 0)
@@ -223,58 +230,51 @@ namespace Inventory_Management
             else harvestingSubmitButton.Enabled = false;
         }
 
+        private void harvestingSubmitButton_Click(object sender, EventArgs e)
+        {
+            resetHarvesting();
+            // DATABASE INSERT / PRINT LABEL ========================================
+            //int ID = dbs.HarvestingInsert();
+
+            //======================================================================= 
+        }
+
         //============================================================================================================
         //REUSE
         //============================================================================================================
-        private void reuseCheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (reuseCheckedListBox.GetItemChecked(0))
-            {
-                reuseExistingIDTextbox.Enabled = false;
-                reuseParentIDTextbox.Enabled = true;
-                reuseSearchButton.Enabled = false;
-            }
-            if (reuseCheckedListBox.GetItemChecked(1))
-            {
-                reuseExistingIDTextbox.Enabled = true;
-                reuseParentIDTextbox.Enabled = false;
-                reuseSearchButton.Enabled = true;
-            }
-        }
+        
 
         private void reuseCheckCanSubmit()
         {
-            bool reuseValidChecklist=false, reuseValidID=false, reuseValidWeight=false;
-            if (reuseCheckedListBox.GetItemChecked(0))
-            {
-                reuseValidChecklist = true;
-                if (reuseParentIDTextbox.Text == "")
-                    reuseValidID = false;
-                else reuseValidID = true;
-                if (reuseWeightNumericbox.Value == 0)
-                    reuseValidWeight = false;
-                else reuseValidWeight = true;
-            }
-            else if (reuseCheckedListBox.GetItemChecked(1))
-            {
-                reuseValidChecklist = true;
-                if (reuseExistingIDTextbox.Text == "")
-                    reuseValidID = false;
-                else reuseValidID = true;
-                if (reuseWeightNumericbox.Value == 0)
-                    reuseValidWeight = false;
-                else reuseValidWeight = true;
-            }
-            else reuseValidChecklist = false;
+            bool reuseValidID=false, reuseValidWeight=false, reuseValidPayment=false;
 
-            if (reuseValidChecklist && reuseValidID && reuseValidWeight)
+            if (reuseParentIDTextbox.Text == "") reuseValidID = false;
+            else reuseValidID = true;
+
+            if (reuseWeightNumericbox.Value == 0) reuseValidWeight = false;
+            else reuseValidWeight = true;
+
+            if (reuseSoldCheckbox.Checked)
+            {
+                if (reuseSaleAmountNumericbox.Value <= 0) reuseValidPayment = false;
+                else reuseValidPayment = true;
+            }
+            else reuseValidPayment = true;
+
+            if (reuseValidPayment && reuseValidID && reuseValidWeight)
                 reuseSubmitButton.Enabled = true;
             else reuseSubmitButton.Enabled = false;
         }
 
         private void resetReuse()
         {
-
+            reuseParentIDTextbox.Text = "";
+            reuseCategoryTextbox.Text = "";
+            reuseCommentsTextbox.Text = "";
+            reuseSoldCheckbox.Checked = false;
+            reuseListedCheckbox.Checked = false;
+            reuseSaleAmountNumericbox.Value = 0;
+            reuseWeightNumericbox.Value = 0;
         }
 
         private void reuseSubmitButton_Click(object sender, EventArgs e)
@@ -284,6 +284,53 @@ namespace Inventory_Management
             //int ID = dbs.ReuseInsert();
 
             //=======================================================================
+        }
+
+        private void reuseParentIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseExistingIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseWeightNumericbox_ValueChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseCategoryTextbox_TextChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseListedCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseSoldCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (reuseSoldCheckbox.Checked)
+                reuseSaleAmountNumericbox.Enabled = true;
+            else
+            {
+                reuseSaleAmountNumericbox.Enabled = false;
+                reuseSaleAmountNumericbox.Value = 0;
+            }
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseCommentsTextbox_TextChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
+        }
+
+        private void reuseSaleAmountNumericbox_ValueChanged(object sender, EventArgs e)
+        {
+            reuseCheckCanSubmit();
         }
     }
     public partial class DATABASE
