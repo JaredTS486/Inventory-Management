@@ -96,7 +96,7 @@ namespace Inventory_Management
             this.receivingCommentsTextbox.Text = "";
             this.receivingDateReceivedDatebox.Value = new System.DateTime(2014, 1, 1, 11, 41, 0, 0);
             this.receivingPileCheckbox.Checked = false;
-            this.receivingJobIDTextbox.Text = "";
+            this.receivingJobID.Value = 0;
         }
 
         private void receivingSubmitButton_Click(object sender, EventArgs e)
@@ -107,16 +107,19 @@ namespace Inventory_Management
             string comments = this.receivingCommentsTextbox.Text;
             string date = this.receivingDateReceivedDatebox.Value.ToString("yyyy-MM-dd hh:mm:ss");
             bool pile = this.receivingPileCheckbox.Checked;
-            resetReceiving();
+            int jobID = Convert.ToInt32(this.receivingJobID.Value);
             // DATABASE INSERT / PRINT LABEL ========================================
-            int ID = dbs.ReceivingInsert(source, weight, type, comments, date, pile);
+            if (pile) { source = "Taken from Pile";}
+            int ID = dbs.ReceivingInsert(source, weight, type, comments, date, pile, jobID);
             if (ID > 0){
                 lbl.SetInfoData(ID, "Receiving", source, weight);
+                lbl.SetBarcode("DEP:Receiving"+",ID:" + ID + ",Source:" + source + ",Weight:" + weight);
                 lbl.PrintLabel();
             }
             else { 
                 // ERROR HANDELING, LAST INSERT WAS NOT DONE 
             }
+            resetReceiving();
             //=======================================================================
         }
 
@@ -191,10 +194,10 @@ namespace Inventory_Management
             harvestingCheckCanSubmit();
 
             if (harvestingPileCheckbox.Checked){
-                harvestingParentTextbox.Enabled = false;
-                harvestingParentTextbox.Text = "";
+                harvestReceivingID.Enabled = false;
+                harvestReceivingID.Value = 0;
             }
-            else harvestingParentTextbox.Enabled = true;
+            else harvestReceivingID.Enabled = true;
         }
 
         private void harvestingWeightNumericbox_ValueChanged(object sender, EventArgs e)
@@ -204,7 +207,7 @@ namespace Inventory_Management
 
         private void resetHarvesting()
         {
-            harvestingParentTextbox.Text = "";
+            harvestReceivingID.Value = 0;
             harvestingCommentsTextbox.Text = "";
             harvestingCategoryTextbox.Text = "";
             harvestingWeightNumericbox.Value = 0;
@@ -216,7 +219,7 @@ namespace Inventory_Management
             bool harvestingValidParentTextbox, harvestingValidWeightNumericbox;
             if (!harvestingPileCheckbox.Checked)
             {
-                if (harvestingParentTextbox.Text == "") harvestingValidParentTextbox = false;
+                if (harvestReceivingID.Value == 0) harvestingValidParentTextbox = false;
                 else harvestingValidParentTextbox = true;
             }
             else harvestingValidParentTextbox = true;
@@ -232,23 +235,33 @@ namespace Inventory_Management
 
         private void harvestingSubmitButton_Click(object sender, EventArgs e)
         {
-            resetHarvesting();
+            int receivingID = Convert.ToInt32(this.harvestReceivingID.Value);
+            decimal weight = this.harvestingWeightNumericbox.Value;
+            string category = this.harvestingCategoryTextbox.Text;
+            string comments = this.harvestingCommentsTextbox.Text;
+            bool pile = this.harvestingPileCheckbox.Checked;
             // DATABASE INSERT / PRINT LABEL ========================================
-            //int ID = dbs.HarvestingInsert();
-
-            //======================================================================= 
+            int ID = dbs.HarvestInsert(receivingID, weight, category, comments, pile);
+            if (ID > 0)
+            {
+                lbl.SetInfoData(ID, "Harvest", receivingID.ToString() + " (Receiving)", weight);
+                lbl.SetBarcode("DEP:Harvest" + ",ID:" + ID + ",ReceivingID:" + receivingID + ",Weight:" + weight);
+                lbl.PrintLabel();
+            }
+            else
+            {
+                // ERROR HANDELING, LAST INSERT WAS NOT DONE 
+            }
+            resetHarvesting();
         }
-
         //============================================================================================================
         //REUSE
         //============================================================================================================
-        
-
         private void reuseCheckCanSubmit()
         {
             bool reuseValidID=false, reuseValidWeight=false, reuseValidPayment=false;
 
-            if (reuseParentIDTextbox.Text == "") reuseValidID = false;
+            if (reuseHarvestID.Value == 0) reuseValidID = false;
             else reuseValidID = true;
 
             if (reuseWeightNumericbox.Value == 0) reuseValidWeight = false;
@@ -268,7 +281,7 @@ namespace Inventory_Management
 
         private void resetReuse()
         {
-            reuseParentIDTextbox.Text = "";
+            reuseHarvestID.Value = 0;
             reuseCategoryTextbox.Text = "";
             reuseCommentsTextbox.Text = "";
             reuseSoldCheckbox.Checked = false;
@@ -279,10 +292,41 @@ namespace Inventory_Management
 
         private void reuseSubmitButton_Click(object sender, EventArgs e)
         {
-            resetReuse();
+            string status;
+            decimal soldfor;
+            int harvestID = Convert.ToInt32(reuseHarvestID.Value);
+            decimal weight = this.reuseWeightNumericbox.Value;
+            if (this.reuseListedCheckbox.Checked){
+                status = "Listed";
+            }
+            else if (this.reuseSoldCheckbox.Checked) { 
+                status = "Sold";
+                soldfor = this.reuseSaleAmountNumericbox.Value;
+            }
+            else
+                status = "";
+                soldfor = 0;
+            string category = this.reuseCategoryTextbox.Text;
+            string description = this.reuseCommentsTextbox.Text;
+            Console.WriteLine(harvestID);
+            Console.WriteLine(weight);
+            Console.WriteLine(category);
+            Console.WriteLine(description);
+            Console.WriteLine(status);
+            Console.WriteLine(soldfor);
             // DATABASE INSERT / PRINT LABEL ========================================
-            //int ID = dbs.ReuseInsert();
-
+            int ID = dbs.ReuseInsert(harvestID, weight, description, category, status, soldfor);
+            if (ID > 0)
+            {
+                lbl.SetInfoData(ID, "Reuse", harvestID.ToString() + " (Harvest)", weight);
+                lbl.SetBarcode("DEP:Reuse" + ",ID:" + ID + ",HarvestID:" + harvestID + ",Weight:" + weight);
+                lbl.PrintLabel();
+            }
+            else
+            {
+                // ERROR HANDELING, LAST INSERT WAS NOT DONE 
+            }
+            resetReuse();
             //=======================================================================
         }
 
@@ -362,60 +406,62 @@ namespace Inventory_Management
                 }
             }
         }
-        public int ReceivingInsert(string source, decimal weight, string type, string comments, string date, bool pile)
+        public int ReceivingInsert(string source, decimal weight, string type, string comments, string date, bool pile, int jobID)
         {
             if(Connection())
             {   //Contains query to insert data specifically into the receiving table using parameterization.
                 this.conn.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = this.conn;
-                cmd.CommandText = @"INSERT INTO receiving(Source,Weight,Type,Comments,DateReceived,Pile)
-                                    VALUES(?source,?weight,?type,?comments,?date,?pile);SELECT last_insert_id();";
+                cmd.CommandText = @"INSERT INTO receiving(Source,Weight,Type,Comments,DateReceived,Pile,JobID)
+                                    VALUES(?source,?weight,?type,?comments,?date,?pile,?jobID);SELECT last_insert_id();";
                 cmd.Parameters.Add("?source", MySqlDbType.VarChar).Value = source;
                 cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = weight;
                 cmd.Parameters.Add("?type", MySqlDbType.VarChar).Value = type;
                 cmd.Parameters.Add("?comments", MySqlDbType.VarChar).Value = comments;
                 cmd.Parameters.Add("?date", MySqlDbType.VarChar).Value = date;
                 cmd.Parameters.Add("?pile", MySqlDbType.VarChar).Value = pile;
+                cmd.Parameters.Add("?jobID", MySqlDbType.VarChar).Value = jobID;
                 return Convert.ToInt32(cmd.ExecuteScalar());
             }
             return -1;
         }
-        public bool HarvestInsert(string source, string weight, string type, string comments)
+        public int HarvestInsert(int receivingID, decimal weight, string category, string comments, bool pile)
         {
             if (Connection())
             {   //Contains query to insert data specifically into the reuse table using parameterization.
                 this.conn.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = this.conn;
-                cmd.CommandText = @"INSERT INTO reuse(Source,Weight,Type,Comments,DateReceived) 
-                                    VALUES(?source,?weight,?type,?comments)";
-                cmd.Parameters.Add("?source", MySqlDbType.VarChar).Value = "Source Test";
-                cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = "Weight Test";
-                cmd.Parameters.Add("?type", MySqlDbType.VarChar).Value = "Type Test";
-                cmd.Parameters.Add("?comments", MySqlDbType.VarChar).Value = "Comments Test";
-                cmd.ExecuteNonQuery();
-                return true;
+                cmd.CommandText = @"INSERT INTO harvest(ReceivingID,Weight,Category,Comments,Pile) 
+                                    VALUES(?receivingID,?weight,?category,?comments,?pile);SELECT last_insert_id();";
+                cmd.Parameters.Add("?receivingID", MySqlDbType.VarChar).Value = receivingID;
+                cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = weight;
+                cmd.Parameters.Add("?category", MySqlDbType.VarChar).Value = category;
+                cmd.Parameters.Add("?comments", MySqlDbType.VarChar).Value = comments;
+                cmd.Parameters.Add("?pile", MySqlDbType.VarChar).Value = pile;
+                return Convert.ToInt32(cmd.ExecuteScalar());
             }
-            return false;
+            return -1;
         }
-        public bool ReuseInsert(string source, string weight, string type, string comments)
+        public int ReuseInsert(int harvestID, decimal weight, string description, string category, string status, decimal soldfor)
         {
             if(Connection())
             {   //Contains query to insert data specifically into the reuse table using parameterization.
                 this.conn.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = this.conn;
-                cmd.CommandText = @"INSERT INTO reuse(Source,Weight,Type,Comments,DateReceived) 
-                                    VALUES(?source,?weight,?type,?comments)";
-                cmd.Parameters.Add("?source", MySqlDbType.VarChar).Value = "Source Test";
-                cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = "Weight Test";
-                cmd.Parameters.Add("?type", MySqlDbType.VarChar).Value = "Type Test";
-                cmd.Parameters.Add("?comments", MySqlDbType.VarChar).Value = "Comments Test";
-                cmd.ExecuteNonQuery();
-                return true;
+                cmd.CommandText = @"INSERT INTO reuse(HarvestID,Weight,Description,Category,Status,SoldFor) 
+                                    VALUES(?harvestID,?weight,?description,?category,?status,?soldfor);SELECT last_insert_id();";
+                cmd.Parameters.Add("?harvestID", MySqlDbType.VarChar).Value = harvestID;
+                cmd.Parameters.Add("?weight", MySqlDbType.VarChar).Value = weight;
+                cmd.Parameters.Add("?description", MySqlDbType.VarChar).Value = description;
+                cmd.Parameters.Add("?category", MySqlDbType.VarChar).Value = category;
+                cmd.Parameters.Add("?status", MySqlDbType.VarChar).Value = status;
+                cmd.Parameters.Add("?soldfor", MySqlDbType.VarChar).Value = soldfor;
+                return Convert.ToInt32(cmd.ExecuteScalar());
             }
-            return false;
+            return -1;
         }
     }
     public partial class LABELS
