@@ -30,6 +30,9 @@ namespace Inventory_Management
             dbs.SetServer("jpsharpe.net");
             dbs.SetDatabase("ewaste");
             dbs.Connection();
+            dbs.receivingListBox_Query(ref this.receivingListBox);
+            dbs.harvestListBox_Query(ref this.harvestListBox);
+            dbs.reuseListBox_Query(ref this.reuseListBox);
             
         }
         public void AddDataMethod(String myString)
@@ -308,12 +311,6 @@ namespace Inventory_Management
                 soldfor = 0;
             string category = this.reuseCategoryTextbox.Text;
             string description = this.reuseCommentsTextbox.Text;
-            Console.WriteLine(harvestID);
-            Console.WriteLine(weight);
-            Console.WriteLine(category);
-            Console.WriteLine(description);
-            Console.WriteLine(status);
-            Console.WriteLine(soldfor);
             // DATABASE INSERT / PRINT LABEL ========================================
             int ID = dbs.ReuseInsert(harvestID, weight, description, category, status, soldfor);
             if (ID > 0)
@@ -375,6 +372,62 @@ namespace Inventory_Management
         private void reuseSaleAmountNumericbox_ValueChanged(object sender, EventArgs e)
         {
             reuseCheckCanSubmit();
+        }
+
+        private void receivingSearch_TextChanged(object sender, EventArgs e)
+        {
+            dbs.receivingListBox_Query(ref this.receivingListBox, this.receivingSearch.Text);
+        }
+
+        private void harvestSearch_TextChanged(object sender, EventArgs e)
+        {
+            dbs.harvestListBox_Query(ref this.harvestListBox, this.harvestSearch.Text);
+        }
+
+        private void reuseSearch_TextChanged(object sender, EventArgs e)
+        {
+            dbs.reuseListBox_Query(ref this.reuseListBox,this.reuseSearch.Text);
+        }
+
+        private void reuseListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ID = this.reuseListBox.GetItemText(this.reuseListBox.SelectedItem);
+            MySql.Data.MySqlClient.MySqlDataReader reader = dbs.reuseResult_Query(ID);
+            while (reader.Read())
+            {
+                this.reuseWeightResult.Text = reader.GetString(3);
+                this.reuseStatusResult.Text = reader.GetString(5);
+                this.reuseCategoryResult.Text = reader.GetString(8);
+                this.reuseSoldForResult.Text = reader.GetString(6);
+                try { this.reuseListedOnResult.Text = reader.GetString(11); }
+                catch { this.reuseListedOnResult.Text = "Not Listed"; }
+                try { this.reuseSoldOnResult.Text = reader.GetString(10); }
+                catch { 
+                    this.reuseSoldOnResult.Text = "Not Sold";
+                    this.reuseSoldForResult.Enabled = false;
+                }
+                try { this.reuseRejectedOnResult.Text = reader.GetString(12); }
+                catch { this.reuseRejectedOnResult.Text = "Not Rejected"; }
+                try { this.reuseDescriptionResult.Text = reader.GetString(4); }
+                catch { this.reuseDescriptionResult.Text = ""; }
+            }
+        }
+
+        private void reuseButtonReject_Click(object sender, EventArgs e)
+        {
+            string ID = this.reuseListBox.GetItemText(this.reuseListBox.SelectedItem);
+            dbs.reuseStatus_Query(ID, "Rejected");
+        }
+
+        private void reuseButtonListed_Click(object sender, EventArgs e)
+        {
+            string ID = this.reuseListBox.GetItemText(this.reuseListBox.SelectedItem);
+            dbs.reuseStatus_Query(ID, "Listed");
+        }
+
+        private void reuseButtonSold_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public partial class DATABASE
@@ -463,7 +516,141 @@ namespace Inventory_Management
             }
             return -1;
         }
+        public int receivingListBox_Query(ref ListBox listbox, string search = "")
+        {
+            if (Connection())
+            {
+                listbox.Items.Clear();
+                this.conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                if (search == "")
+                {
+                    cmd.CommandText = @"SELECT ReceivingID from receiving;";
+                }
+                else
+                {
+                    cmd.CommandText = @"SELECT ReceivingID from receiving WHERE ReceivingID LIKE ?search;";
+                    cmd.Parameters.Add("?search", MySqlDbType.VarChar).Value = search;
+                }
+                MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read()){
+                    listbox.Items.Add(reader[0]);
+                }
+                return 1;
+            }
+            return -1;
+        }
+        public int harvestListBox_Query(ref ListBox listbox, string search = "")
+        {
+            if (Connection())
+            {
+                listbox.Items.Clear();
+                this.conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                if (search == "")
+                {
+                    cmd.CommandText = @"SELECT HarvestID from harvest;";
+                }
+                else
+                {
+                    cmd.CommandText = @"SELECT HarvestID from harvest WHERE HarvestID LIKE ?search;";
+                    cmd.Parameters.Add("?search", MySqlDbType.VarChar).Value = search;
+                }
+                MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read()){
+                    listbox.Items.Add(reader[0]);
+                }
+                return 1;
+            }
+            return -1;
+        }
+        public int reuseListBox_Query(ref ListBox listbox, string search = "")
+        {
+            if (Connection())
+            {
+                listbox.Items.Clear();
+                this.conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                if (search == "") { 
+                    cmd.CommandText = @"SELECT ReuseID from reuse;";
+                }
+                else {
+                    cmd.CommandText = @"SELECT ReuseID from reuse WHERE ReuseID LIKE ?search;";
+                    cmd.Parameters.Add("?search", MySqlDbType.VarChar).Value = search;
+                }
+                MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read()){
+                    listbox.Items.Add(reader[0]);
+                }
+                return 1;
+            }
+            return -1;
+        }
+        public MySql.Data.MySqlClient.MySqlDataReader reuseResult_Query(string ID)
+        {
+            if (Connection())
+            {
+                this.conn.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                cmd.CommandText = @"SELECT * FROM reuse WHERE ReuseID = ?ID;";
+                cmd.Parameters.Add("?ID", MySqlDbType.VarChar).Value = ID;
+                MySql.Data.MySqlClient.MySqlDataReader reader = cmd.ExecuteReader();
+                return reader;
+            }
+            return null;
+        }
+        public int reuseStatus_Query(string id, string status, decimal soldfor = -1)
+        {
+            if (Connection())
+            {
+                this.conn.Open();
+                string statusDate = "";
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = this.conn;
+                switch(status){
+                    case "Listed": statusDate = "ListedDate";
+                        break;
+                    case "Sold": statusDate = "SoldDate";
+                        break;
+                    case "Rejected": statusDate = "RejectedDate";
+                        break;
+                }
+                if (statusDate == "") return -1;
+                if (status == "Sold" && soldfor > 0)
+                {
+                    cmd.CommandText = @"UPDATE reuse SET Status = ?status, SET SoldDate = CURRENT_TIMESTAMP, SET SoldFor = ?soldfor WHERE ReuseID = ?id;";
+                    cmd.Parameters.Add("?status", MySqlDbType.VarChar).Value = status;
+                    cmd.Parameters.Add("?statusDate", MySqlDbType.VarChar).Value = statusDate;
+                    cmd.Parameters.Add("?soldfor", MySqlDbType.VarChar).Value = soldfor;
+                    cmd.Parameters.Add("?id", MySqlDbType.VarChar).Value = id;
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                else if (status == "Rejected")
+                {
+                    cmd.CommandText = @"UPDATE reuse SET Status = ?status, RejectedDate = NOW() WHERE ReuseID = ?id;" ;
+                    cmd.Parameters.Add("?status", MySqlDbType.VarChar).Value = status;
+                    cmd.Parameters.Add("?statusDate", MySqlDbType.VarChar).Value = statusDate;
+                    cmd.Parameters.Add("?id", MySqlDbType.VarChar).Value = id;
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                else if (status == "Listed")
+                {
+                    cmd.CommandText = @"UPDATE reuse SET Status = ?status, ListedDate = NOW() WHERE ReuseID = ?id;";
+                    cmd.Parameters.Add("?status", MySqlDbType.VarChar).Value = status;
+                    cmd.Parameters.Add("?statusDate", MySqlDbType.VarChar).Value = statusDate;
+                    cmd.Parameters.Add("?id", MySqlDbType.VarChar).Value = id;
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            return -1;
+        }
     }
+
+
     public partial class LABELS
     {
         private ILabel label;
