@@ -1,0 +1,42 @@
+How did you develop a specification?
+
+	Talked to clients.  Brainstormed.  Basicly did Agile Programming.
+	
+Initial Specifications:
+	Cross-Platform
+	Mobile Device Enabled
+	Database working with UI
+	Label Printing
+	Scanning with various devices (including mobile)
+	Searching through Database for Audits and Tracking
+
+How did you design your solution?
+
+	We used Visual Studio Express, MySQL Workbench, and GitHub.
+	Each person would be assigned something to focus on, and we would communicate our
+		 progress
+	to each other regularly.  (Agile Programming and Scrumming)
+
+How did you test your solution?
+
+	We tested in the compiler with just us three as the test group.
+
+What design choices did you make?
+
+	Scratched cross-platform and focused on Windows .NET Framework
+	Scratched Mobile Devices
+	Switched from C++ to C#
+
+
+What did you learn about on this project?
+
+Create an environment the code works in before working too much on the code.
+Create an environment everyone can access and use.
+Remember Hofstadter's Law
+
+
+What did each team member contribute?
+
+Jared got Printer stuff, SQL stuff, some UI stuff, Scanner stuff
+Scott got Printer research, UI Stuff
+Chris did QR research, SQL stuff
