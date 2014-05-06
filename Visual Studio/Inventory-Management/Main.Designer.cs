@@ -74,12 +74,55 @@
             this.reuseHarvestID = new System.Windows.Forms.NumericUpDown();
             this.searchTab = new System.Windows.Forms.TabPage();
             this.searchLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.searchIDLabel = new System.Windows.Forms.Label();
+            this.harvestSearch = new System.Windows.Forms.TextBox();
+            this.receivingSearch = new System.Windows.Forms.TextBox();
+            this.reuseSearch = new System.Windows.Forms.TextBox();
             this.searchClientLabel = new System.Windows.Forms.Label();
-            this.searchClientButton = new System.Windows.Forms.Button();
-            this.searchIDButton = new System.Windows.Forms.Button();
-            this.searchIDTextbox = new System.Windows.Forms.TextBox();
-            this.searchClientTextbox = new System.Windows.Forms.TextBox();
+            this.searchIDLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.receivingListBox = new System.Windows.Forms.ListBox();
+            this.receivingButtonRemove = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.harvestListBox = new System.Windows.Forms.ListBox();
+            this.harvestButtonRemove = new System.Windows.Forms.Button();
+            this.harvestButtonReject = new System.Windows.Forms.Button();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.reuseListBox = new System.Windows.Forms.ListBox();
+            this.reuseButtonRemove = new System.Windows.Forms.Button();
+            this.reuseButtonSold = new System.Windows.Forms.Button();
+            this.reuseButtonReject = new System.Windows.Forms.Button();
+            this.reuseButtonListed = new System.Windows.Forms.Button();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.reuseWeightLBL = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.reuseDescriptionResult = new System.Windows.Forms.TextBox();
+            this.reuseSoldForResult = new System.Windows.Forms.TextBox();
+            this.reuseRejectedOnResult = new System.Windows.Forms.TextBox();
+            this.reuseSoldOnResult = new System.Windows.Forms.TextBox();
+            this.reuseListedOnResult = new System.Windows.Forms.TextBox();
+            this.reuseStatusResult = new System.Windows.Forms.TextBox();
+            this.reuseCategoryResult = new System.Windows.Forms.TextBox();
+            this.reuseWeightResult = new System.Windows.Forms.TextBox();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.receivingTab.SuspendLayout();
             this.receivingLayoutPanel.SuspendLayout();
@@ -96,6 +139,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.reuseHarvestID)).BeginInit();
             this.searchTab.SuspendLayout();
             this.searchLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ScanComm
@@ -669,86 +736,521 @@
             this.searchTab.Name = "searchTab";
             this.searchTab.Size = new System.Drawing.Size(1045, 619);
             this.searchTab.TabIndex = 4;
-            this.searchTab.Text = "Search";
+            this.searchTab.Text = "Update / Edit";
             // 
             // searchLayoutPanel
             // 
             this.searchLayoutPanel.ColumnCount = 3;
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.25418F));
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.74582F));
-            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
-            this.searchLayoutPanel.Controls.Add(this.searchIDLabel, 0, 0);
-            this.searchLayoutPanel.Controls.Add(this.searchClientLabel, 0, 1);
-            this.searchLayoutPanel.Controls.Add(this.searchClientButton, 2, 1);
-            this.searchLayoutPanel.Controls.Add(this.searchIDButton, 2, 0);
-            this.searchLayoutPanel.Controls.Add(this.searchIDTextbox, 1, 0);
-            this.searchLayoutPanel.Controls.Add(this.searchClientTextbox, 1, 1);
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.98851F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.01149F));
+            this.searchLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 379F));
+            this.searchLayoutPanel.Controls.Add(this.harvestSearch, 1, 1);
+            this.searchLayoutPanel.Controls.Add(this.receivingSearch, 0, 1);
+            this.searchLayoutPanel.Controls.Add(this.reuseSearch, 2, 1);
+            this.searchLayoutPanel.Controls.Add(this.searchClientLabel, 2, 0);
+            this.searchLayoutPanel.Controls.Add(this.searchIDLabel, 1, 0);
+            this.searchLayoutPanel.Controls.Add(this.label1, 0, 0);
+            this.searchLayoutPanel.Controls.Add(this.splitContainer1, 0, 2);
+            this.searchLayoutPanel.Controls.Add(this.splitContainer2, 1, 2);
+            this.searchLayoutPanel.Controls.Add(this.splitContainer3, 2, 2);
+            this.searchLayoutPanel.Controls.Add(this.splitContainer4, 2, 3);
+            this.searchLayoutPanel.Controls.Add(this.splitContainer5, 1, 3);
             this.searchLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.searchLayoutPanel.Name = "searchLayoutPanel";
             this.searchLayoutPanel.RowCount = 4;
             this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.53764F));
             this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.46236F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 487F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.searchLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 364F));
             this.searchLayoutPanel.Size = new System.Drawing.Size(1045, 619);
             this.searchLayoutPanel.TabIndex = 0;
             // 
-            // searchIDLabel
+            // harvestSearch
             // 
-            this.searchIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.searchIDLabel.AutoSize = true;
-            this.searchIDLabel.Location = new System.Drawing.Point(3, 11);
-            this.searchIDLabel.Name = "searchIDLabel";
-            this.searchIDLabel.Size = new System.Drawing.Size(168, 24);
-            this.searchIDLabel.TabIndex = 0;
-            this.searchIDLabel.Text = "Search by Label ID";
+            this.harvestSearch.Location = new System.Drawing.Point(322, 39);
+            this.harvestSearch.Name = "harvestSearch";
+            this.harvestSearch.Size = new System.Drawing.Size(340, 29);
+            this.harvestSearch.TabIndex = 3;
+            this.harvestSearch.TextChanged += new System.EventHandler(this.harvestSearch_TextChanged);
+            // 
+            // receivingSearch
+            // 
+            this.receivingSearch.Location = new System.Drawing.Point(3, 39);
+            this.receivingSearch.Name = "receivingSearch";
+            this.receivingSearch.Size = new System.Drawing.Size(313, 29);
+            this.receivingSearch.TabIndex = 1;
+            this.receivingSearch.TextChanged += new System.EventHandler(this.receivingSearch_TextChanged);
+            // 
+            // reuseSearch
+            // 
+            this.reuseSearch.Location = new System.Drawing.Point(668, 39);
+            this.reuseSearch.Name = "reuseSearch";
+            this.reuseSearch.Size = new System.Drawing.Size(374, 29);
+            this.reuseSearch.TabIndex = 5;
+            this.reuseSearch.TextChanged += new System.EventHandler(this.reuseSearch_TextChanged);
             // 
             // searchClientLabel
             // 
             this.searchClientLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.searchClientLabel.AutoSize = true;
-            this.searchClientLabel.Location = new System.Drawing.Point(3, 57);
+            this.searchClientLabel.Location = new System.Drawing.Point(668, 6);
             this.searchClientLabel.Name = "searchClientLabel";
-            this.searchClientLabel.Size = new System.Drawing.Size(147, 24);
+            this.searchClientLabel.Size = new System.Drawing.Size(65, 24);
             this.searchClientLabel.TabIndex = 1;
-            this.searchClientLabel.Text = "Search by Client";
+            this.searchClientLabel.Text = "Reuse";
             // 
-            // searchClientButton
+            // searchIDLabel
             // 
-            this.searchClientButton.Enabled = false;
-            this.searchClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.searchClientButton.Location = new System.Drawing.Point(868, 50);
-            this.searchClientButton.Name = "searchClientButton";
-            this.searchClientButton.Size = new System.Drawing.Size(164, 36);
-            this.searchClientButton.TabIndex = 4;
-            this.searchClientButton.Text = "Search";
-            this.searchClientButton.UseVisualStyleBackColor = true;
+            this.searchIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchIDLabel.AutoSize = true;
+            this.searchIDLabel.Location = new System.Drawing.Point(322, 6);
+            this.searchIDLabel.Name = "searchIDLabel";
+            this.searchIDLabel.Size = new System.Drawing.Size(73, 24);
+            this.searchIDLabel.TabIndex = 0;
+            this.searchIDLabel.Text = "Harvest";
             // 
-            // searchIDButton
+            // label1
             // 
-            this.searchIDButton.Enabled = false;
-            this.searchIDButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.searchIDButton.Location = new System.Drawing.Point(868, 3);
-            this.searchIDButton.Name = "searchIDButton";
-            this.searchIDButton.Size = new System.Drawing.Size(164, 36);
-            this.searchIDButton.TabIndex = 2;
-            this.searchIDButton.Text = "Search";
-            this.searchIDButton.UseVisualStyleBackColor = true;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Receiving";
             // 
-            // searchIDTextbox
+            // splitContainer1
             // 
-            this.searchIDTextbox.Location = new System.Drawing.Point(230, 3);
-            this.searchIDTextbox.Name = "searchIDTextbox";
-            this.searchIDTextbox.Size = new System.Drawing.Size(632, 29);
-            this.searchIDTextbox.TabIndex = 1;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 74);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // searchClientTextbox
+            // splitContainer1.Panel1
             // 
-            this.searchClientTextbox.Location = new System.Drawing.Point(230, 50);
-            this.searchClientTextbox.Name = "searchClientTextbox";
-            this.searchClientTextbox.Size = new System.Drawing.Size(632, 29);
-            this.searchClientTextbox.TabIndex = 3;
+            this.splitContainer1.Panel1.Controls.Add(this.receivingListBox);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.receivingButtonRemove);
+            this.splitContainer1.Size = new System.Drawing.Size(313, 177);
+            this.splitContainer1.SplitterDistance = 196;
+            this.splitContainer1.TabIndex = 10;
+            // 
+            // receivingListBox
+            // 
+            this.receivingListBox.FormattingEnabled = true;
+            this.receivingListBox.ItemHeight = 24;
+            this.receivingListBox.Location = new System.Drawing.Point(5, 3);
+            this.receivingListBox.Name = "receivingListBox";
+            this.receivingListBox.Size = new System.Drawing.Size(188, 172);
+            this.receivingListBox.TabIndex = 7;
+            // 
+            // receivingButtonRemove
+            // 
+            this.receivingButtonRemove.Location = new System.Drawing.Point(3, 3);
+            this.receivingButtonRemove.Name = "receivingButtonRemove";
+            this.receivingButtonRemove.Size = new System.Drawing.Size(107, 40);
+            this.receivingButtonRemove.TabIndex = 2;
+            this.receivingButtonRemove.Text = "Remove";
+            this.receivingButtonRemove.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(322, 74);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.harvestListBox);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.harvestButtonRemove);
+            this.splitContainer2.Panel2.Controls.Add(this.harvestButtonReject);
+            this.splitContainer2.Size = new System.Drawing.Size(340, 177);
+            this.splitContainer2.SplitterDistance = 213;
+            this.splitContainer2.TabIndex = 11;
+            // 
+            // harvestListBox
+            // 
+            this.harvestListBox.FormattingEnabled = true;
+            this.harvestListBox.ItemHeight = 24;
+            this.harvestListBox.Location = new System.Drawing.Point(0, 0);
+            this.harvestListBox.Name = "harvestListBox";
+            this.harvestListBox.Size = new System.Drawing.Size(210, 172);
+            this.harvestListBox.TabIndex = 8;
+            // 
+            // harvestButtonRemove
+            // 
+            this.harvestButtonRemove.Location = new System.Drawing.Point(3, 46);
+            this.harvestButtonRemove.Name = "harvestButtonRemove";
+            this.harvestButtonRemove.Size = new System.Drawing.Size(120, 40);
+            this.harvestButtonRemove.TabIndex = 1;
+            this.harvestButtonRemove.Text = "Remove";
+            this.harvestButtonRemove.UseVisualStyleBackColor = true;
+            // 
+            // harvestButtonReject
+            // 
+            this.harvestButtonReject.Location = new System.Drawing.Point(3, 3);
+            this.harvestButtonReject.Name = "harvestButtonReject";
+            this.harvestButtonReject.Size = new System.Drawing.Size(120, 40);
+            this.harvestButtonReject.TabIndex = 0;
+            this.harvestButtonReject.Text = "Reject";
+            this.harvestButtonReject.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Location = new System.Drawing.Point(668, 74);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.reuseListBox);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.reuseButtonSold);
+            this.splitContainer3.Panel2.Controls.Add(this.reuseButtonReject);
+            this.splitContainer3.Panel2.Controls.Add(this.reuseButtonRemove);
+            this.splitContainer3.Panel2.Controls.Add(this.reuseButtonListed);
+            this.splitContainer3.Size = new System.Drawing.Size(343, 177);
+            this.splitContainer3.SplitterDistance = 212;
+            this.splitContainer3.TabIndex = 12;
+            // 
+            // reuseListBox
+            // 
+            this.reuseListBox.FormattingEnabled = true;
+            this.reuseListBox.ItemHeight = 24;
+            this.reuseListBox.Location = new System.Drawing.Point(0, 0);
+            this.reuseListBox.Name = "reuseListBox";
+            this.reuseListBox.Size = new System.Drawing.Size(209, 172);
+            this.reuseListBox.TabIndex = 9;
+            this.reuseListBox.SelectedIndexChanged += new System.EventHandler(this.reuseListBox_SelectedIndexChanged);
+            // 
+            // reuseButtonRemove
+            // 
+            this.reuseButtonRemove.Location = new System.Drawing.Point(2, 92);
+            this.reuseButtonRemove.Name = "reuseButtonRemove";
+            this.reuseButtonRemove.Size = new System.Drawing.Size(125, 40);
+            this.reuseButtonRemove.TabIndex = 2;
+            this.reuseButtonRemove.Text = "Remove";
+            this.reuseButtonRemove.UseVisualStyleBackColor = true;
+            // 
+            // reuseButtonSold
+            // 
+            this.reuseButtonSold.Location = new System.Drawing.Point(2, 138);
+            this.reuseButtonSold.Name = "reuseButtonSold";
+            this.reuseButtonSold.Size = new System.Drawing.Size(125, 40);
+            this.reuseButtonSold.TabIndex = 2;
+            this.reuseButtonSold.Text = "Sold";
+            this.reuseButtonSold.UseVisualStyleBackColor = true;
+            this.reuseButtonSold.Click += new System.EventHandler(this.reuseButtonSold_Click);
+            // 
+            // reuseButtonReject
+            // 
+            this.reuseButtonReject.Location = new System.Drawing.Point(2, 0);
+            this.reuseButtonReject.Name = "reuseButtonReject";
+            this.reuseButtonReject.Size = new System.Drawing.Size(125, 40);
+            this.reuseButtonReject.TabIndex = 1;
+            this.reuseButtonReject.Text = "Reject";
+            this.reuseButtonReject.UseVisualStyleBackColor = true;
+            this.reuseButtonReject.Click += new System.EventHandler(this.reuseButtonReject_Click);
+            // 
+            // reuseButtonListed
+            // 
+            this.reuseButtonListed.Location = new System.Drawing.Point(2, 46);
+            this.reuseButtonListed.Name = "reuseButtonListed";
+            this.reuseButtonListed.Size = new System.Drawing.Size(125, 40);
+            this.reuseButtonListed.TabIndex = 1;
+            this.reuseButtonListed.Text = "Listed";
+            this.reuseButtonListed.UseVisualStyleBackColor = true;
+            this.reuseButtonListed.Click += new System.EventHandler(this.reuseButtonListed_Click);
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(668, 257);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.panel1);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.panel2);
+            this.splitContainer4.Size = new System.Drawing.Size(374, 359);
+            this.splitContainer4.SplitterDistance = 124;
+            this.splitContainer4.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.reuseWeightLBL);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(124, 359);
+            this.panel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 254);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 24);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Description";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(39, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 24);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Sold For";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 222);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 24);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Rejected On";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 24);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Sold On";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Listed On";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(61, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 24);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Status";
+            // 
+            // reuseWeightLBL
+            // 
+            this.reuseWeightLBL.AutoSize = true;
+            this.reuseWeightLBL.Location = new System.Drawing.Point(52, 13);
+            this.reuseWeightLBL.Name = "reuseWeightLBL";
+            this.reuseWeightLBL.Size = new System.Drawing.Size(69, 24);
+            this.reuseWeightLBL.TabIndex = 0;
+            this.reuseWeightLBL.Text = "Weight";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Category";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.reuseDescriptionResult);
+            this.panel2.Controls.Add(this.reuseSoldForResult);
+            this.panel2.Controls.Add(this.reuseRejectedOnResult);
+            this.panel2.Controls.Add(this.reuseSoldOnResult);
+            this.panel2.Controls.Add(this.reuseListedOnResult);
+            this.panel2.Controls.Add(this.reuseStatusResult);
+            this.panel2.Controls.Add(this.reuseCategoryResult);
+            this.panel2.Controls.Add(this.reuseWeightResult);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(246, 359);
+            this.panel2.TabIndex = 0;
+            // 
+            // reuseDescriptionResult
+            // 
+            this.reuseDescriptionResult.Location = new System.Drawing.Point(3, 254);
+            this.reuseDescriptionResult.Multiline = true;
+            this.reuseDescriptionResult.Name = "reuseDescriptionResult";
+            this.reuseDescriptionResult.Size = new System.Drawing.Size(238, 100);
+            this.reuseDescriptionResult.TabIndex = 7;
+            // 
+            // reuseSoldForResult
+            // 
+            this.reuseSoldForResult.Location = new System.Drawing.Point(3, 185);
+            this.reuseSoldForResult.Name = "reuseSoldForResult";
+            this.reuseSoldForResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseSoldForResult.TabIndex = 6;
+            // 
+            // reuseRejectedOnResult
+            // 
+            this.reuseRejectedOnResult.Location = new System.Drawing.Point(3, 219);
+            this.reuseRejectedOnResult.Name = "reuseRejectedOnResult";
+            this.reuseRejectedOnResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseRejectedOnResult.TabIndex = 5;
+            // 
+            // reuseSoldOnResult
+            // 
+            this.reuseSoldOnResult.Location = new System.Drawing.Point(3, 150);
+            this.reuseSoldOnResult.Name = "reuseSoldOnResult";
+            this.reuseSoldOnResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseSoldOnResult.TabIndex = 4;
+            // 
+            // reuseListedOnResult
+            // 
+            this.reuseListedOnResult.Location = new System.Drawing.Point(3, 115);
+            this.reuseListedOnResult.Name = "reuseListedOnResult";
+            this.reuseListedOnResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseListedOnResult.TabIndex = 3;
+            // 
+            // reuseStatusResult
+            // 
+            this.reuseStatusResult.Location = new System.Drawing.Point(3, 80);
+            this.reuseStatusResult.Name = "reuseStatusResult";
+            this.reuseStatusResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseStatusResult.TabIndex = 2;
+            // 
+            // reuseCategoryResult
+            // 
+            this.reuseCategoryResult.Location = new System.Drawing.Point(3, 45);
+            this.reuseCategoryResult.Name = "reuseCategoryResult";
+            this.reuseCategoryResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseCategoryResult.TabIndex = 1;
+            // 
+            // reuseWeightResult
+            // 
+            this.reuseWeightResult.Location = new System.Drawing.Point(3, 10);
+            this.reuseWeightResult.Name = "reuseWeightResult";
+            this.reuseWeightResult.Size = new System.Drawing.Size(238, 29);
+            this.reuseWeightResult.TabIndex = 0;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(322, 257);
+            this.splitContainer5.Name = "splitContainer5";
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.panel3);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.Controls.Add(this.panel4);
+            this.splitContainer5.Size = new System.Drawing.Size(340, 359);
+            this.splitContainer5.SplitterDistance = 123;
+            this.splitContainer5.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(123, 359);
+            this.panel3.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(16, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 24);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Comments";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 83);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 24);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Rejected On";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(52, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 24);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Weight";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(36, 48);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 24);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Category";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.textBox7);
+            this.panel4.Controls.Add(this.textBox8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(213, 359);
+            this.panel4.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 115);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(207, 100);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(3, 80);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(207, 29);
+            this.textBox3.TabIndex = 5;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(3, 45);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(207, 29);
+            this.textBox7.TabIndex = 1;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(3, 10);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(207, 29);
+            this.textBox8.TabIndex = 0;
             // 
             // Main
             // 
@@ -779,6 +1281,34 @@
             this.searchTab.ResumeLayout(false);
             this.searchLayoutPanel.ResumeLayout(false);
             this.searchLayoutPanel.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -824,10 +1354,8 @@
         private System.Windows.Forms.Button reuseSubmitButton;
         private System.Windows.Forms.Label searchIDLabel;
         private System.Windows.Forms.Label searchClientLabel;
-        private System.Windows.Forms.Button searchClientButton;
-        private System.Windows.Forms.Button searchIDButton;
-        private System.Windows.Forms.TextBox searchIDTextbox;
-        private System.Windows.Forms.TextBox searchClientTextbox;
+        private System.Windows.Forms.TextBox receivingSearch;
+        private System.Windows.Forms.TextBox harvestSearch;
         private System.Windows.Forms.TableLayoutPanel searchLayoutPanel;
         private System.Windows.Forms.Label receivingJobIDLabel;
         private System.Windows.Forms.Label reuseParentIDLabel;
@@ -840,6 +1368,51 @@
         private System.Windows.Forms.NumericUpDown reuseHarvestID;
         private System.Windows.Forms.NumericUpDown harvestReceivingID;
         private System.Windows.Forms.NumericUpDown receivingJobID;
+        private System.Windows.Forms.ListBox reuseListBox;
+        private System.Windows.Forms.ListBox harvestListBox;
+        private System.Windows.Forms.TextBox reuseSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox receivingListBox;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Button harvestButtonReject;
+        private System.Windows.Forms.Button reuseButtonReject;
+        private System.Windows.Forms.Button reuseButtonSold;
+        private System.Windows.Forms.Button reuseButtonListed;
+        private System.Windows.Forms.Button harvestButtonRemove;
+        private System.Windows.Forms.Button reuseButtonRemove;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label reuseWeightLBL;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox reuseStatusResult;
+        private System.Windows.Forms.TextBox reuseCategoryResult;
+        private System.Windows.Forms.TextBox reuseWeightResult;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox reuseDescriptionResult;
+        private System.Windows.Forms.TextBox reuseSoldForResult;
+        private System.Windows.Forms.TextBox reuseRejectedOnResult;
+        private System.Windows.Forms.TextBox reuseSoldOnResult;
+        private System.Windows.Forms.TextBox reuseListedOnResult;
+        private System.Windows.Forms.Button receivingButtonRemove;
+        private System.Windows.Forms.SplitContainer splitContainer5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
 
