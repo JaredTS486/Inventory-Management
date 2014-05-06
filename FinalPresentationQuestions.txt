@@ -10,6 +10,13 @@ Initial Specifications:
 	Scanning with various devices (including mobile)
 	Searching through Database for Audits and Tracking
 
+Final Specifications:
+	Windows only with .NET Framework
+	USB Scanners only
+	Database working with UI
+	Label Printing
+	Searching through Database for Audits and Tracking
+	
 How did you design your solution?
 
 	We used Visual Studio Express, MySQL Workbench, and GitHub.
@@ -19,7 +26,7 @@ How did you design your solution?
 
 How did you test your solution?
 
-	We tested in the compiler with just us three as the test group.
+	We tested solution in the compiler with just us three as the test group.
 
 What design choices did you make?
 
